@@ -703,7 +703,10 @@ a.text-danger:hover{
 
 /*Subscripiton status active*/
 .cb-subscription-status.active{
-    background:{{subscription_status.active}};
+    background:#69ad22;
+    font-family: Roboto,Helvetica Neue, Helvetica, Arial, sans-serif;
+    color:#ffffff;
+    font-weight: normal;
 }
 
 /*Subscripiton status non renewing*/
@@ -5940,7 +5943,9 @@ ul#g-menu.add_menu li:last-child{
 .navbar-collapse .navbar-nav .dropdown-menu a{
     font-size:13px;
     padding:3px 10px;
-    color: {{text.link_color}};
+}
+.navbar-collapse > .navbar-nav a{
+    color:#ffffff;
 }
 .navbar-collapse .navbar-nav a:hover{
     color:#ffffff;

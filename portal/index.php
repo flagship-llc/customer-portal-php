@@ -6,11 +6,15 @@ $subscription = $servicePortal->getSubscription();
 $customerInvoice = $servicePortal->retrieveInvoice();
 ?> 
 <div class="container">
+    <h2 id="customer-title" class="text-center Candal text-darkblue">
+        <span class="small-text">カスタマーポータル</span><br>
+        CUSTOMER PORTAL
+    </h2>
     <div id="cb-wrapper-ssp">
 
          <?php include("processing.php")  ?>
         <div id="cb-content">
-            <div id="cb-portal-account" class="cb-well">
+<!--             <div id="cb-portal-account" class="cb-well">
                 <div id="cb-portal-account-title" class="page-header clearfix">
                     <span class="h3">Account Information</span>
                     <?php if ($settingconfigData["account"]["addedit"] == 'true') { ?>
@@ -20,7 +24,7 @@ $customerInvoice = $servicePortal->retrieveInvoice();
                     <?php } ?>
                 </div>
                 <?php include("accountInfo.php") ?>
-            </div>
+            </div> -->
 			
             <div id="cb-portal-payment-mode" class="cb-well">
                 <div id="cb-portal-payment-mode-title" class="page-header clearfix">
@@ -92,8 +96,8 @@ $customerInvoice = $servicePortal->retrieveInvoice();
                     $showEditDisplay = $servicePortal->getEditSubscription($settingconfigData);                    
                     if($showEditDisplay==true) {   ?>
                         <a href=<?php echo getEditUrl("editSubscription.php", $configData) ?>>
-                                <span class='glyphicon glyphicon-pencil'></span>Edit
-                            </a>
+                            <span class='glyphicon glyphicon-pencil'></span>Upgrade / Downgrade
+                        </a>
                     <?php
                         $showEditDisplay = false;
                     }                    

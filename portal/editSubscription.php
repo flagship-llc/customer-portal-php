@@ -59,7 +59,7 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
 											data-cb-current-step='' id="step-addon">
                                         Add/Remove Addon(s)
                                     </div>
-                                <?php } else { ?>                                    
+                                <?php } else { ?>
                                     <input id="NoAddon" name="NoAddon" type="hidden" class="form-control" value="1" > 
                                 <?php } ?>
                                 <div class="cb-product-step future" data-cb-step-for="review" data-cb-current-step='' id="step-review">

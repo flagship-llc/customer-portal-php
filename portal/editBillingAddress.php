@@ -8,7 +8,7 @@ $address = $customer->billingAddress;
     <div id="cb-wrapper-ssp">
 		<?php include("processing.php") ?>
         <div id="cb-user-content">
-            <form id="addressForm" method="POST">
+            <form id="portal_billing_address_update" method="POST">
                 <div class="cb-well">
                     <h3 class="text-center">Billing Information</h3>
                     <div class="row">

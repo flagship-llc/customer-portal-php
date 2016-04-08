@@ -8,7 +8,7 @@ $termEndDate = date('d-M-y', $subscription->currentTermEnd);
     <div id="cb-wrapper-ssp">
 		<?php include("processing.php") ?>
         <div id="cb-user-content">
-            <form id="cancelForm" method="POST">                
+            <form id="portal_subscription_cancel_submit" method="POST">                
                 <input id="cancelLaterText" name="cancelLaterText" type="hidden" class="form-control" value="<?php echo str_replace('$subscription.current_term_end', $termEndDate, $infoconfigData['Warnings_during_Cancellation']['Cancel_on_end_of_term_active']) ?>" > 
                 <input id="cancelImmediateText" name="cancelImmediateText" type="hidden" class="form-control" value="<?php echo $infoconfigData['Warnings_during_Cancellation']['Cancel_immediately'] ?>" > 
                 <div class="cb-well">
@@ -34,7 +34,7 @@ $termEndDate = date('d-M-y', $subscription->currentTermEnd);
                             </div> 
                         <?php 
                     } elseif ($settingconfigData["cancelsubscription"]["immediately"] == 'true' && $settingconfigData["cancelsubscription"]["endcurrentterm"] == 'true') { ?>
-                        <p> When do you want to cancel? </p>
+                        <p>If you cancel now, you will lose a chance to receive the monthly <a href="https://tokyotreat.com/about/how-it-works/#lucky-treat">Lucky Treat</a> with value over $500 USD! Are you sure..? (TωT)</p>
                         <div class="radio-group">                            
                             <div class="radio">
                                 <label>                                 
@@ -98,11 +98,10 @@ $termEndDate = date('d-M-y', $subscription->currentTermEnd);
                     <br>                                        
                     <div class="form-inline">
                         <div class="form-group">
-                            <input type="button" id="updateSubscription" value="Cancel Subscription" class="btn
-                                   btn-danger">
+                            <input type="button" id="updateSubscription" value="Cancel Subscription" class="btn btn-danger">
                         </div>
                         <div class="form-group">
-                            <a class="btn btn-link" id="back" href=<?php echo getCancelURL($configData) ?>>Go Back</a>                 
+                            <a class="btn btn-link" id="back" href=<?php echo getCancelURL($configData) ?>>Keep My Subscription!</a>
                         </div>
                     </div>
                 </div>
