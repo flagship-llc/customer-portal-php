@@ -5956,4 +5956,24 @@ header nav .nav-area ul li{
     position: relative;
     top: 10px;
 }
+.cb-well .cancel-button input[type="submit"]{
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    top:70px;
+    border-radius: 5px;
+    font-size: 120%!important;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #ff7a0f;
+    border-bottom: 1px solid #ff7a0f;
+    font-weight: bold;
+    border-color: transparent!important;
+    border-bottom: 1px solid #ff7a0f!important;
+    box-shadow: none!important;
+    background-color: transparent!important;
+    padding: 12px 0px!important;
+    padding-bottom: 4px!important;
+}
 

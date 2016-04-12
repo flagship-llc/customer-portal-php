@@ -97,8 +97,8 @@ $termEndDate = date('d-M-y', $subscription->currentTermEnd);
                     ?>           
                     <br>                                        
                     <div class="form-inline">
-                        <div class="form-group">
-                            <input type="button" id="updateSubscription" value="Cancel Subscription" class="btn btn-danger">
+                        <div class="form-group cancel-button">
+                            <input type="submit" value="Cancel Subscription" class="btn btn-danger">
                         </div>
                         <div class="form-group">
                             <a class="btn btn-link" id="back" href=<?php echo getCancelURL($configData) ?>>Keep My Subscription!</a>

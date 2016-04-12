@@ -190,12 +190,12 @@ $customerInvoice = $servicePortal->retrieveInvoice();
             <?php echo str_replace('$subscription.created_at', date('d-M-y', $subscription->createdAt),
 								$infoconfigData['Timeline']['Signed_up_on']); ?> 
 		</p>
+        <?php var_dump($subscription->status);?>
         <hr class="clearfix">
         <div class="text-right">
 			<?php if($subscription->status == "cancelled") {?>
 				<?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
-					<a class="text-danger" data-cb-jshook="link-cancel-subscription" 
-						id="reactivateSubscription">Reactivate</a> 
+					<a class="text-danger" data-cb-jshook="link-cancel-subscription" id="reactivateSubscription">Reactivate</a>
 						this subscription
 			    <?php } ?>
             <?php } else if ($settingconfigData["cancelsubscription"]["allow"] == 'true') { 
