@@ -163,6 +163,13 @@ $customerInvoice = $servicePortal->retrieveInvoice();
             	<p class="text-muted">
                 	<?php echo str_replace('$subscription.current_term_end', date('d-M-y', $subscription->currentTermEnd),
 											$infoconfigData['Timeline']['Next_billing_date']); ?> 
+                    <?php 
+                        if (isset($estimate->lineItems)) {
+                            foreach ($estimate->lineItems as $li) {
+                                echo ' Your next plan will be '.$li->description;
+                            }
+                        }
+                    ?>
 				</p>
             	<p class="text-muted">Your current billing term is 
 					<?php echo date('d-M-y', $subscription->currentTermStart) ?> and 

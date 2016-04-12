@@ -36,6 +36,13 @@ if ($subscription->status == "future") {
                 <span class="glyphicon glyphicon-info-sign pull-left"></span>
                 <div class="media-body">
 					<?php echo $subscriptionInfoMsg ?>
+                    <?php 
+                        if (isset($estimate->lineItems)) {
+                            foreach ($estimate->lineItems as $li) {
+                                echo ' Your next plan will be '.$li->description;
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>
