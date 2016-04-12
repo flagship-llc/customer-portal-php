@@ -190,7 +190,6 @@ $customerInvoice = $servicePortal->retrieveInvoice();
             <?php echo str_replace('$subscription.created_at', date('d-M-y', $subscription->createdAt),
 								$infoconfigData['Timeline']['Signed_up_on']); ?> 
 		</p>
-        <?php var_dump($subscription->status);?>
         <hr class="clearfix">
         <div class="text-right">
 			<?php if($subscription->status == "cancelled") {?>
