@@ -125,8 +125,7 @@ $customerInvoice = $servicePortal->retrieveInvoice();
 
     <div class="cb-well">
         <div id="cb-portal-subscription-info-title" class="page-header clearfix">
-            <span class="h4">Timeline
-            </span>
+            <span class="h4">Timeline</span>
         </div>
         <p class="text-muted">
             <?php 
@@ -139,8 +138,8 @@ $customerInvoice = $servicePortal->retrieveInvoice();
                     <?php 
                     $phrase = $infoconfigData['Timeline']['Current_term'];
                     $default = array('$subscription.current_term_start', '$subscription.current_term_end');
-                    $assign   = array(date('d-M-y', $subscription->currentTermStart), date('d-M-y', $subscription->currentTermEnd));
-                    echo str_replace($default,  $assign, $phrase);
+                    // $assign   = array(date('d-M-y', $subscription->currentTermStart), date('d-M-y', $subscription->currentTermEnd));
+                    // echo str_replace($default,  $assign, $phrase);
 
                  ?> 
                 </p> 

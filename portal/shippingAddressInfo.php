@@ -17,10 +17,14 @@
         	<?php echo (isset($shippingAddress->company) ? esc($shippingAddress->company) . "<br>" : "") ?>
         	<?php echo (isset($shippingAddress->line1) ? $shippingAddress->line1 . "<br>" : "") ?>
         	<?php echo (isset($shippingAddress->line2) ? $shippingAddress->line2 . "<br>" : "") ?>
-        	<?php echo (isset($shippingAddress->city) ? $shippingAddress->city .  (isset($shippingAddress->zip) ? "-" .$shippingAddress->zip : "") . "<br>" : "") ?>
-        	<?php echo (isset($shippingAddress->state) ? $shippingAddress->state . "<br>" : "") ?>
+        	<?php echo (isset($shippingAddress->city) ? $shippingAddress->city . "," : "") ?>
+        	<?php echo (isset($shippingAddress->state) ? $shippingAddress->state . "," : "") ?>
         	<?php $countryCodes = $servicePortal->getCountryCodes($configData); ?>
-        	<?php echo (isset($shippingAddress->country) ? $countryCodes[$shippingAddress->country] . "<br>" : "" ) ?>
-			<?php echo (isset($shippingAddress->zip) ? $shippingAddress->zip . "<br>" : "") ?>
+        	<?php echo (isset($shippingAddress->country) ? $countryCodes[$shippingAddress->country] . "," : "" ) ?>
+			<?php echo (isset($shippingAddress->zip) ? $shippingAddress->zip . "" : "") ?>
+            <br>
+            <br>
+            <?php echo (isset($shippingAddress->phone) ? 'phone:'.$shippingAddress->phone . "<br>" : "") ?>
+            <?php echo (isset($shippingAddress->email) ? 'email:'.$shippingAddress->email . "<br>" : "") ?>
     </address>
 <?php } ?>
