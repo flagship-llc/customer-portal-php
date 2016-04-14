@@ -206,7 +206,27 @@ $customerInvoice = $servicePortal->retrieveInvoice();
 						</a> this subscription
                   <?php } ?>
             <?php } ?>
+
+
         </div>
+    </div>
+
+    <div class="cb-well">
+        <div id="cb-portal-subscription-info-title" class="page-header clearfix">
+            <span class="h4">Skip a month</span>
+        </div>    
+        <?php
+            $timestamp = strtotime( "+1 month" ) ;
+            $subscription_term_start = $subscription->currentTermStart;
+            $subscription_term_end = $subscription->currentTermEnd;
+        ?>
+        <p><b>currentTermStart:</b> <?php echo date('y-M-d', $subscription_term_start); ?></p>
+        <p><b>currentTermEnd:</b> <?php echo date('y-M-d', $subscription_term_end); ?></p>
+        <p><b>今から１ヶ月後:</b> <?php echo date('y-M-d', $timestamp); ?></p>
+
+        <form action="skip_a_month.php" method="post">
+            <input type="submit" value="skip_a_month">
+        </form>
     </div>
 
 </div>
