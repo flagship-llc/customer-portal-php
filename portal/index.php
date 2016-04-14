@@ -219,10 +219,13 @@ $customerInvoice = $servicePortal->retrieveInvoice();
             $timestamp = strtotime( "+1 month" ) ;
             $subscription_term_start = $subscription->currentTermStart;
             $subscription_term_end = $subscription->currentTermEnd;
+            $one_month_after_start = strtotime( "+1 month", $subscription_term_start) ;
+            $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
         ?>
         <p><b>currentTermStart:</b> <?php echo date('y-M-d', $subscription_term_start); ?></p>
         <p><b>currentTermEnd:</b> <?php echo date('y-M-d', $subscription_term_end); ?></p>
-        <p><b>今から１ヶ月後:</b> <?php echo date('y-M-d', $timestamp); ?></p>
+        <p><b>currentTermStart + 1 month:</b> <?php echo date('y-M-d', $one_month_after_start); ?></p>
+        <p><b>currentTermEnd + 1 month:</b> <?php echo date('y-M-d', $one_month_after_end); ?></p>
 
         <form action="skip_a_month.php" method="post">
             <input type="submit" value="skip_a_month">
