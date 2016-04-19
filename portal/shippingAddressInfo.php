@@ -11,12 +11,13 @@
 	</div>
 <?php } else { ?>               
     <address>
+
         <?php $shippingAddress = $subscription->shippingAddress ?>
         	<?php echo (isset($shippingAddress->firstName) ? esc($shippingAddress->firstName) : "" ) ?>
 			<?php echo (isset($shippingAddress->lastName) ? esc($shippingAddress->lastName) . "<br>" : "") ?>
         	<?php echo (isset($shippingAddress->company) ? esc($shippingAddress->company) . "<br>" : "") ?>
-        	<?php echo (isset($shippingAddress->line1) ? $shippingAddress->line1 . "<br>" : "") ?>
-        	<?php echo (isset($shippingAddress->line2) ? $shippingAddress->line2 . "<br>" : "") ?>
+        	<?php echo (isset($shippingAddress->line1) ? $shippingAddress->line1 . "," : "") ?>
+        	<?php echo (isset($shippingAddress->line2) ? $shippingAddress->line2 . "," : "") ?>
         	<?php echo (isset($shippingAddress->city) ? $shippingAddress->city . "," : "") ?>
         	<?php echo (isset($shippingAddress->state) ? $shippingAddress->state . "," : "") ?>
         	<?php $countryCodes = $servicePortal->getCountryCodes($configData); ?>

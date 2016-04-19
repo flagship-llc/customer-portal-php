@@ -3,11 +3,14 @@ include("header.php");
 $address = $servicePortal->getSubscription()->shippingAddress;
 ?>
 
-<div class="container" style="height:674px">
+<div class="container" style=>
     <div id="cb-wrapper-ssp">
 		<?php include("processing.php") ?>
         <div id="cb-user-content">
-            <form id="updateAddressForm">
+            <form id="portal_shipping_address_update" action="update_shipping_address_info.php" method="POST">
+            <div class="attention_text">
+                Use the form below to update your shipping address for future renewals only. If you make a mistake or would like to edit the shipping address for remaining boxes per your most recent renewal, please contact support at <a href="mailTo:weloveyou@tokyotreat.com">weloveyou@tokyotreat.com</a>.
+            </div>
                 <div class="cb-well">
                     <h3 class="text-center">Shipping Information</h3>
                     <div class="row">
@@ -33,24 +36,15 @@ $address = $servicePortal->getSubscription()->shippingAddress;
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="shipping_address[company]">Company
-                                </label>
-                                <input id="shipping_address[company]" name="shipping_address[company]" type="text" 								class="form-control"  value="<?php echo (isset($address->company) ? esc($address->company) : "" ) ?>" >
-                                <span id="shipping_address[company]" class="text-danger"></span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
+                                <!-- <?php var_dump($address);?> -->
                                 <label for="shipping_address[line1]">Address Line 1<span>*</span>
                                 </label>
                                 <input id="shipping_address[line1]" name="shipping_address[line1]" type="text" class="form-control"
-									value="<?php echo (isset($address->line1) ? esc($address->line1) : "" ) ?>" 
-									required data-msg-required="cannot be blank" >
+                                    value="<?php echo (isset($address->line1) ? esc($address->line1) : "" ) ?>" 
+                                    required data-msg-required="cannot be blank" >
                                 <span id="shipping_address[line1]" class="text-danger"></span>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="customer[address2]">Address Line 2
@@ -59,18 +53,18 @@ $address = $servicePortal->getSubscription()->shippingAddress;
                                 <span id="shipping_address[line2]" class="text-danger"></span>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="shipping_address[city]">City <span>*</span>
                                 </label>
                                 <input id="shipping_address[city]" name="shipping_address[city]" type="text" class="form-control"
-									value="<?php echo (isset($address->city) ? esc($address->city) : "" ) ?>" 
-									required data-msg-required="cannot be blank" >
+                                    value="<?php echo (isset($address->city) ? esc($address->city) : "" ) ?>" 
+                                    required data-msg-required="cannot be blank" >
                                 <span id="shipping_address[city]" class="text-danger"></span>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="shipping_address[zip]">Zip
@@ -79,6 +73,8 @@ $address = $servicePortal->getSubscription()->shippingAddress;
                                 <span id="shipping_address[zip]" class="text-danger"></span>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="shipping_address[country]">Country <span>*</span>
@@ -103,8 +99,6 @@ $address = $servicePortal->getSubscription()->shippingAddress;
                                 <span id="shipping_address[country]" class="text-danger"></span>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="shipping_address[state]">State 
@@ -113,7 +107,37 @@ $address = $servicePortal->getSubscription()->shippingAddress;
                                 <span id="shipping_address[state]" class="text-danger"></span>
                             </div>
                         </div>
-                    </div>             
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="shipping_address[email]">Email <span>*</span>
+                                </label>
+                                <input id="shipping_address[email]" name="shipping_address[email]" type="text"                                class="form-control" value="<?php echo (isset($address->email) ? esc($address->email) : "" ) ?>" 
+                                required data-msg-required="cannot be blank" >
+                                <span class="text-danger" id="shipping_address[email]"></span>
+                            </div>                            
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="shipping_address[phone]">Phone <span>*</span>
+                                </label>
+                                <input id="shipping_address[phone]" name="shipping_address[phone]" type="text"                                class="form-control" value="<?php echo (isset($address->phone) ? esc($address->phone) : "" ) ?>" 
+                                required data-msg-required="cannot be blank" >
+                                <span class="text-danger" id="shipping_address[phone]"></span>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="shipping_address[company]">Company
+                                </label>
+                                <input id="shipping_address[company]" name="shipping_address[company]" type="text"                              class="form-control"  value="<?php echo (isset($address->company) ? esc($address->company) : "" ) ?>" >
+                                <span id="shipping_address[company]" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
                     <hr class="clearfix">
                     <div class="form-inline">
                         <div class="form-group">

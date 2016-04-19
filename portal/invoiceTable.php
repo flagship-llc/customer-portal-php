@@ -33,7 +33,7 @@
                     <?php } ?>
                 </td>
                 <td data-cb-invoice="Date">
-                    <?php echo date('d-M-y', $invoice->paidOn) ?>
+                    <?php echo date('d-M-Y', $invoice->paidOn) ?>
                 </td>
                 <td data-cb-invoice="Invoice Number">
                     <?php echo $invoice->id ?>
@@ -43,7 +43,7 @@
                 </td>
                 <td class="text-muted">
                     <span class="cb-portal-invoice-desc">
-						Paid on <?php echo date('d-M-y', $invoice->endDate) ?>
+						Paid on <?php echo date('d-M-Y', $invoice->endDate) ?>
 					</span>
                 </td>
                 <td class="text-right">
@@ -71,7 +71,7 @@
         <?php if(isset($nextOffset)){ ?>
             <a href="" data-cb-nav="next" id="next">Next</a>
         <?php } else{ ?>
-            <span class="text-muted" >Next</span>
+            <a data-cb-prev-link="cb-nav-prev" class="cb-nav-prev" href="#" id="prev" onclick="backPlan()">Prev</a>：<span class="text-muted" >Next</span>
         <?php } ?>
 		<span class="inv-next-offset" style="display :none"><?php echo $customerInvoice->nextOffset() ?> </span>
     </p>

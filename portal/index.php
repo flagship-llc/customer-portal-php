@@ -35,7 +35,7 @@ $customerInvoice = $servicePortal->retrieveInvoice();
 			
             <div id="cb-portal-payment-info" class="cb-well">
                 <div id="cb-portal-payment-info-title" class="page-header clearfix">
-                    <span class="h3">Payment Information</span>                    
+                    <span class="h3">Payment Method Information</span>                    
                         <a id="cb-portal-payment-info-edit-link" href=<?php echo getEditUrl("editCard.php", $configData) ?> >
 							<?php if(!isset($customer->paymentMethod)) {?>
                             	<span class='glyphicon glyphicon-plus'></span>Add
@@ -138,7 +138,7 @@ $customerInvoice = $servicePortal->retrieveInvoice();
                     <?php 
                     $phrase = $infoconfigData['Timeline']['Current_term'];
                     $default = array('$subscription.current_term_start', '$subscription.current_term_end');
-                    // $assign   = array(date('d-M-y', $subscription->currentTermStart), date('d-M-y', $subscription->currentTermEnd));
+                    // $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
                     // echo str_replace($default,  $assign, $phrase);
 
                  ?> 
@@ -147,47 +147,47 @@ $customerInvoice = $servicePortal->retrieveInvoice();
 			
      <?php if ($subscription->status == "in_trial") {  ?>
             <p class="text-muted">
-                <?php echo str_replace('$subscription.trial_end', date('d-M-y', $subscription->trialEnd),
+                <?php echo str_replace('$subscription.trial_end', date('d-M-Y', $subscription->trialEnd),
 											$infoconfigData['Timeline']['Trial_ends_on']); ?> </p>
             <?php } else if ($subscription->status == "cancelled") { ?>  
                 <p class="text-muted">
-					<?php echo str_replace('$subscription.cancelled_at', date('d-M-y', $subscription->cancelledAt),
+					<?php echo str_replace('$subscription.cancelled_at', date('d-M-Y', $subscription->cancelledAt),
 													$infoconfigData['Timeline']['Canceled_date']); ?> 
 				</p> 
                 <p class="text-muted">
-            		<?php echo str_replace('$subscription.trial_start', date('d-M-y', $subscription->trialStart),
+            		<?php echo str_replace('$subscription.trial_start', date('d-M-Y', $subscription->trialStart),
 							 							$infoconfigData['Timeline']['Trial_started_on']); ?> 
 				</p> 
         <?php } else if ($subscription->status == "active") { ?>   
             	<p class="text-muted">
-                	<?php echo str_replace('$subscription.current_term_end', date('d-M-y', $subscription->currentTermEnd),
+                	<?php echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),
 											$infoconfigData['Timeline']['Next_billing_date']); ?> 
                     <?php 
                         if (isset($estimate->lineItems)) {
                             foreach ($estimate->lineItems as $li) {
-                                echo ' Your next plan will be '.$li->description;
+                                echo ' Your next plan will be '.$li->description.'.';
                             }
                         }
                     ?>
 				</p>
             	<p class="text-muted">Your current billing term is 
-					<?php echo date('d-M-y', $subscription->currentTermStart) ?> and 
-                	<?php echo date('d-M-y', $subscription->currentTermEnd) ?>. 
+					<?php echo date('d-M-Y', $subscription->currentTermStart) ?> and 
+                	<?php echo date('d-M-Y', $subscription->currentTermEnd) ?>. 
 				</p>
             	<p class="text-muted">
-                	<?php echo str_replace('$subscription.activated_at', date('d-M-y', $subscription->activatedAt),
+                	<?php echo str_replace('$subscription.activated_at', date('d-M-Y', $subscription->activatedAt),
 								$infoconfigData['Timeline']['Activation_date']); ?> 
 				</p>
        <?php } else if ($subscription->status == "non_renewing") { ?>
             	<p class="text-muted">
-                	<?php echo str_replace('$subscription.cancelled_at', date('d-M-y', $subscription->currentTermEnd),
+                	<?php echo str_replace('$subscription.cancelled_at', date('d-M-Y', $subscription->currentTermEnd),
 											$infoconfigData['Non_Renewing_Subscriptions']['Will_be_canceled']); ?> 
 				</p>
-            	<p class="text-muted"><?php echo str_replace('$subscription.activated_at', date('d-M-y', $subscription->activatedAt),
+            	<p class="text-muted"><?php echo str_replace('$subscription.activated_at', date('d-M-Y', $subscription->activatedAt),
 								$infoconfigData['Timeline']['Activation_date']); ?> </p>
         <?php }  ?>
         <p class="text-muted">
-            <?php echo str_replace('$subscription.created_at', date('d-M-y', $subscription->createdAt),
+            <?php echo str_replace('$subscription.created_at', date('d-M-Y', $subscription->createdAt),
 								$infoconfigData['Timeline']['Signed_up_on']); ?> 
 		</p>
         <hr class="clearfix">
@@ -222,10 +222,10 @@ $customerInvoice = $servicePortal->retrieveInvoice();
             $one_month_after_start = strtotime( "+1 month", $subscription_term_start) ;
             $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
         ?>
-        <p><b>currentTermStart:</b> <?php echo date('y-M-d', $subscription_term_start); ?></p>
-        <p><b>currentTermEnd:</b> <?php echo date('y-M-d', $subscription_term_end); ?></p>
-        <p><b>currentTermStart + 1 month:</b> <?php echo date('y-M-d', $one_month_after_start); ?></p>
-        <p><b>currentTermEnd + 1 month:</b> <?php echo date('y-M-d', $one_month_after_end); ?></p>
+        <p><b>currentTermStart:</b> <?php echo date('Y-M-d', $subscription_term_start); ?></p>
+        <p><b>currentTermEnd:</b> <?php echo date('Y-M-d', $subscription_term_end); ?></p>
+        <p><b>currentTermStart + 1 month:</b> <?php echo date('Y-M-d', $one_month_after_start); ?></p>
+        <p><b>currentTermEnd + 1 month:</b> <?php echo date('Y-M-d', $one_month_after_end); ?></p>
 
         <form action="skip_a_month.php" method="post">
             <input type="submit" value="skip_a_month">

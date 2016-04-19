@@ -838,7 +838,7 @@ a.text-danger:hover{
     margin:auto;
     border-top: 32px solid transparent;
     border-bottom: 32px solid transparent;
-    border-left: 24px solid #FFFFFF;
+    border-left: 24px solid #e2e2e2;
 }
 .cb-product-step:after{
     right: -16px;
@@ -850,10 +850,10 @@ a.text-danger:hover{
     border:none;
 }
 /*Change subscription previous step done and can be editable*/
-.cb-product-step.done.active{
+.cb-product-step.past.active{
     cursor:pointer;
     color:{{section.heading_background_color}};
-    background:{{section.heading_text_color}};
+    background:#e2e2e2;
 }
 .cb-product-step.active.done:before{
     border-left-color:#e2e2e2!important;
@@ -5414,20 +5414,8 @@ ul#g-menu{
 }
 #portal_shipping_address_update{
     position: relative;
-    margin-top:60px;
+    margin-top:-20px;
 }
-#portal_shipping_address_update:before{
-    content:"Use the form below to update your shipping address for future renewals only. If you make a mistake or would like to edit the shipping address for remaining boxes per your most recent renewal, please contact support at weloveyou@tokyotreat.com.";
-    position: absolute;
-    top:-130px;
-    font-size: 18px;
-    letter-spacing: 0.03em;
-    color:#fc8c08;
-    padding:15px 30px;
-    padding-left:50px;
-    background: url('../images/hirameki.png') center left no-repeat;
-}
-
 #error h1{
     margin-top:0;
 }
@@ -5513,11 +5501,11 @@ span.small-text{
     background:#ff7a0f;
     color: #ffffff;
 }
-.cb-product-step.done.active{
+.cb-product-step.past.active{
     background:#e2e2e2;
     color: #797979;
 }
-.cb-product-step.active.done:before{
+.cb-product-step.active.past:before{
     border-left-color: #e2e2e2;
 }
 .cb-product-step.current:before{
@@ -5975,5 +5963,16 @@ header nav .nav-area ul li{
     background-color: transparent!important;
     padding: 12px 0px!important;
     padding-bottom: 4px!important;
+}
+
+
+/**/
+.attention_text{
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    color: #fc8c08;
+    padding: 15px 30px;
+    padding-left: 50px;
+    background: url('../images/hirameki.png') center left no-repeat;
 }
 

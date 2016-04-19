@@ -1,14 +1,21 @@
 <?php
 include_once('header.php');
 $subscription = $servicePortal->getSubscription();
-$termEndDate = date('d-M-y', $subscription->currentTermEnd);
+$termEndDate = date('d-M-Y', $subscription->currentTermEnd);
 ?>
 
-<div class="container" style="height:674px">
+<div class="container">
+
+    <div class="skip_a_month">
+        <div class="text-center">
+            <h1 class="text-orange"><strong>SKIP A MONTH</strong></h1>
+        </div>
+    </div>
+
     <div id="cb-wrapper-ssp">
 		<?php include("processing.php") ?>
         <div id="cb-user-content">
-            <form id="portal_subscription_cancel_submit" method="POST">                
+            <form id="portal_subscription_cancel_submit" action="cancel_logic.php" method="POST">
                 <input id="cancelLaterText" name="cancelLaterText" type="hidden" class="form-control" value="<?php echo str_replace('$subscription.current_term_end', $termEndDate, $infoconfigData['Warnings_during_Cancellation']['Cancel_on_end_of_term_active']) ?>" > 
                 <input id="cancelImmediateText" name="cancelImmediateText" type="hidden" class="form-control" value="<?php echo $infoconfigData['Warnings_during_Cancellation']['Cancel_immediately'] ?>" > 
                 <div class="cb-well">

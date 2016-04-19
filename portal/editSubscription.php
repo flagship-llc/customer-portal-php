@@ -218,7 +218,7 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
                                             if ($settingconfigData["subscription"]["immediately"] == 'false') {
                                                 $phrase = $infoconfigData['Messages_during_change_subscription']['Change_at_end_of_term'];
                                                 $default = array('$subscription.current_term_end', '$estimated_invoice.amount');
-                                                $assign = array(date('d-M-y', $currentTermEnd), '');
+                                                $assign = array(date('d-M-Y', $currentTermEnd), '');
                                                 $subscriptionMessage = str_replace($default, $assign, $phrase);
                                                 ?>
                                                 <input type="hidden" value="true" name="end_of_term" id="end_of_term" /> 
@@ -227,7 +227,7 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
                                             } else {
                                                 $phrase = $infoconfigData['Messages_during_change_subscription']['Change_immediately'];
                                                 $default = array('$subscription.current_term_end', '$estimated_invoice.amount');
-                                                $assign = array(date('d-M-y', $currentTermEnd), '');
+                                                $assign = array(date('d-M-Y', $currentTermEnd), '');
                                                 $subscriptionMessage = str_replace($default, $assign, $phrase);
                                                 ?>
                                                 <input type="hidden" value="false" name="end_of_term" id="end_of_term" />  

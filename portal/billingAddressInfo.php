@@ -17,13 +17,14 @@
 		  	<?php echo (isset($billingAddress->firstName) ? esc($billingAddress->firstName) : "" )?>
 		  	<?php echo (isset($billingAddress->lastName) ? esc($billingAddress->lastName) : "" )?>
 		  	<?php echo (isset($billingAddress->lastName) || isset($billingAddress->firstName) ? "<br>" : "") ?>
-		  	<?php echo (isset($billingAddress->line1) ? esc($billingAddress->line1) . "<br>" : "") ?>
-		  	<?php echo (isset($billingAddress->line2) ? esc($billingAddress->line2) . "<br>" : "") ?>
+        <?php echo (isset($billingAddress->company) ? esc($billingAddress->company) . "<br>" : "" )?>
+		  	<?php echo (isset($billingAddress->line1) ? esc($billingAddress->line1) . "" : "") ?>
+		  	<?php echo (isset($billingAddress->line2) ? esc($billingAddress->line2) . "" : "") ?>
 		  	<?php echo (isset($billingAddress->city) ? esc($billingAddress->city) . "," : "") ?>
 		  	<?php echo (isset($billingAddress->state) ? esc($billingAddress->state) . "," : "") ?>
         	<?php $countryCodes = $servicePortal->getCountryCodes($configData); ?>
         	<?php echo (isset($billingAddress->country) ? esc($countryCodes[$billingAddress->country]) . "," : "" ) ?>
-			<?php echo (isset($billingAddress->zip) ? esc($billingAddress->zip) . "," : "") ?>
+			<?php echo (isset($billingAddress->zip) ? esc($billingAddress->zip) . "" : "") ?>
             <br>
             <br>
             <?php echo (isset($billingAddress->phone) ? esc('phone:'.$billingAddress->phone) . "<br>" : "") ?>
