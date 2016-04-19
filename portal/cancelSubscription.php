@@ -10,13 +10,13 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
 
     <div id="skip_a_month" class="cb-user-content">
         <div class="text-center skip-desc">
-            <h1 class="text-orange"><strong>Skip a Month!</strong></h1>
+            <h1 class="text-orange"><strong>You could just Skip a Month!</strong></h1>
             <p>Now you can Skip a Month, refreshed and ready for your next Treat!<br class="hidden-xs"> You would <span class="text-orange">Skip <?php echo date('M Y', $subscription_term_end); ?></span> and get your next crate in <?php echo date('M Y', $one_month_after_end); ?>.</p>
             <form action="skip_a_month.php" method="post">
                 <input type="submit" value="Skip a Month" class="button">
             </form>
             <div class="go_cancel"><a href="cancel-disp">Cancel Subscription</a></div>
-            <div class="go_top"><a href="<?php echo getCancelURL($configData) ?>">Go Back</a></div>
+            <div class="go_top"><a href="<?php echo getEditUrl("index.php", $configData) ?>">Go Back</a></div>
         </div>
     </div>
 
