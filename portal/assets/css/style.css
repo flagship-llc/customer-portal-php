@@ -5976,3 +5976,74 @@ header nav .nav-area ul li{
     background: url('../images/hirameki.png') center left no-repeat;
 }
 
+#skip_a_month{
+    border: 2px solid #ff7a0f;
+    border-radius: 5px;
+    width: 950px;
+    height: 350px;
+    padding-bottom:30px;
+    margin:0 auto;
+    overflow: hidden;
+    background: url('../images/skip.png') 15px center no-repeat;
+}
+.skip-desc{
+    width: 620px;
+    float: right;
+}
+.skip-desc h1{
+    margin:50px auto 20px;
+}
+.skip-desc p{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+}
+.skip-desc input.button{
+    display: inline-block;
+    margin:0 auto;
+    position: relative;
+    font-size: 22px;
+    border-radius: 5px;
+    padding: 6px 90px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    border-color:transparent!important;
+    box-shadow: 0 5px 0 #cc5f07!important;
+    background-color: #ff7a0f!important;    
+}
+
+.go_cancel a,.go_top a{
+    color: #ff7a0f;
+    font-size: 18px;
+    text-decoration: underline!important;
+}
+.go_cancel{
+    margin:20px auto 8px;
+}
+#cancel-disp{
+    display: none;
+}
+
+@media (max-width: 767px) {
+    #skip_a_month,
+    .skip-desc{
+        width: auto;
+        float: none;
+        height: auto;
+    }
+    .skip-desc{
+        padding: 0 15px;
+    }
+    .skip-desc p{
+        font-size: 14px;
+    }
+    #skip_a_month{
+        padding-bottom:100px;
+        background-size: 150px auto;
+        background-position: bottom right;
+    }
+}
+
+
+

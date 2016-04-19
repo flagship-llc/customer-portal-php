@@ -18,3 +18,10 @@
     $customer = $result->customer();
     $card = $result->card();
 ?>
+<script>
+    function jump(){
+        location.href = "index.php";
+    }
+    jump();
+
+</script>
