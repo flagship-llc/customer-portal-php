@@ -1,5 +1,5 @@
 <?php
-    include_once('init.php');
+    include("header.php");
     $customer = $servicePortal->getCustomer();
     $billingAddress = $customer->billingAddress;
     $subscription = $servicePortal->getSubscription();
@@ -16,10 +16,16 @@
     $subscription = $result->subscription();
     $customer = $result->customer();
     $card = $result->card();
+    $GLOBALS['skip'] = 'true';
 ?>
-<script>
-    function jump(){
-        location.href = "index.php";
-    }
-    jump();
-</script>
+
+    <div class="container text-center"><b>Skip a month now...</b></div>
+
+    <?php include("footer.php"); ?>
+    <script>
+        function jump(){
+            location.href = "index.php";
+        }
+        jump();
+
+    </script>

@@ -1,5 +1,5 @@
 <?php
-    include_once('init.php');
+    include("header.php");
     $customer = $servicePortal->getCustomer();
     $billingAddress = $customer->billingAddress;
     $subscription = $servicePortal->getSubscription();
@@ -28,10 +28,13 @@
     $card = $result->card();
 ?>
 
-<script>
-    function jump(){
-        location.href = "index.php";
-    }
-    jump();
+    <div class="container text-center"><b>Update Shippng Info now...</b></div>
 
-</script>
+    <?php include("footer.php"); ?>
+    <script>
+        function jump(){
+            location.href = "index.php";
+        }
+        jump();
+
+    </script>
