@@ -708,6 +708,12 @@ a.text-danger:hover{
     color:#ffffff;
     font-weight: normal;
 }
+.cb-subscription-status.cancelled{
+    background:#cc3335;
+    font-family: Roboto,Helvetica Neue, Helvetica, Arial, sans-serif;
+    color:#ffffff;
+    font-weight: normal;
+}
 
 /*Subscripiton status non renewing*/
 .cb-subscription-status.non_renewing{
@@ -5239,6 +5245,10 @@ input[type="submit"]:focus{
     box-shadow: none!important;
     background-color: #38b6fe!important;
 }
+#portal_shipping_address_update .row,
+#portal_billing_address_update .row{
+    margin-bottom:22px;
+}
 #thank_you .btn.btn-primary{
     margin-bottom:20px;
 }
@@ -5837,6 +5847,16 @@ footer .social .youtube-icon{
     }
     #cb-payment-method-card #cb-billing-title{
         margin-top:0;
+    }
+    #portal_shipping_address_update .row,
+    #portal_billing_address_update .row{
+        margin-bottom:0;
+    }
+    #portal_shipping_address_update .col-sm-6 input,
+    #portal_shipping_address_update .col-sm-6 select,
+    #portal_billing_address_update .col-sm-6 input,
+    #portal_billing_address_update .col-sm-6 select{
+        margin-bottom:18px;
     }
 }
 header nav .nav-area ul li.center-logo a{
