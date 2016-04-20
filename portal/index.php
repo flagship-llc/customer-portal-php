@@ -4,6 +4,9 @@ $customer = $servicePortal->getCustomer();
 $billingAddress = $customer->billingAddress;
 $subscription = $servicePortal->getSubscription();
 $customerInvoice = $servicePortal->retrieveInvoice();
+
+$subscription_id = $subscription->id;
+
 ?> 
 <div class="container">
     <h2 id="customer-title" class="text-center Candal text-darkblue">
@@ -47,21 +50,43 @@ $customerInvoice = $servicePortal->retrieveInvoice();
 				<?php include("cardInfo.php") ?>
             </div>      
 
-        <div class="cb-well" id="cb-portal-billing">
-            <div class="page-header clearfix" id="cb-portal-billing-title">
-                <span class="h3">Billing Information</span>                 
-				<?php if ($settingconfigData["billing"]["addedit"] == 'true') { ?>
-                    	<a href=<?php echo getEditUrl("editBillingAddress.php", $configData) ?> id="cb-portal-billing-edit-link">
-							<?php if(!isset($customer->billingAddress)) {?>
-                            	<span class='glyphicon glyphicon-plus'></span>Add
-							<?php } else {?>
-								 <span class='glyphicon glyphicon-pencil'></span>Edit
-							<?php } ?>
-                    	</a>
-				<?php } ?>
-			</div>
-			<?php include("billingAddressInfo.php") ?>
-    	</div>
+        <div class="clearfix row">
+            <div class="col-sm-6">
+                <div class="cb-well" id="cb-portal-billing">
+                    <div class="page-header clearfix" id="cb-portal-billing-title">
+                        <span class="h3">Billing Information</span>                 
+        				<?php if ($settingconfigData["billing"]["addedit"] == 'true') { ?>
+                            	<a href=<?php echo getEditUrl("editBillingAddress.php", $configData) ?> id="cb-portal-billing-edit-link">
+        							<?php if(!isset($customer->billingAddress)) {?>
+                                    	<span class='glyphicon glyphicon-plus'></span>Add
+        							<?php } else {?>
+        								 <span class='glyphicon glyphicon-pencil'></span>Edit
+        							<?php } ?>
+                            	</a>
+        				<?php } ?>
+        			</div>
+        			<?php include("billingAddressInfo.php") ?>
+            	</div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="cb-well" id="cb-portal-shipping">
+                    <div class="page-header clearfix" id="cb-portal-billing-title">
+                    <span class="h3">Shipping Information</span>
+                     <?php if ($settingconfigData["shipping"]["addedit"] == 'true') { ?>
+                         <a href=<?php echo getEditUrl("editShippingAddress.php", $configData) ?> id="cb-portal-billing-edit-link">
+                            <?php if(!isset($subscription->shippingAddress)) {?>
+                                <span class='glyphicon glyphicon-plus'></span>Add
+                            <?php } else {?>
+                                 <span class='glyphicon glyphicon-pencil'></span>Edit
+                            <?php } ?>
+                        </a>
+                      <?php } ?>
+                    </div>
+                    <?php include("shippingAddressInfo.php") ?>
+                </div>
+            </div>
+        </div>
 
     <div id="cb-payments-container">
         <div id="cb-portal-portal-invoices" class="cb-well">
@@ -84,6 +109,7 @@ $customerInvoice = $servicePortal->retrieveInvoice();
             <?php } ?>
         </div>
     </div>
+
     <div data-cb-cancel-subscription-url="#">
         <div class="cb-well">
             <div id="cb-portal-subscription-title" class="page-header clearfix">
@@ -106,22 +132,6 @@ $customerInvoice = $servicePortal->retrieveInvoice();
             </div>
             <?php include("subscriptionInfo.php") ?>
         </div>
-
-        <div class="cb-well" id="cb-portal-shipping">
-            <div class="page-header clearfix" id="cb-portal-billing-title">
-                <span class="h3">Shipping Information</span>
-                 <?php if ($settingconfigData["shipping"]["addedit"] == 'true') { ?>
-                	 <a href=<?php echo getEditUrl("editShippingAddress.php", $configData) ?> id="cb-portal-billing-edit-link">
-						<?php if(!isset($subscription->shippingAddress)) {?>
-                        	<span class='glyphicon glyphicon-plus'></span>Add
-						<?php } else {?>
-							 <span class='glyphicon glyphicon-pencil'></span>Edit
-						<?php } ?>
-                    </a>
-                  <?php } ?>
-                </div>
-				<?php include("shippingAddressInfo.php") ?>
-    	</div>
 
     <div class="cb-well">
         <div id="cb-portal-subscription-info-title" class="page-header clearfix">
