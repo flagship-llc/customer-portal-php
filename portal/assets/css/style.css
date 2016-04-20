@@ -6072,6 +6072,9 @@ header nav .nav-area ul li{
         padding-top: 50px;
     }
 }
-
+#cancel-next-renewal-info{
+    display: inline-block;
+    
+}
 
 

@@ -48,7 +48,7 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
                                     <div class="media text-left">
                                         <span class="glyphicon glyphicon-exclamation-sign pull-left"></span>
                                         <div class="media-body">
-                                            <?php echo $cancelImmediateMessage ?>
+                                            Your subscription will be canceled immediately.
                                         </div>
                                     </div>
                                 </div> 
@@ -76,12 +76,13 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
                                         </div>
                                     </div>
                                 </div>     
-                            
-                                <div id="cancel-next-renewal-info" class="alert alert-warning" style='display:none;'>
-                                    <div class="media text-left">
-                                        <span class="glyphicon glyphicon-exclamation-sign pull-left"></span>
-                                        <div class="media-body">
-                                            <?php echo $cancelEndOfTermMessage ?>
+                                <div class="text-center">
+                                    <div id="cancel-next-renewal-info" class="alert alert-warning" style='display:none;'>
+                                        <div class="media text-left">
+                                            <span class="glyphicon glyphicon-exclamation-sign pull-left"></span>
+                                            <div class="media-body">
+                                                <?php echo $cancelEndOfTermMessage ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -91,11 +92,13 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
                              ?>
                             
                                 <input type="hidden" id="endOfTerm" value="true" name="endOfTerm" >
-                                <div id="cancel-next-renewal-info" class="alert alert-warning" >
-                                    <div class="media text-left">
-                                        <span class="glyphicon glyphicon-exclamation-sign pull-left"></span>
-                                        <div class="media-body">
-                                            <?php echo $cancelEndOfTermMessage ?>
+                                <div class="text-center">
+                                    <div id="cancel-next-renewal-info" class="alert alert-warning" >
+                                        <div class="media text-left">
+                                            <span class="glyphicon glyphicon-exclamation-sign pull-left"></span>
+                                            <div class="media-body">
+                                                Your subscription will be canceled immediately.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
