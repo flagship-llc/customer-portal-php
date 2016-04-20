@@ -28,9 +28,13 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
                     <input id="cancelLaterText" name="cancelLaterText" type="hidden" class="form-control" value="<?php echo str_replace('$subscription.current_term_end', $termEndDate, $infoconfigData['Warnings_during_Cancellation']['Cancel_on_end_of_term_active']) ?>" > 
                     <input id="cancelImmediateText" name="cancelImmediateText" type="hidden" class="form-control" value="<?php echo $infoconfigData['Warnings_during_Cancellation']['Cancel_immediately'] ?>" > 
                     <div class="cb-well">
-                        <h3 class="text-center">Cancel Subscription</h3>                    
+                        <h3 class="text-center">Cancel Subscription</h3>
+                        <p>If you cancel now, you will lose a chance to receive the monthly <a href="https://tokyotreat.com/about/how-it-works/#lucky-treat">Lucky Treat</a> with value over $500 USD! Are you sure..? (TωT)</p>
+                        <p>Please let us know why you would like to cancel</p>
+                        <textarea name="feedback" class="form-control" style="margin-bottom:20px;"></textarea>
                         <?php 
                         $cancelImmediateMessage = $infoconfigData['Warnings_during_Cancellation']['Cancel_immediately'];
+
                         if($subscription->status == 'in_trial'){
                             $cancelEndOfTermMessage = str_replace('$subscription.trial_end', $subscription->trialEnd, $infoconfigData['Warnings_during_Cancellation']['Cancel_on_end_of_term_trial']);
                         }
@@ -50,8 +54,7 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
                                 </div> 
                             <?php 
                         } elseif ($settingconfigData["cancelsubscription"]["immediately"] == 'true' && $settingconfigData["cancelsubscription"]["endcurrentterm"] == 'true') { ?>
-                            <p>If you cancel now, you will lose a chance to receive the monthly <a href="https://tokyotreat.com/about/how-it-works/#lucky-treat">Lucky Treat</a> with value over $500 USD! Are you sure..? (TωT)</p>
-                            <div class="radio-group">                            
+                            <!-- <div class="radio-group">                            
                                 <div class="radio">
                                     <label>                                 
                                         <input type="radio" name="endOfTerm" id="cancelNow" value="false" checked=""> Cancel Immediately
@@ -63,7 +66,7 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
                                     </label>
                                 </div>
                                 <span id="sub_cancel.err" class="text-danger">&nbsp;</span>
-                            </div> 
+                            </div>  -->
                             
                                 <div id="cancel-immediately-info" class="alert alert-warning">
                                     <div class="media text-left">
@@ -111,7 +114,7 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
                             <?php 
                         }             
                         ?>           
-                        <br>                                        
+                        <br> 
                         <div class="form-inline">
                             <div class="form-group cancel-button">
                                 <input type="submit" value="Cancel Subscription" class="btn btn-danger">
