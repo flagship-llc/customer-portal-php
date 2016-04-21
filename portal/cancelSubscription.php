@@ -7,7 +7,7 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
 ?>
 
 <div class="container">
-
+<?php if(!$_COOKIE["skip_status"]): ?>
     <div id="skip_a_month" class="cb-user-content">
         <div class="text-center skip-desc">
             <h1 class="text-orange"><strong>You could just Skip a Month!</strong></h1>
@@ -20,8 +20,8 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
             <div class="go_top"><a href="<?php echo getEditUrl("index.php", $configData) ?>">Go Back</a></div>
         </div>
     </div>
-
-    <div id="cancel-disp">
+<?php endif;?>
+    <div <?php if(!$_COOKIE["skip_status"]){echo 'id="cancel-disp"';} ?>>
         <div id="cb-wrapper-ssp">
     		<?php include("processing.php") ?>
             <div id="cb-user-content">
