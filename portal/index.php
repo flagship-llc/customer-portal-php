@@ -116,7 +116,11 @@ $customerInvoice = $servicePortal->retrieveInvoice();
                 <?php } else if ($settingconfigData["cancelsubscription"]["allow"] == 'true') { 
                         if (!($subscription->status == "non_renewing" && 
                                         $settingconfigData["cancelsubscription"]["immediately"] == "false")) { ?>
-                            <a class="text-danger" href=<?php echo getEditUrl("skip_a_month_view.php", $configData) ?> >Skip a Month</a> | 
+
+                            <?php if(!$_COOKIE["skip_status"]){ ?>
+                                <a class="text-danger" href=<?php echo getEditUrl("skip_a_month_view.php", $configData) ?> >Skip a Month</a> | 
+                            <?php }?>
+
                             <a class="text-danger" href=<?php echo getEditUrl("cancelSubscription.php", $configData) ?> 
                                 id="cancelSubscription">
                                 Cancel

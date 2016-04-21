@@ -4,6 +4,7 @@ $subscription = $servicePortal->getSubscription();
 $termEndDate = date('d-M-Y', $subscription->currentTermEnd);
 $subscription_term_end = $subscription->currentTermEnd;
 $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
+
 ?>
 
 <div class="container">

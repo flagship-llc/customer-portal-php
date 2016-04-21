@@ -257,7 +257,13 @@ function httpBuildQuery( $data, $prefix = null, $sep = null, $key = '', $urlenco
 
 if($_POST['skip_true'] == 'true'){
     setcookie("skip_message", "true", time()+60);
-    setcookie("skip_status", "true", time()+60*60);
+
+    $now_day = date('d',time());
+    $now_month = date('m',time());
+    $now_year = date('Y',time());
+    $last_day = date('t', mktime(0, 0, 0, $now_month, 1, $now_year));
+    $next_days = $last_day - $now_day + 1;
+    setcookie("skip_status", "true", time()+60*60*24*$next_days);
 }
 if($_POST['update_shipping_true'] == 'true'){
     setcookie("update_shipping_message", "true", time()+60);
