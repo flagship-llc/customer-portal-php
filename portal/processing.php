@@ -28,6 +28,10 @@ if($_COOKIE["update_billing_message"]){
     $successMessage = 'true';
     $successFlashMsg = $infoconfigData['update_billing']['success'];
 }
+if($_COOKIE["cancel_message"]){
+    $successMessage = 'true';
+    $successFlashMsg = $infoconfigData['cancel_message']['success'];
+}
 
 ?>
 <div id="cb-handle-progress" >
@@ -56,5 +60,6 @@ $(document).ready(function(){
     $.removeCookie("skip_message");
     $.removeCookie("update_shipping_message");
     $.removeCookie("update_billing_message");
+    $.removeCookie("cancel_message");
 });
 </script>

@@ -121,6 +121,7 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
                         <br> 
                         <div class="form-inline">
                             <div class="form-group cancel-button">
+                                <input type="hidden" value="true" name="cancel_true" >
                                 <input type="submit" value="Cancel Subscription" class="btn btn-danger">
                             </div>
                             <div class="form-group">

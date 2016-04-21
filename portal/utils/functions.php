@@ -271,6 +271,9 @@ if($_POST['update_shipping_true'] == 'true'){
 if($_POST['update_billing_true'] == 'true'){
     setcookie("update_billing_message", "true", time()+60);
 }
+if($_POST['cancel_true'] == 'true'){
+    setcookie("cancel_message", "true", time()+60);
+}
 
 
 
