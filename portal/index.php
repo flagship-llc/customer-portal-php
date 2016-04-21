@@ -4,9 +4,6 @@ $customer = $servicePortal->getCustomer();
 $billingAddress = $customer->billingAddress;
 $subscription = $servicePortal->getSubscription();
 $customerInvoice = $servicePortal->retrieveInvoice();
-
-$subscription_id = $subscription->id;
-
 ?> 
 <div class="container">
     <h2 id="customer-title" class="text-center Candal text-darkblue">
