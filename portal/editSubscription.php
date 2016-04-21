@@ -352,9 +352,9 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
             var planReplaceHtml = toTitleCase(planRadioValue);
         } else {
             if (typeof planQuantity === 'undefined') {
-                var planReplaceHtml = toTitleCase(planRadioValue) + ' / ' + 'Month ' + '(' + planActualPrice + ')';
+                var planReplaceHtml = toTitleCase(planRadioValue);
             } else {
-                var planReplaceHtml = toTitleCase(planRadioValue) + ' / ' + 'Month ' + '(' + currencyValue + ' ' + planActualPrice + ' x ' + planQuantity + ')';
+                var planReplaceHtml = toTitleCase(planRadioValue);
             }
         }
         var finalTotal = planPrice;
@@ -394,8 +394,8 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
         }
         if (planRadioValue) {
             $('#selectedPlanReview').html(planReplaceHtml);
-            $('#selectedPlanAmount').html(planPrice);
-            $("#grand-total, #grandTotal-body").html(finalTotal);
+            $('#selectedPlanAmount').html('$'+planPrice);
+            $("#grand-total, #grandTotal-body").html('$'+finalTotal);
             finalsubmessage = submessge + finalTotal + '.';
             $("#subscriptionMessage").html(finalsubmessage);
         }
