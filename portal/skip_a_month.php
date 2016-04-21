@@ -16,7 +16,8 @@
     $subscription = $result->subscription();
     $customer = $result->customer();
     $card = $result->card();
-    $GLOBALS['skip'] = 'true';
+    
+
 ?>
 
     <div class="container text-center"><b>Skip a month now...</b></div>

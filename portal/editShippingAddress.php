@@ -142,6 +142,7 @@ $address = $servicePortal->getSubscription()->shippingAddress;
                     <div class="form-inline">
                         <div class="form-group">
 							<input name="action" value="updateShippingAddress" type="hidden">
+                            <input name="update_shipping_true" value="true" type="hidden">
                             <input type="submit" id="updateShippingAddress" value="Update shipping address" class="btn
                                    btn-primary">
                         </div>

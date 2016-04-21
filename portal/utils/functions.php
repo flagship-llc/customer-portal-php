@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Returns the portal's login URL.
  */
@@ -23,6 +22,7 @@ function getChangePasswordUrl($configData){
     $url = "https://" . $configData['SITE_NAME'] . ".chargebeeportal.com/portal/change_password"; 
     return $url;
 }
+
 
 /*
  * Returns the portal's logout URL.
@@ -254,3 +254,17 @@ function httpBuildQuery( $data, $prefix = null, $sep = null, $key = '', $urlenco
 
     return implode($sep, $ret);
 }
+
+if($_POST['skip_true'] == 'true'){
+    setcookie("skip_message", "true", time()+60);
+    setcookie("skip_status", "true", time()+60*60);
+}
+if($_POST['update_shipping_true'] == 'true'){
+    setcookie("update_shipping_message", "true", time()+60);
+}
+if($_POST['update_billing_true'] == 'true'){
+    setcookie("update_billing_message", "true", time()+60);
+}
+
+
+

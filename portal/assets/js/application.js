@@ -81,5 +81,12 @@ $(document).ready(function(){
 	    var params = {lastInvoiceNo:lastInvoiceNo, offset:offset};
 	    AjaxCall('nextInvoiceDetails.php', 'POST', params, '#invoiceTableShow', '#spinner');
 	});
+
 })
+
+
+
+
+
+
 

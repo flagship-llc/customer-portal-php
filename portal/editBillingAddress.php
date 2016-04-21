@@ -137,6 +137,7 @@ $address = $customer->billingAddress;
                         <div class="form-group">
                             <input type="submit" id="updateAddress" value="Update billing address" class="btn
                                    btn-primary">
+                            <input type="hidden" name="update_billing_true" value="true">
 						    <input type="hidden" name="action" value="updateBillingAddress">
                         </div>
                         <div class="form-group">

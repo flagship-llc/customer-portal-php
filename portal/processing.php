@@ -14,7 +14,21 @@ if ($successMessage == 'true') {
 	 } elseif ($_GET['page'] == 'index') { 
         $successFlashMsg = $infoconfigData['reactivatesubscription']['success'];
 	 }
-}	 
+}
+
+if($_COOKIE["skip_message"]){
+    $successMessage = 'true';
+    $successFlashMsg = $infoconfigData['skip_a_month']['success'];
+}
+if($_COOKIE["update_shipping_message"]){
+    $successMessage = 'true';
+    $successFlashMsg = $infoconfigData['update_shipping']['success'];
+}
+if($_COOKIE["update_billing_message"]){
+    $successMessage = 'true';
+    $successFlashMsg = $infoconfigData['update_billing']['success'];
+}
+
 ?>
 <div id="cb-handle-progress" >
     <div class="cb-alert-flash">
@@ -36,3 +50,11 @@ if ($successMessage == 'true') {
         </div>
     </div>
 </div>
+
+<script>
+$(document).ready(function(){
+    $.removeCookie("skip_message");
+    $.removeCookie("update_shipping_message");
+    $.removeCookie("update_billing_message");
+});
+</script>

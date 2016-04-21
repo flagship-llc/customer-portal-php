@@ -6074,7 +6074,9 @@ header nav .nav-area ul li{
 }
 #cancel-next-renewal-info{
     display: inline-block;
-    
 }
-
+#cb-portal-billing,
+#cb-portal-shipping{
+    min-height: 240px;
+}
 

@@ -46,6 +46,7 @@ class Auth {
             $configData['COOKIE_SECURE'], 
             $configData['COOKIE_HTTPONLY']
         );
+  
     }
 
     public function setSubscriptionId($subscriptionId){

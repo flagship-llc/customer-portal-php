@@ -11,6 +11,7 @@ include_once('init.php');?>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/portal.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
   <div id="page" class="hfeed site">
@@ -94,3 +95,8 @@ include_once('init.php');?>
       </nav><!-- #site-navigation -->
     </header><!-- #masthead -->
   </div>
+
+
+
+
+

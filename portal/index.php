@@ -12,22 +12,12 @@ $subscription_id = $subscription->id;
     <h2 id="customer-title" class="text-center Candal text-darkblue">
         <span class="small-text">カスタマーポータル</span><br>
         CUSTOMER PORTAL
+
     </h2>
     <div id="cb-wrapper-ssp">
 
          <?php include("processing.php")  ?>
         <div id="cb-content">
-<!--             <div id="cb-portal-account" class="cb-well">
-                <div id="cb-portal-account-title" class="page-header clearfix">
-                    <span class="h3">Account Information</span>
-                    <?php if ($settingconfigData["account"]["addedit"] == 'true') { ?>
-                    	<a id="cb-portal-account-edit-link" href=<?php echo getEditUrl("editAccount.php", $configData) ?>>
-                        	<span class='glyphicon glyphicon-pencil'></span>Edit
-                    	</a>
-                    <?php } ?>
-                </div>
-                <?php include("accountInfo.php") ?>
-            </div> -->
 
         <div data-cb-cancel-subscription-url="#">
             <div class="cb-well">
