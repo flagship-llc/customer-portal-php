@@ -240,7 +240,7 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
                             </div>
                             <hr class="clearfix">
                             <p class="cb-step-nav clearfix">
-                                <a data-cb-prev-link="cb-nav-prev" class="cb-nav-prev" href="#" id="prev1" onclick="backAddon()">Prev</a>
+                                <a data-cb-prev-link="cb-nav-prev" class="cb-nav-prev" href="#" id="prev1" onclick="backPlan(2)">Prev</a>
                             </p>
                             <div class="clearfix">
                                 <input type="button" data-cb="review" class="btn btn-primary" value="Change Subscription" id="changeSubscription">
@@ -280,7 +280,6 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
     function savePlan() {
         var planId = $('input:radio[name=plan_id]:checked').val();
         if (planId) {
-            alert(aaa);
             $(this).toggleClass('selected');
             var price = $("span[data-plan-total-price='" + planId+"']").text();
             var planPrice = $("input[data-plan-price='" + planId +"']").val();
@@ -411,7 +410,7 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
         } else {
         	$('#step-addon').toggleClass('cb-product-step current cb-product-step future');
        	 	$('#step-plan').toggleClass('cb-product-step past cb-product-step current');
-        	$('#addons, #prev, #next1, #next').hide();
+        	$('#addons,#review, #prev, #next1, #next').hide();
         	$('#changeYourPlan, #next').show();
 		}
 		addonIdList = [];

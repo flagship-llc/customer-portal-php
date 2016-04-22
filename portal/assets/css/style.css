@@ -894,7 +894,7 @@ a.text-danger:hover{
     -webkit-border-radius: 5px;
     margin-bottom:15px;
     background-color:#ffffff;
-    border:1px solid {{section.border_color}};
+    border:1px solid #e3e3e3;
 }
 .cb-product-box hr{
     border-style:solid!important;
