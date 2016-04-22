@@ -1,13 +1,16 @@
 <?php
 include_once('header.php');
+
 $subscription = $servicePortal->getSubscription();
 $termEndDate = date('d-M-Y', $subscription->currentTermEnd);
 $subscription_term_end = $subscription->currentTermEnd;
 $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
+include("skip_true.php");
 ?>
 
 <div class="container">
-<?php if(!$_COOKIE["skip_status"]): ?>
+
+<?php if($skip_st): ?>
     <div id="skip_a_month" class="cb-user-content">
         <div class="text-center skip-desc">
             <h1 class="text-orange"><strong>You could just Skip a Month!</strong></h1>
@@ -21,7 +24,7 @@ $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
         </div>
     </div>
 <?php endif;?>
-    <div <?php if(!$_COOKIE["skip_status"]){echo 'id="cancel-disp"';} ?>>
+    <div <?php if($skip_st){echo 'id="cancel-disp"';} ?>>
         <div id="cb-wrapper-ssp">
     		<?php include("processing.php") ?>
             <div id="cb-user-content">
