@@ -11,7 +11,6 @@
         </tr>
         <?php
         foreach ($customerInvoice as $entry) {
-            
             $invoice = $entry->invoice();
             $amount = $invoice->amount;
             if ($invoice->status == "pending") {
@@ -59,6 +58,7 @@
         <?php } ?>
     </tbody>
 </table>
+
 <div class="clearfix cb-portal-invoice-details">
     <p class="pull-left hidden-xs">
         <span class="glyphicon glyphicon-ok text-success"></span>&nbsp;<small>Paid </small>&emsp;
@@ -67,11 +67,11 @@
     </p>
     <p class="pull-right center-xs">
         Showing <span class="inv-start-no"><?php echo $lastInvoiceNo + 1 ?></span> - 
-				<span class="inv-end-no"><?php echo $lastInvoiceNo + $count ?></span>&emsp;
+				<span class="inv-end-no"><?php echo $lastInvoiceNo + $count ?></span> of <?php echo $max_invoice_count; ?>　
         <?php if(isset($nextOffset)){ ?>
             <a href="" data-cb-nav="next" id="next">Next</a>
         <?php } else{ ?>
-            <a data-cb-prev-link="cb-nav-prev" class="cb-nav-prev" href="#" id="prev" onclick="backPlan()">Prev</a>：<span class="text-muted" >Next</span>
+            <span class="text-muted" >Next</span>
         <?php } ?>
 		<span class="inv-next-offset" style="display :none"><?php echo $customerInvoice->nextOffset() ?> </span>
     </p>
