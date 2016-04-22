@@ -222,7 +222,7 @@ $customerInvoice = $servicePortal->retrieveInvoice();
 <?php include("footer.php"); ?>
 <script>
     $(document).ready(function () {
-        $(".alert-success").fadeOut(6000);
+        $(".alert-success").fadeOut(10000);
     });
     $('#reactivateSubscription').click(function () {
         var data = $.param({action: "subscriptionReactivate"});
