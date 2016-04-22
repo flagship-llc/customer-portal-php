@@ -16,7 +16,6 @@
 
         $one_month_after_end = strtotime( $next_add_day.'+ 7 hour', $subscription_term_end) ;
 
-        ChargeBee_Environment::configure("tokyotreat-test","test_GaRJqYcqiISoo439GgkSbPUgFHIjS6GD");
         $result = ChargeBee_Subscription::changeTermEnd($subscription_id, array(
         "termEndsAt" => $one_month_after_end));
         $subscription = $result->subscription();
