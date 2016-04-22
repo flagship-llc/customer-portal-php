@@ -936,7 +936,7 @@ a.text-danger:hover{
     border:2px solid transparent;
 }
 .cb-available-item.selected{
-    border-color:{{section.border_color}};
+    border-color:#e3e3e3;
 }
 
 /*Change Subscription pick product quantity field*/

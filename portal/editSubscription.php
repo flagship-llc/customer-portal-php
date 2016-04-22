@@ -22,6 +22,9 @@ foreach ($allPlans as $plan) {
     } elseif ($plan->plan()->periodUnit == "week") {
         $weeklyPlans[$plan->plan()->id] = $plan->plan()->period;
         asort($weeklyPlans);
+    } elseif ($plan->plan()->period == 12) {
+        $yearlyPlans[$plan->plan()->id] = $plan->plan()->period;
+        asort($yearlyPlans);
     } elseif ($plan->plan()->periodUnit == "month") {
         if ($plan->plan()->period == 6) {
             $halfYearlyPlans[$plan->plan()->id] = $plan->plan()->period;
@@ -31,9 +34,6 @@ foreach ($allPlans as $plan) {
             $monthlyPlans[$plan->plan()->id] = $plan->plan()->period;
             asort($monthlyPlans);
         }
-    } elseif ($plan->plan()->periodUnit == "year") {
-        $yearlyPlans[$plan->plan()->id] = $plan->plan()->period;
-        asort($yearlyPlans);
     }
 }
 $total = ($planResult->price * $servicePortal->getSubscription()->planQuantity);
@@ -280,6 +280,8 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
     function savePlan() {
         var planId = $('input:radio[name=plan_id]:checked').val();
         if (planId) {
+            alert(aaa);
+            $(this).toggleClass('selected');
             var price = $("span[data-plan-total-price='" + planId+"']").text();
             var planPrice = $("input[data-plan-price='" + planId +"']").val();
             var quantity = $("input[data-plan-quantity='" + planId+ "']").val();
@@ -432,9 +434,13 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
 	/*
 	 * On selecting the plan enables the plan quantity for the user to change the quantity.
 	 */
+    $("input[name=plan_id]:radio:checked").parent().parent().parent().addClass('selected');
     $("input[name=plan_id]:radio").on('change', function () {
+        $('.cb-available-item').removeClass('selected');
         var selector = $("input[name=plan_id]:radio:checked");
         $(selector).attr("checked");
+
+        $(selector).parent().parent().parent().addClass('selected');
         var res = $(selector).val();
         $('input[name=plan_quantity]').attr('disabled', true);
         $("input[data-plan-quantity='"+ res +"']").removeAttr('disabled');
