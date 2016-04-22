@@ -34,7 +34,7 @@
                     <?php } ?>
                 </td>
                 <td data-cb-invoice="Date">
-                    <?php echo date('d-M-Y', $invoice->paidOn) ?>
+                    <?php echo date('d-M-Y', $invoice->endDate) ?>
                 </td>
                 <td data-cb-invoice="Invoice Number">
                     <?php echo $invoice->id ?>
@@ -43,9 +43,9 @@
                     <?php echo $configData['currency_value'] . number_format($amount / 100, 2, '.', '') ?>
                 </td>
                 <td class="text-muted">
-                    <span class="cb-portal-invoice-desc">
+                    <!-- <span class="cb-portal-invoice-desc">
 						Paid on <?php echo date('d-M-Y', $invoice->endDate) ?>
-					</span>
+					</span> -->
                 </td>
                 <td class="text-right">
                      <?php if ($settingconfigData["invoice"]["download"] == 'true') { 
