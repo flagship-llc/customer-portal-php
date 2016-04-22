@@ -410,6 +410,7 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
         } else {
         	$('#step-addon').toggleClass('cb-product-step current cb-product-step future');
        	 	$('#step-plan').toggleClass('cb-product-step past cb-product-step current');
+            $('#step-review').removeClass('current');
         	$('#addons,#review, #prev, #next1, #next').hide();
         	$('#changeYourPlan, #next').show();
 		}
