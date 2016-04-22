@@ -1,4 +1,6 @@
-<?php $count = 0; ?>
+<?php 
+    $count = 0; 
+?>
 <table class="table table-hover" id="cb-portal-invoice-table">
     <tbody>
         <tr class="hidden-xs">
@@ -65,9 +67,10 @@
         <span class="glyphicon glyphicon-exclamation-sign text-warning"></span>&nbsp;<small>Payment Due</small>&emsp;
         <span class="glyphicon glyphicon-remove text-danger"></span>&nbsp;<small>Not Paid</small>
     </p>
+
     <p class="pull-right center-xs">
         Showing <span class="inv-start-no"><?php echo $lastInvoiceNo + 1 ?></span> - 
-				<span class="inv-end-no"><?php echo $lastInvoiceNo + $count ?></span> of <?php echo $max_invoice_count; ?>　
+				<span class="inv-end-no"><?php echo $lastInvoiceNo + $count ?></span> of <span class="inv-max-no"><?php echo $maxInvoiceNo; ?></span>　
         <?php if(isset($nextOffset)){ ?>
             <a href="" data-cb-nav="next" id="next">Next</a>
         <?php } else{ ?>

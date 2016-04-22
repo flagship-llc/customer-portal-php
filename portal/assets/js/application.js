@@ -78,7 +78,8 @@ $(document).ready(function(){
 	    e.preventDefault();
 	    var offset = $('.inv-next-offset').text();
 	    var lastInvoiceNo = $('.inv-end-no').text();
-	    var params = {lastInvoiceNo:lastInvoiceNo, offset:offset};
+      var maxInvoiceNo = $('.inv-max-no').text();
+	    var params = {lastInvoiceNo:lastInvoiceNo, offset:offset,maxInvoiceNo:maxInvoiceNo,};
 	    AjaxCall('nextInvoiceDetails.php', 'POST', params, '#invoiceTableShow', '#spinner');
 	});
 
