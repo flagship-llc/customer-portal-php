@@ -196,6 +196,7 @@ $customerInvoice = $servicePortal->retrieveInvoice();
             <div id="cb-portal-portal-invoices-title" class="page-header clearfix">
                 <span class="h3">Payment History</span>
             </div>
+
             <?php if (count($customerInvoice) <= 0) { ?>
                 <div class="text-center">
                     <div class="alert alert-info">
@@ -221,7 +222,7 @@ $customerInvoice = $servicePortal->retrieveInvoice();
 <?php include("footer.php"); ?>
 <script>
     $(document).ready(function () {
-        $(".alert-success").fadeOut(2000);
+        $(".alert-success").fadeOut(6000);
     });
     $('#reactivateSubscription').click(function () {
         var data = $.param({action: "subscriptionReactivate"});
