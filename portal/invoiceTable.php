@@ -43,9 +43,11 @@
                     <?php echo $configData['currency_value'] . number_format($amount / 100, 2, '.', '') ?>
                 </td>
                 <td class="text-muted">
-                    <!-- <span class="cb-portal-invoice-desc">
+                    <span class="cb-portal-invoice-desc">
+                    <?php if ($invoice->status == "paid") { ?> 
 						Paid on <?php echo date('d-M-Y', $invoice->endDate) ?>
-					</span> -->
+                    <?php }?>
+					</span>
                 </td>
                 <td class="text-right">
                      <?php if ($settingconfigData["invoice"]["download"] == 'true') { 
