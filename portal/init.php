@@ -60,6 +60,21 @@ if (!$authObj->isLoggedIn()) {
  * in the constructor of ServicePortal object. 
  * This subscription ID will be used throughout the portal.
  */
-$servicePortal = new ServicePortal($authObj->getSessionSubscriptionId());
+$sub_id =  $_GET['s_id'];
+setcookie("now_id", $sub_id, time()+60*60*2);
+if($_COOKIE['now_id']){
+  $servicePortal = new ServicePortal($_COOKIE['now_id']);
+}else{
+  if($sub_id){
+    $servicePortal = new ServicePortal($sub_id);
+  }else{
+    $servicePortal = new ServicePortal($authObj->getSessionSubscriptionId());
+  }
+}
+
+$result = ChargeBee_PortalSession::retrieve($_COOKIE['cb_portal_session_id']);
+$portalSession = $result->portalSession();
+$account_count = count($portalSession->linkedCustomers);
+
 
 ?>

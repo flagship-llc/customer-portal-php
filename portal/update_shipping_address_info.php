@@ -6,7 +6,6 @@
     $customerInvoice = $servicePortal->retrieveInvoice();
 
     $subscription_id = $subscription->id;
-    // var_dump($_POST);
 
     ChargeBee_Environment::configure("tokyotreat-test","test_GaRJqYcqiISoo439GgkSbPUgFHIjS6GD");
     $result = ChargeBee_Address::update(array(

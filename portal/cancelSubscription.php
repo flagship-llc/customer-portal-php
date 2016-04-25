@@ -1,7 +1,5 @@
 <?php
 include_once('header.php');
-
-$subscription = $servicePortal->getSubscription();
 $termEndDate = date('d-M-Y', $subscription->currentTermEnd);
 $subscription_term_end = $subscription->currentTermEnd;
 $one_month_after_end = strtotime( "+1 month", $subscription_term_end) ;
@@ -153,13 +151,13 @@ include("skip_true.php");
         $('#cancelText').text(cancelLaterText);
     });
 
-    $('#updateSubscription').click(function () {
-        var subscriptionId = $("#subscriptionId").val();
-        var endOfTerm = $('input[name=endOfTerm]:checked', '#cancelForm').val();
-        if(endOfTerm == ''){
-            var endOfTerm = $("#endOfTerm").val();
-   	 	}    
-        var params = {action: "subscriptionCancel", endOfTerm: endOfTerm, subscriptionId: subscriptionId};
-        AjaxCallMessage('api.php', 'POST', 'json', $.param(params), 'cancelsubscription');
-    });
+    // $('#updateSubscription').click(function () {
+    //     var subscriptionId = $("#subscriptionId").val();
+    //     var endOfTerm = $('input[name=endOfTerm]:checked', '#cancelForm').val();
+    //     if(endOfTerm == ''){
+    //         var endOfTerm = $("#endOfTerm").val();
+   	//  	}
+    //     var params = {action: "subscriptionCancel", endOfTerm: endOfTerm, subscriptionId: subscriptionId};
+    //     AjaxCallMessage('api.php', 'POST', 'json', $.param(params), 'cancelsubscription');
+    // });
 </script>

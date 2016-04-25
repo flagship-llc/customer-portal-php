@@ -1,5 +1,10 @@
 <?php
-include_once('init.php');?>
+include_once('init.php');
+$customer = $servicePortal->getCustomer();
+$subscription = $servicePortal->getSubscription();
+$subscription_id = $subscription->id;
+$accounts = $portalSession->linkedCustomers;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,12 +19,6 @@ include_once('init.php');?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
-<?php
-$result = ChargeBee_PortalSession::retrieve($_COOKIE['cb_portal_session_id']);
-$portalSession = $result->portalSession();
-$account_count = count($portalSession->linkedCustomers);
-
-?>
   <div id="page" class="hfeed site">
     <header id="masthead" class="site-header scroll" role="banner">
       <nav role="navigation">

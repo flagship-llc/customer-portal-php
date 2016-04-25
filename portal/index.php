@@ -1,17 +1,8 @@
 <?php
 include("header.php");
-if($_GET['s_id']){
-    $servicePortal = new ServicePortal($_GET['s_id']);
-}else if($_COOKIE['logined']){
-    header('Location: ' . $configData['SITE_URL']."customer-portal-php/portal/switch_account.php");
-}
-$customer = $servicePortal->getCustomer();
 $billingAddress = $customer->billingAddress;
-$subscription = $servicePortal->getSubscription();
 $customerInvoice = $servicePortal->retrieveInvoice();
 include("skip_true.php");
-
-
 ?>
 <div class="container">
     <h2 id="customer-title" class="text-center Candal text-darkblue">
@@ -41,7 +32,7 @@ include("skip_true.php");
                             $showEditDisplay = false;
                         }                    
                     }               
-    ?>
+                    ?>
                 </div>
                 <?php include("subscriptionInfo.php") ?>
             </div>

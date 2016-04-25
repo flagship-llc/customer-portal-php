@@ -112,7 +112,7 @@ class Auth {
         }
         setcookie('cb_portal_session_id', false, time() - 3600, $configData['COOKIE_PATH'], 
 					$configData['COOKIE_DOMAIN'], $configData['COOKIE_SECURE'], $configData['COOKIE_HTTPONLY']);
-        unset($_COOKIE['cb_portal_session_id']);        
+        unset($_COOKIE['cb_portal_session_id']);
         header('Location: ' . $configData['SITE_URL']."/".$configData['APP_PATH']);
         exit;
     }

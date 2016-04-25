@@ -1,8 +1,5 @@
 <?php
 include_once('header.php');
-$customer = $servicePortal->getCustomer();
-$subscription = $servicePortal->getSubscription();
-$accounts = $portalSession->linkedCustomers;
 ?>
 
 <div class="container">

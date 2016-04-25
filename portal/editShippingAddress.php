@@ -36,7 +36,6 @@ $address = $servicePortal->getSubscription()->shippingAddress;
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <!-- <?php var_dump($address);?> -->
                                 <label for="shipping_address[line1]">Address Line 1<span>*</span>
                                 </label>
                                 <input id="shipping_address[line1]" name="shipping_address[line1]" type="text" class="form-control"
