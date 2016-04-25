@@ -14,6 +14,12 @@ include_once('init.php');?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
+<?php
+$result = ChargeBee_PortalSession::retrieve($_COOKIE['cb_portal_session_id']);
+$portalSession = $result->portalSession();
+$account_count = count($portalSession->linkedCustomers);
+
+?>
   <div id="page" class="hfeed site">
     <header id="masthead" class="site-header scroll" role="banner">
       <nav role="navigation">
@@ -26,6 +32,9 @@ include_once('init.php');?>
           </button>
           <div data-cb-jshook="attach-account-dropdown" class="navbar-collapse collapse" style="height: auto;">
             <ul class="nav navbar-nav navbar-right">
+              <li class="visible-xs">
+                <a href="/portal/switch_account.php">Switch Account</a>
+              </li>
               <li class="visible-xs">
                 <a href="/portal/change_password">Change Password</a>
               </li>
@@ -41,9 +50,11 @@ include_once('init.php');?>
                 </a>
                 <ul class="dropdown-menu">
                   <li class="">
+                    <a href="/portal/switch_account.php">Switch Account</a>
+                  </li>
+                  <li class="">
                     <a href="/portal/change_password">Change Password</a>
                   </li>
-
                   <li class="">
                     <a href=<?php echo getLogoutUrl($configData); ?>>Logout</a>
                   </li>
@@ -65,6 +76,11 @@ include_once('init.php');?>
               <li>
                 <div data-cb-jshook="attach-account-dropdown" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
+                    <?php if($account_count > 1 ):?>
+                    <li class="visible-xs">
+                      <a href="switch_account.php">Switch Account</a>
+                    </li>
+                    <?php endif; ?>
                     <li class="visible-xs">
                       <a href=<?php echo getChangePasswordUrl($configData); ?>>Change Password</a>
                     </li>
@@ -78,6 +94,11 @@ include_once('init.php');?>
                         <b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">
+                        <?php if($account_count > 1 ):?>
+                        <li class="">
+                          <a href="switch_account.php">Switch Account</a>
+                        </li>
+                        <?php endif;?>
                         <li class="">
                           <a href=<?php echo getChangePasswordUrl($configData); ?>>Change Password</a>
                         </li>
