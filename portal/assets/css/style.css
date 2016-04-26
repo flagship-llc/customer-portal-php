@@ -717,12 +717,7 @@ a.text-danger:hover{
 
 /*Subscripiton status non renewing*/
 .cb-subscription-status.non_renewing{
-    background:{{subscription_status.non_renewing}};
-}
-
-/*Subscripiton status cancelled*/
-.cb-subscription-status.cancelled{
-    background:{{subscription_status.cancelled}};
+    background:#555f78;
 }
 
 /*Identifier contains the login,signup,change password,manage subscription,account,billing form in portal edit page.*/

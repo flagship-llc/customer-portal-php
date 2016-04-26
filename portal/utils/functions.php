@@ -5,7 +5,7 @@
 function getPortalLoginUrl($configData){ 
     $url = "https://" .$configData['SITE_NAME']. ".chargebeeportal.com/portal/login"; 
     
-    $url .= "?return_url=". $configData['SITE_URL']."".$configData['APP_PATH']."/index.php";
+    $url .= "?return_url=". $configData['SITE_URL']."/".$configData['APP_PATH']."/index.php";
     if(empty($configData['APP_PATH'])){
         $url .= "?return_url=". $configData['SITE_URL']."/index.php";
     }
