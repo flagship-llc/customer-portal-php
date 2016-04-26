@@ -121,6 +121,8 @@ setcookie('navgate_was','true',time() - 7200);
 
                             <?php if($skip_st){ ?>
                                 <a class="text-danger" href=<?php echo getEditUrl("skip_a_month_view.php", $configData) ?> >Skip a Month</a> | 
+                            <?php } else { ?>
+                                <span class="text-muted">Can't Skip a Month</span> | 
                             <?php }?>
 
                             <a class="text-danger" href=<?php echo getEditUrl("cancelSubscription.php", $configData) ?> 

@@ -1,10 +1,13 @@
 <?php
     include("header.php");
+    $subscription = $servicePortal->getSubscription();
     $customer = $servicePortal->getCustomer();
     $billingAddress = $customer->billingAddress;
     $subscription = $servicePortal->getSubscription();
     $customerInvoice = $servicePortal->retrieveInvoice();
 
+    include("skip_true.php");
+    if($skip_st){
         $subscription_id = $subscription->id;
         $subscription_term_end = $subscription->currentTermEnd;
         
@@ -21,11 +24,14 @@
         $subscription = $result->subscription();
         $customer = $result->customer();
         $card = $result->card();
-    
+    }
 
 ?>
+    <?php if($skip_st):?>
         <div class="container text-center"><b>Skip a month now...</b></div>
-        <!-- <div class="container text-center"><b>You can't Skip a Month</b></div> -->
+    <?php else: ?>
+        <div class="container text-center"><b>You can't Skip a Month</b></div>
+    <?php endif;?>
 
     <?php include("footer.php"); ?>
     <script>
