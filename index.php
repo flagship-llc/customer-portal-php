@@ -223,9 +223,10 @@ setcookie('navgate_was','true',time() - 7200);
 </div>
 <?php include("footer.php"); ?>
 <script>
-    $(document).ready(function () {
-        $(".alert-success").fadeOut(10000);
-    });
+    var hidden_alert = function () {
+        $(".alert-success").fadeOut(2000);
+    }
+    setTimeout(hidden_alert, 10000);
     $('#reactivateSubscription').click(function () {
         var data = $.param({action: "subscriptionReactivate"});
         AjaxCallMessage('api.php', 'POST', 'json', data, 'index');
