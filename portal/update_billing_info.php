@@ -1,13 +1,11 @@
 <?php
     include("header.php");
     $customer = $servicePortal->getCustomer();
-    $billingAddress = $customer->billingAddress;
-    $subscription = $servicePortal->getSubscription();
-    $customerInvoice = $servicePortal->retrieveInvoice();
-
     $customer_id = $customer->id;
+    $billingAddress = $customer->billingAddress;
+    $customerInvoice = $servicePortal->retrieveInvoice();
+    $subscription = $servicePortal->getSubscription();
 
-    ChargeBee_Environment::configure("tokyotreat-test","test_GaRJqYcqiISoo439GgkSbPUgFHIjS6GD");
     $result = ChargeBee_Customer::updateBillingInfo($customer_id, array(
       "billingAddress" => array(
         "firstName" => $_POST['billing_address']['first_name'], 
@@ -22,8 +20,6 @@
         "company" => $_POST['billing_address']['company'], 
         "country" => $_POST['billing_address']['country']
       )));
-    $customer = $result->customer();
-    $card = $result->card();
 ?>
 
     <div class="container text-center"><b>Update Billing Info now...</b></div>

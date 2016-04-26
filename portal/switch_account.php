@@ -1,5 +1,6 @@
 <?php
 include_once('header.php');
+$accounts = $portalSession->linkedCustomers;
 ?>
 <div class="container">
 

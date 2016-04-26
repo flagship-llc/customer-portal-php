@@ -2,9 +2,10 @@
 include("header.php");
 $customer = $servicePortal->getCustomer();
 $address = $customer->billingAddress;
+$subscription = $servicePortal->getSubscription();
 ?>
 
-<div class="container" style="height:674px">
+<div class="container">
     <div id="cb-wrapper-ssp">
 		<?php include("processing.php") ?>
         <div id="cb-user-content">
@@ -158,7 +159,7 @@ $(document).ready(function() {
 		}
 		var data = $('#addressForm').serialize();
         AjaxCallMessage('api.php', 'POST', 'json', data, 'editaddress');    
-		return false;        
+		return false;
     });
 })    
     

@@ -1,9 +1,6 @@
 <?php
 include_once('init.php');
-$customer = $servicePortal->getCustomer();
 $subscription = $servicePortal->getSubscription();
-$subscription_id = $subscription->id;
-$accounts = $portalSession->linkedCustomers;
 ?>
 <!DOCTYPE html>
 <html>

@@ -60,9 +60,12 @@ if (!$authObj->isLoggedIn()) {
  * in the constructor of ServicePortal object. 
  * This subscription ID will be used throughout the portal.
  */
+
 $sub_id =  $_GET['s_id'];
-setcookie("now_id", $sub_id, time()+60*60*2);
-if($_COOKIE['now_id']){
+if($sub_id){
+  setcookie("now_id", $sub_id, time()+60*60*2);  
+  $servicePortal = new ServicePortal($sub_id);
+}else if($_COOKIE['now_id']){
   $servicePortal = new ServicePortal($_COOKIE['now_id']);
 }else{
   if($sub_id){
@@ -79,8 +82,7 @@ $account_count = count($portalSession->linkedCustomers);
 $now_url = strstr($_SERVER['REQUEST_URI'],'switch_account.php');
 if($now_url == 'switch_account.php'){
    setcookie('navgate_was','true',time()+60*60*2); 
-}
-if($now_url != 'switch_account.php' && $account_count > 1 ){
+}else if($now_url != 'switch_account.php' && $account_count > 1 ){
   if(!$_COOKIE['navgate_was']){
     header('Location: ' . $configData['SITE_URL']."/".$configData['APP_PATH'].'/switch_account.php');
   }

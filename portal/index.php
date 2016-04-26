@@ -1,8 +1,11 @@
 <?php
 include("header.php");
+$subscription = $servicePortal->getSubscription();
+$customer = $servicePortal->getCustomer();
 $billingAddress = $customer->billingAddress;
 $customerInvoice = $servicePortal->retrieveInvoice();
 include("skip_true.php");
+setcookie('navgate_was','true',time() - 7200);
 ?>
 <div class="container">
     <h2 id="customer-title" class="text-center Candal text-darkblue">
@@ -10,6 +13,7 @@ include("skip_true.php");
         CUSTOMER PORTAL
 
     </h2>
+
     <div id="cb-wrapper-ssp">
          <?php include("processing.php");  ?>
         <div id="cb-content">

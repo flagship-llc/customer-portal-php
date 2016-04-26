@@ -1,5 +1,9 @@
 <?php
     include("header.php");
+    $subscription = $servicePortal->getSubscription();
+    $subscription_id = $subscription->id;
+    $billingAddress = $customer->billingAddress;
+
     $result = ChargeBee_Subscription::cancel($subscription_id);
 
     $comment_note = $_POST['feedback'];
