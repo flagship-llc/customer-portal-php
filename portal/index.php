@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 $subscription = $servicePortal->getSubscription();
+$subscription_term_end = $subscription->currentTermEnd;
 $customer = $servicePortal->getCustomer();
 $billingAddress = $customer->billingAddress;
 $customerInvoice = $servicePortal->retrieveInvoice();
@@ -11,9 +12,9 @@ setcookie('navgate_was','true',time() - 7200);
     <h2 id="customer-title" class="text-center Candal text-darkblue">
         <span class="small-text">カスタマーポータル</span><br>
         CUSTOMER PORTAL
-
     </h2>
 
+    NEXT BILLING DATE:<?php echo date('Y年m月d日',$subscription_term_end); ?>
     <div id="cb-wrapper-ssp">
          <?php include("processing.php");  ?>
         <div id="cb-content">
