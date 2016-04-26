@@ -6080,3 +6080,11 @@ header nav .nav-area ul li{
     min-height: 240px;
 }
 
+#cb-portal-payment-info .form-control-static{
+    padding:7px 15px;
+}
+
+#cb-portal-payment-info .form-control-static address{
+    margin-bottom:0;
+    line-height: 30px;
+}
