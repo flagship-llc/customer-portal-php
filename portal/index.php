@@ -138,6 +138,7 @@ setcookie('navgate_was','true',time() - 7200);
                 <div id="cb-portal-payment-mode-title" class="page-header clearfix">
                     <span class="h3">Payment Mode</span>
                 </div>
+                テスト start
 				<?php include("paymentmode.php") ?>
             </div>
 			
