@@ -150,14 +150,4 @@ include("skip_true.php");
         var cancelLaterText = $("#cancelLaterText").val();
         $('#cancelText').text(cancelLaterText);
     });
-
-    // $('#updateSubscription').click(function () {
-    //     var subscriptionId = $("#subscriptionId").val();
-    //     var endOfTerm = $('input[name=endOfTerm]:checked', '#cancelForm').val();
-    //     if(endOfTerm == ''){
-    //         var endOfTerm = $("#endOfTerm").val();
-   	//  	}
-    //     var params = {action: "subscriptionCancel", endOfTerm: endOfTerm, subscriptionId: subscriptionId};
-    //     AjaxCallMessage('api.php', 'POST', 'json', $.param(params), 'cancelsubscription');
-    // });
 </script>
