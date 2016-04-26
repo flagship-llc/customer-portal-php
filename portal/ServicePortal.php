@@ -149,16 +149,19 @@ class ServicePortal {
      */
     function updateSubscription($params) {
         try {
-            $result = ChargeBee_Subscription::update($this->getSubscription()->id, array(
-                "planId" => $_POST['planId'],
-                "planQuantity" => $_POST['planQuantity'],
-                "endOfTerm" => $settingconfigData["subscription"]["immediately"],
-                "replaceAddonList" => true,
-                "addons" => $_POST['addons']
-            ));
-            $response["status"] = "success";
-			$response["forward"] = getReturnURL();
-            return json_encode($response);
+         global $settingconfigData;
+         $endOfTerm = $settingconfigData["subscription"]["immediately"] == "false";
+         $result = ChargeBee_Subscription::update($this->getSubscription()->id, array(
+                        "planId" => $_POST['planId'],
+                        "planQuantity" => $_POST['planQuantity'],
+                        "endOfTerm" => $endOfTerm,
+                        "replaceAddonList" => true,
+                        "addons" => $_POST['addons']
+                    ));
+          $response["status"] = "success";
+          $response["forward"] = getReturnURL();
+          return json_encode($response);
+
         } catch (ChargeBee_PaymentException $e) {
             return $this->handleChargeAttemptFailureErrors($e);
         }catch (ChargeBee_InvalidRequestException $e) {
