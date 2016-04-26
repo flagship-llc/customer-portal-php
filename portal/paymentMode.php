@@ -14,6 +14,9 @@ if($customer->autoCollection == "on" && $customer->cardStatus == "no_card") {
         	<div class="media text-left">
             	<span class="glyphicon glyphicon-info-sign pull-left"></span>
                 	<div class="media-body">
+                        <?php var_dump($customer->cardStatus); ?>
+                        <?php var_dump($customer->autoCollection); ?>
+                        <?php var_dump($paymentMessage); ?>
                     	<?php echo $paymentMessage ?>
                     </div>
             </div>
