@@ -141,31 +141,28 @@ setcookie('navgate_was','true',time() - 7200);
                 <div id="cb-portal-payment-mode-title" class="page-header clearfix">
                     <span class="h3">Payment Mode</span>
                 </div>
-                テスト start
                 <?php   
-if($customer->autoCollection == "on" && $customer->cardStatus == "no_card") {
-     $paymentMessage = $infoconfigData['Payment_Mode']['Autocolletion_On_Nocard'];
-} elseif ($customer->autoCollection == "on") {
-    $paymentMessage = $infoconfigData['Payment_Mode']['Autocolletion_On'];
-} elseif ($customer->autoCollection == "off") {
-    $paymentMessage = $infoconfigData['Payment_Mode']['Offline_payment'];
-}
-?>
+                    if($customer->autoCollection == "on" && $customer->cardStatus == "no_card") {
+                         $paymentMessage = $infoconfigData['Payment_Mode']['Autocolletion_On_Nocard'];
+                    } elseif ($customer->autoCollection == "on") {
+                        $paymentMessage = $infoconfigData['Payment_Mode']['Autocolletion_On'];
+                    } elseif ($customer->autoCollection == "off") {
+                        $paymentMessage = $infoconfigData['Payment_Mode']['Offline_payment'];
+                    }
+                ?>
 
-<div class="form-horizontal">
-    <div class="text-center">
-        <div class="alert alert-info">
-            <div class="media text-left">
-                <span class="glyphicon glyphicon-info-sign pull-left"></span>
-                <div class="media-body">
-                    <?php echo $paymentMessage ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-				<?php include("paymentmode.php") ?>
+                    <div class="form-horizontal">
+                        <div class="text-center">
+                            <div class="alert alert-info">
+                                <div class="media text-left">
+                                    <span class="glyphicon glyphicon-info-sign pull-left"></span>
+                                    <div class="media-body">
+                                        <?php echo $paymentMessage ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
 			
             <div id="cb-portal-payment-info" class="cb-well">

@@ -20,5 +20,3 @@ if($customer->autoCollection == "on" && $customer->cardStatus == "no_card") {
         </div>
     </div>
 </div>
-
-テスト end
