@@ -36,4 +36,5 @@
         $skip_st = false; //タームエンドより1ヶ月以上前だったら false
       }    
   }
+  $skip_st = true; //タームエンドより1ヶ月以内だったら true
 ?>
