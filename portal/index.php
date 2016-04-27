@@ -79,6 +79,8 @@ include("skip_true.php");
                     <p class="text-muted">
                         <?php echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),
                                                 $infoconfigData['Timeline']['Next_billing_date']); ?> 
+                    </p>
+                    <p class="text-muted">
                         <?php 
                             if (isset($estimate->lineItems)) {
                                 foreach ($estimate->lineItems as $li) {
@@ -86,9 +88,6 @@ include("skip_true.php");
                                 }
                             }
                         ?>
-                    </p>
-                    <p class="text-muted">Your current billing term is from
-                        <?php echo date('d-M-Y', $subscription->currentTermStart) ?> , next billing will be <?php echo date('d-M-Y', $subscription->currentTermEnd) ?>. 
                     </p>
                     <p class="text-muted">
                         <?php echo str_replace('$subscription.activated_at', date('d-M-Y', $subscription->activatedAt),
