@@ -16,7 +16,7 @@ if($past_skip_true){
     <div id="skip_a_month" class="cb-user-content">
         <div class="text-center skip-desc">
             <h1 class="text-orange"><strong>Skip a Month!</strong></h1>
-            <p>Now you can Skip a Month, refreshed and ready for your next Treat!<br class="hidden-xs"> You would <span class="text-orange">Skip <?php echo date('M Y', $subscription_term_end); ?></span> and get your next crate in <?php echo date('M Y', $one_month_after_end); ?>.</p>
+            <p>You can Skip a Month, and postpone the fun!<br class="hidden-xs"> The <?php echo date('M Y', $subscription_term_end); ?>treat will get skipped, and your next treat will be <?php echo date('M Y', $one_month_after_end); ?>.</p>
             <form action="skip_a_month.php" method="post">
                 <input type="hidden" name="skip_true" value="true">
                 <input type="submit" value="Skip a Month" class="button">
