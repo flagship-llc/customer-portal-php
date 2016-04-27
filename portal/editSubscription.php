@@ -25,15 +25,15 @@ foreach ($allPlans as $plan) {
     } elseif ($plan->plan()->period == 12) {
         $yearlyPlans[$plan->plan()->id] = $plan->plan()->period;
         asort($yearlyPlans);
-    } elseif ($plan->plan()->periodUnit == "month") {
-        if ($plan->plan()->period == 6) {
-            $halfYearlyPlans[$plan->plan()->id] = $plan->plan()->period;
-        } elseif ($plan->plan()->period == 3) {
-            $quarterYearlyPlans[$plan->plan()->id] = $plan->plan()->period;
-        } else {
-            $monthlyPlans[$plan->plan()->id] = $plan->plan()->period;
-            asort($monthlyPlans);
-        }
+    } elseif ($plan->plan()->period == 6) {
+        $halfYearlyPlans[$plan->plan()->id] = $plan->plan()->period;
+        asort($halfYearlyPlans);
+    } elseif ($plan->plan()->period == 3) {
+        $quarterYearlyPlans[$plan->plan()->id] = $plan->plan()->period;
+        asort($quarterYearlyPlans);
+    } else {
+        $monthlyPlans[$plan->plan()->id] = $plan->plan()->period;
+        asort($monthlyPlans);
     }
 }
 $total = ($planResult->price * $servicePortal->getSubscription()->planQuantity);
