@@ -25,7 +25,11 @@
         $next_last_day = date('t', mktime(0, 0, 0, $end_month, 1, $end_year));
         $next_add_day =$current_last_day - $end_day + 1;
         $next_term = $next_last_day + $next_add_day;
-        $one_month_after_end = strtotime( '+ '.$next_term .' day + 7 hour', $subscription_term_end) ;
+        if($past_skip_true){
+            $one_month_after_end = strtotime( '+ '.$next_add_day .' day + 7 hour', $subscription_term_end) ;
+        }else{
+            $one_month_after_end = strtotime( '+ '.$next_term .' day + 7 hour', $subscription_term_end) ;
+        }
         
         $result = ChargeBee_Subscription::changeTermEnd($subscription_id, array(
         "termEndsAt" => $one_month_after_end));

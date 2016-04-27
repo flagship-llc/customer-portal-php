@@ -13,7 +13,6 @@ include("skip_true.php");
         CUSTOMER PORTAL
     </h2>
 
-    NEXT BILLING DATE:<?php echo date('Y年m月d日',$subscription->currentTermEnd); ?>
     <div id="cb-wrapper-ssp">
          <?php include("processing.php");  ?>
         <div id="cb-content">

@@ -26,8 +26,9 @@
   $no_skip_cur_end = date('Ym01',$cur_term_x); //スキップ ア マンスをしていない場合のタームエンド(１ヶ月)
   $cur_end = date('Ym01',$current_end); //実際のタームエンド
   $skip_st = true;
-
+  $past_skip_true = false;
   if ($cur_end != $no_skip_cur_end ){ //想定しているタームエンドと異なった場合
+    $past_skip_true = true;    
       $time_now = time(); //現在時間
       if ($time_now >= $skip_limit) {
         $skip_st = true; //タームエンドより1ヶ月以内だったら true
