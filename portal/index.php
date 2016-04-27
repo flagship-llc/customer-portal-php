@@ -55,8 +55,8 @@ include("skip_true.php");
                         <?php 
                         $phrase = $infoconfigData['Timeline']['Current_term'];
                         $default = array('$subscription.current_term_start', '$subscription.current_term_end');
-                        // $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
-                        // echo str_replace($default,  $assign, $phrase);
+                        $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
+                        echo str_replace($default,  $assign, $phrase);
 
                      ?> 
                     </p> 
@@ -72,8 +72,8 @@ include("skip_true.php");
                                                         $infoconfigData['Timeline']['Canceled_date']); ?> 
                     </p> 
                     <p class="text-muted">
-                        <?php echo str_replace('$subscription.trial_start', date('d-M-Y', $subscription->trialStart),
-                                                            $infoconfigData['Timeline']['Trial_started_on']); ?> 
+                        <?php echo str_replace('$subscription.activated_at', date('d-M-Y', $subscription->activatedAt),
+                                                            $infoconfigData['Timeline']['Activation_date']); ?> 
                     </p> 
             <?php } else if ($subscription->status == "active") { ?>   
                     <p class="text-muted">
@@ -87,9 +87,8 @@ include("skip_true.php");
                             }
                         ?>
                     </p>
-                    <p class="text-muted">Your current billing term is 
-                        <?php echo date('d-M-Y', $subscription->currentTermStart) ?> and 
-                        <?php echo date('d-M-Y', $subscription->currentTermEnd) ?>. 
+                    <p class="text-muted">Your current billing term is from
+                        <?php echo date('d-M-Y', $subscription->currentTermStart) ?> , next billing will be <?php echo date('d-M-Y', $subscription->currentTermEnd) ?>. 
                     </p>
                     <p class="text-muted">
                         <?php echo str_replace('$subscription.activated_at', date('d-M-Y', $subscription->activatedAt),

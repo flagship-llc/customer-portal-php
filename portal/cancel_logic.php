@@ -18,7 +18,7 @@
     }
 
 ?>
-    <div class="container text-center"><b>Cancel Subscription now...</b></div>
+    <div class="container text-center"><b>canceling subscription now</b></div>
 
     <?php include("footer.php"); ?>
 

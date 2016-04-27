@@ -40,7 +40,7 @@
 
 ?>
     <?php if($skip_st):?>
-        <div class="container text-center"><b>Skip a month now...</b></div>
+        <div class="container text-center"><b>skipping a month now<b></div>
     <?php else: ?>
         <div class="container text-center"><b>You can skip only one month.</b></div>
     <?php endif;?>
