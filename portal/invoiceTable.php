@@ -53,8 +53,8 @@
                      <?php if ($settingconfigData["invoice"]["download"] == 'true') { 
                     	 $invoiceAsPdf = getEditUrl("downloadInvoice.php", $configData) . "?invoice_id=" . $invoice->id;
                      ?>
-                     <a href="<?php echo $invoiceAsPdf ?>">
-                        Download as PDF<span class="glyphicon glyphicon-cloud-download" title="Download"></span>
+                     <a href="<?php echo $invoiceAsPdf ?>" class="arrow">
+                        PDF<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
                      </a>
                     <?php } ?>
                 </td>

@@ -3,14 +3,14 @@
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="row">
-    			<label class="col-xs-5 control-label">Payment Method</label>
+    			<label class="col-xs-4 control-label">Payment Method</label>
     			<div class="col-xs-7 form-control-static">
         			Paypal Express Checkout
     			</div>
 			</div>
 
 			<div class="row">
-    			<label class="col-xs-5 control-label">Billing Agreement ID</label>
+    			<label class="col-xs-4 control-label">Billing Agreement ID</label>
     			<div class="col-xs-7 form-control-static">
       			  <?php echo esc($customer->paymentMethod->referenceId) ?>
     		  </div>
@@ -52,7 +52,7 @@ if (!isset($customer->paymentMethod)) {
 		<div class="row">
     		<div class="col-sm-6">
         		<div class="row">
-            		<label class="col-xs-5 control-label">Card type</label>
+            		<label class="col-xs-4 control-label">Card type</label>
             		<div class="col-xs-7">
                 		<div id="cb-cards">
                     		<span class="<?php echo $card->cardType ?>"></span>
@@ -60,13 +60,13 @@ if (!isset($customer->paymentMethod)) {
             		</div>
         		</div>
         		<div class="row">
-            		<label class="col-xs-5 control-label">Card Number</label>
+            		<label class="col-xs-4 control-label">Card Number</label>
             		<div class="col-xs-7 form-control-static">
                 		**** **** **** <?php echo esc($card->last4) ?>
             		</div>
         		</div>
         		<div class="row">
-            		<label class="col-xs-5 control-label">Expiry</label>
+            		<label class="col-xs-4 control-label">Expiry</label>
             		<div class="col-xs-7 form-control-static">
                 		<?php echo esc($card->expiryMonth) . "/" . esc($card->expiryYear) ?>
             		</div>
@@ -75,7 +75,7 @@ if (!isset($customer->paymentMethod)) {
     		<?php if(isset($card->firstName)) { ?></li>
     		<div class="col-sm-6">
         		<div class="row">
-            		<label class="col-xs-5 control-label">Name</label>
+            		<label class="col-xs-4 control-label">Name</label>
             		<div class="col-xs-7 form-control-static">
                 		<address><?php echo esc($card->firstName) . " " . esc($card->lastName) ?><br></address>
            	 		</div>

@@ -6,18 +6,112 @@ $customer = $servicePortal->getCustomer();
 $billingAddress = $customer->billingAddress;
 $customerInvoice = $servicePortal->retrieveInvoice();
 include("skip_true.php");
+$phrase = $infoconfigData['Timeline']['Recurring_charge'];
 ?>
-<div class="container">
+
     <h2 id="customer-title" class="text-center Candal text-darkblue">
         <span class="small-text">カスタマーポータル</span><br>
         CUSTOMER PORTAL
     </h2>
+    <div class="container renew">
 
-    <div id="cb-wrapper-ssp">
-         <?php include("processing.php");  ?>
-        <div id="cb-content">
+        <div id="cb-wrapper-ssp">
+             <?php include("processing.php");  ?>
+            <div id="cb-content">
 
-        <div data-cb-cancel-subscription-url="#">
+                <div class="cb-well" id="subscripion-info">
+                  <h2 class="title back-orange Candal">My Subscription</h2>
+                  <div class="clearfix wraps">
+                    <div class="col-sm-6 box-info">
+                      <div class="image-wrap text-center">
+                        <img src="assets/images/premium-12.png" alt="">
+                      </div>
+                    <div class="info">
+                        <?php 
+                            $phrase = $infoconfigData['Timeline']['Recurring_charge'];
+                            $default = array('$planperiod', '$planunit');
+                            $assign   = array($currentPlanDetails->period, $currentPlanDetails->periodUnit);
+                            echo str_replace($default,  $assign, $phrase); ?>
+                            <?php if(isset($subscription->currentTermStart)){ ?>
+                            <p class="text-muted">
+                            <?php 
+                                $phrase = $infoconfigData['Timeline']['Current_term'];
+                                $default = array('$subscription.current_term_start', '$subscription.current_term_end');
+                                $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
+                                echo str_replace($default,  $assign, $phrase);
+                            ?> 
+                            </p> 
+                        <?php } ?>
+                          <p>
+                            <?php
+                              echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
+                            ?>
+                          </p>
+                      </div>
+
+
+
+                      <div class="clearfix">
+                        <?php
+                            if ($settingconfigData["changesubscription"]["allow"] == 'true'){
+                                $showEditDisplay = $servicePortal->getEditSubscription($settingconfigData); 
+                                if($showEditDisplay==true) {   ?>
+                                    <a href=<?php echo getEditUrl("editSubscription.php", $configData) ?> class="arrow glay pull-left">
+                                        Change Plan<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
+                                    </a>
+                                <?php
+                                    $showEditDisplay = false;
+                                }             
+                            }               
+                        ?>
+                        <a href='#timelime' id="timeline-disp" class="arrow pull-right">Timeline<span class="glyphicon glyphicon-chevron-right" title="Download"></span></a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 my-info">
+                      <h3>TOKYOTREAT will ship to</h3>
+                      <?php include("shippingAddressInfo.php") ?>
+                    </div>
+                  </div>   
+                </div>
+
+                <div class="clearfix row">
+                    <div class="col-sm-6">
+                        <div class="cb-well glay-border" id="cb-portal-billing">
+                            <h2 class="title back-glay Candal">Billing Info</h2>
+                            <?php include("billingAddressInfo.php") ?>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="cb-well glay-border" id="cb-portal-payment-method">
+                            <h2 class="title back-glay Candal">Payment Method</h2>
+                            <div class="info-box">
+                                <?php include("cardInfo.php") ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-history">
+                    <h2 class="Candal text-orange">Payment History</h2>
+                    <?php if (count($customerInvoice) <= 0) { ?>
+                        <div class="text-center">
+                            <div class="alert alert-info">
+                                <div class="media text-left">
+                                    <span class="glyphicon glyphicon-info-sign pull-left"></span>
+                                    <div class="media-body">
+                                        <?php echo $infoconfigData['Customer_Invoices']['Invoice_list_is_empty']; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } else { ?>
+                        <?php include("paymentHistoryInfo.php") ?>
+                    <?php } ?>
+                </div>
+
+
+<!-- 
+
             <div class="cb-well">
                 <div id="cb-portal-subscription-title" class="page-header clearfix">
                     <span class="h3">Subscription</span>
@@ -235,7 +329,7 @@ include("skip_true.php");
             <?php } ?>
         </div>
     </div>
-
+ -->
 </div>
 
 </div>

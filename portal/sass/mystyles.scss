@@ -1,0 +1,123 @@
+.container.renew{
+  width: 920px;
+  margin: 0 auto;
+}
+h2.title{
+  position: relative;
+  text-align: center;
+  color: #ff7a0f;
+  padding:15px 0;
+  margin:0;
+  &:before{
+    content:"";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+.back-orange{
+  background-color: #ff7a0f;
+  &.title{
+    color: #ffffff;
+  }
+}
+.back-glay{
+  background-color: #efefef;
+  &.title{
+    color: #ff7a0f;
+    border-bottom:2px solid #b1b1b1;
+  }
+}
+.renew{
+  width: 920px;
+  margin:0 auto;
+  .cb-well{
+    padding:0;
+    &.glay-border{
+      border:2px solid #b1b1b1;
+    }
+  }
+  #cb-portal-billing address{
+    padding:16px;
+  }
+  a.arrow{
+    background-color: #ff7a0f;
+    border-bottom:none;
+    border-radius: 5px;
+    display: inline-block;
+    padding:4px 20px;
+    color: #ffffff;
+    .glyphicon{
+      top:2px;
+      left: 6px;
+    }
+    &.glay{
+      background-color: #b1b1b1;
+    }
+  }
+}
+
+#subscripion-info{
+  position: relative;
+  .wraps{
+    padding:16px 0;
+  }
+  &:before{
+    content:'';
+    position: absolute;
+    transform:scale(1,2);
+    height: 34%;
+    width: 1px;
+    border-left: 2px dashed #ff7a0f;
+    left: 50%;
+    top: 42%;
+    margin-left: -1px;
+  }
+  .image-wrap{
+    border-radius: 5px;
+    background-color: #ffe4cf;
+  }
+}
+
+#subscripion-info h2.title:before{
+  right: -30px;
+  width: 280px;
+  height: 140px;
+  background: url('../assets/images/subscribe-icon.png') no-repeat;
+}
+#cb-portal-billing h2.title:before{
+  right: -10px;
+  width: 83px;
+  height: 70px;
+  background: url('../assets/images/billing-icon.png') no-repeat;
+}
+#cb-portal-payment-method h2.title:before{
+  right: 10px;
+  width: 48px;
+  height: 47px;
+  background: url('../assets/images/payment-icon.png') no-repeat;
+}
+
+#cb-portal-payment-method{
+  .info-box{
+    padding:9px 16px;
+  }
+  .col-sm-6{
+    width: 100%;
+    text-align: left;
+    .control-label{
+      text-align: left;
+    }
+  }
+}
+#cb-portal-invoice-table tr:first-child{
+  background-color: #f7f7f7;
+}
+#cb-portal-invoice-table td{
+  border:1px solid #b1b1b1;
+}
+.subscripion-info{}
+
+
+
+
