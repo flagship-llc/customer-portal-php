@@ -27,7 +27,7 @@
     $card = $result->card();
 ?>
 
-    <div class="container text-center"><b>Update Shipping Info now...</b></div>
+    <div class="container text-center"><b>Updating Shipping Info now...</b></div>
 
     <?php include("footer.php"); ?>
     <script>

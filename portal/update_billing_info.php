@@ -22,7 +22,7 @@
       )));
 ?>
 
-    <div class="container text-center"><b>Update Billing Info now...</b></div>
+    <div class="container text-center"><b>Updating Billing Info now...</b></div>
 
     <?php include("footer.php"); ?>
     <script>
