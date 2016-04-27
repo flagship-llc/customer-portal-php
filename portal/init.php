@@ -84,7 +84,7 @@ if($now_url == 'switch_account.php'){
    setcookie('navgate_was','true',time()+60*60*2); 
 }else if($now_url != 'switch_account.php' && $account_count > 1 ){
   if(!$_COOKIE['navgate_was']){
-    header('Location: ' . $configData['SITE_URL']."/".$configData['APP_PATH'].'/switch_account.php');
+    header('Location: ' . $configData['SITE_URL']."/".$configData['APP_PATH'].'switch_account.php');
   }
 }
 
