@@ -130,6 +130,11 @@ ul#g-menu.add_menu{
       }
     }
   }
+  #cb-portal-billing{
+    @media screen and (max-width: 768px){
+      margin-top:10px;
+    }
+  }
   #cb-portal-billing,
   #cb-portal-payment-method{
     @media screen and (min-width: 768px){
@@ -370,6 +375,8 @@ ul#g-menu.add_menu{
     }
   }
 }
-
+.cb-available-list{
+  max-height: none;
+}
 
 

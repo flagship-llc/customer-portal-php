@@ -6046,6 +6046,9 @@ header nav .nav-area ul li{
 }
 
 @media (max-width: 767px) {
+    .skip-desc input.button{
+        padding:6px 25%;
+    }
     #skip_a_month,
     .skip-desc{
         width: auto;
