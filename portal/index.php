@@ -84,7 +84,6 @@ include("skip_true.php");
     </h2>
     <?php 
       $estimate = $servicePortal->retrieveEstimate(); 
-      var_dump($estimate);
     ?>
     <div class="container renew">
 
@@ -105,7 +104,6 @@ include("skip_true.php");
         $phrase = $infoconfigData['Timeline']['Recurring_charge'];
         $default = array('$planperiod', '$planunit');
         $assign   = array($currentPlanDetails->period, $currentPlanDetails->periodUnit);
-        var_dump($currentPlanDetails->periodUnit);
         echo str_replace($default,  $assign, $phrase); ?>
                         <?php if ($subscription->status != "cancelled") {?>
                         <br>
