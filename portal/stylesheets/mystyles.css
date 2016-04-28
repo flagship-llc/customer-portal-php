@@ -92,26 +92,27 @@ h2.title:before {
 }
 /* line 63, ../sass/mystyles.scss */
 .back-glay.title {
+  border-radius: 3px 3px 0 0;
   color: #ff7a0f;
 }
 
-/* line 67, ../sass/mystyles.scss */
+/* line 68, ../sass/mystyles.scss */
 .link-area {
   padding: 16px;
   padding-top: 0;
 }
 
-/* line 72, ../sass/mystyles.scss */
+/* line 73, ../sass/mystyles.scss */
 #Timeline {
   top: 100px !important;
 }
-/* line 74, ../sass/mystyles.scss */
+/* line 75, ../sass/mystyles.scss */
 #Timeline .modal-header {
   background-color: #efefef;
   padding: 0 15px;
   border-radius: 6px 6px 0 0;
 }
-/* line 79, ../sass/mystyles.scss */
+/* line 80, ../sass/mystyles.scss */
 #Timeline h2.title {
   text-align: left;
   font-size: 28px;
@@ -119,37 +120,37 @@ h2.title:before {
   box-shadow: none;
 }
 
-/* line 86, ../sass/mystyles.scss */
+/* line 87, ../sass/mystyles.scss */
 ul#g-menu.add_menu {
   left: 44px;
 }
 
-/* line 90, ../sass/mystyles.scss */
+/* line 91, ../sass/mystyles.scss */
 .navbar-collapse > .navbar-nav > .dropdown, .navbar-toggle {
   margin-top: 17px;
 }
 
-/* line 93, ../sass/mystyles.scss */
+/* line 94, ../sass/mystyles.scss */
 .renew {
   width: 920px;
   margin: 0 auto;
 }
-/* line 96, ../sass/mystyles.scss */
+/* line 97, ../sass/mystyles.scss */
 .renew .cb-well {
   padding: 0;
 }
-/* line 98, ../sass/mystyles.scss */
+/* line 99, ../sass/mystyles.scss */
 .renew .cb-well.glay-border {
   border: 2px solid #d3d3d3;
 }
 @media screen and (max-width: 768px) {
-  /* line 102, ../sass/mystyles.scss */
+  /* line 103, ../sass/mystyles.scss */
   .renew .box-info {
     margin: 0 -1%;
     overflow: hidden;
     padding-bottom: 20px;
   }
-  /* line 107, ../sass/mystyles.scss */
+  /* line 108, ../sass/mystyles.scss */
   .renew .box-info:before {
     content: "";
     position: absolute;
@@ -160,14 +161,14 @@ ul#g-menu.add_menu {
     border-top: 1px dashed #ff7a0f;
     transform: scale(2, 1);
   }
-  /* line 117, ../sass/mystyles.scss */
+  /* line 118, ../sass/mystyles.scss */
   .renew .box-info .arrow {
     width: 48%;
     margin: 0 1%;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 124, ../sass/mystyles.scss */
+  /* line 125, ../sass/mystyles.scss */
   .renew .my-info h3 {
     font-size: 20px;
     padding-top: 20px;
@@ -175,18 +176,18 @@ ul#g-menu.add_menu {
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 132, ../sass/mystyles.scss */
+  /* line 133, ../sass/mystyles.scss */
   .renew #cb-portal-billing,
   .renew #cb-portal-payment-method {
     min-height: 275px;
   }
 }
-/* line 138, ../sass/mystyles.scss */
+/* line 139, ../sass/mystyles.scss */
 .renew #cb-portal-billing address {
   padding: 16px;
   margin-bottom: 0;
 }
-/* line 142, ../sass/mystyles.scss */
+/* line 143, ../sass/mystyles.scss */
 .renew a.arrow {
   background-color: #ff7a0f;
   border-bottom: none;
@@ -197,7 +198,7 @@ ul#g-menu.add_menu {
   font-weight: normal;
 }
 @media screen and (max-width: 768px) {
-  /* line 142, ../sass/mystyles.scss */
+  /* line 143, ../sass/mystyles.scss */
   .renew a.arrow {
     display: block;
     width: 100%;
@@ -205,94 +206,94 @@ ul#g-menu.add_menu {
     text-align: center;
   }
 }
-/* line 156, ../sass/mystyles.scss */
+/* line 157, ../sass/mystyles.scss */
 .renew a.arrow .glyphicon {
   top: 1px;
   left: 6px;
   transform: scale(0.8, 0.8);
 }
-/* line 161, ../sass/mystyles.scss */
+/* line 162, ../sass/mystyles.scss */
 .renew a.arrow.glay {
   background-color: #b1b1b1;
 }
-/* line 165, ../sass/mystyles.scss */
+/* line 166, ../sass/mystyles.scss */
 .renew .payment-attention {
   font-size: 11px;
   margin-top: 7px;
 }
-/* line 169, ../sass/mystyles.scss */
+/* line 170, ../sass/mystyles.scss */
 .renew .form-horizontal .form-control-static {
   padding-top: 7px;
   padding-bottom: 0;
   min-height: 1;
 }
-/* line 173, ../sass/mystyles.scss */
+/* line 174, ../sass/mystyles.scss */
 .renew .form-horizontal .form-control-static address {
   margin-bottom: 0;
 }
-/* line 177, ../sass/mystyles.scss */
+/* line 178, ../sass/mystyles.scss */
 .renew .control-label {
   font-weight: normal;
 }
-/* line 180, ../sass/mystyles.scss */
+/* line 181, ../sass/mystyles.scss */
 .renew .subsc-menu {
   margin-top: 30px;
   padding: 10px 0;
   border: 2px solid #ececec;
 }
 @media screen and (max-width: 768px) {
-  /* line 180, ../sass/mystyles.scss */
+  /* line 181, ../sass/mystyles.scss */
   .renew .subsc-menu {
     padding-bottom: 10px;
   }
 }
-/* line 187, ../sass/mystyles.scss */
+/* line 188, ../sass/mystyles.scss */
 .renew .subsc-menu a {
   color: #ff7a0f;
   border-bottom: none;
   font-weight: normal;
 }
 
-/* line 195, ../sass/mystyles.scss */
+/* line 196, ../sass/mystyles.scss */
 #subscripion-info {
   position: relative;
 }
-/* line 197, ../sass/mystyles.scss */
+/* line 198, ../sass/mystyles.scss */
 #subscripion-info .wraps {
   padding: 16px 0;
 }
-/* line 199, ../sass/mystyles.scss */
+/* line 200, ../sass/mystyles.scss */
 #subscripion-info .wraps .info {
   margin-top: 15px;
 }
-/* line 201, ../sass/mystyles.scss */
+/* line 202, ../sass/mystyles.scss */
 #subscripion-info .wraps .info .col-sm-8 {
   padding-top: 6px;
 }
-/* line 205, ../sass/mystyles.scss */
+/* line 206, ../sass/mystyles.scss */
 #subscripion-info .wraps .price {
   text-align: right;
 }
 @media screen and (max-width: 768px) {
-  /* line 205, ../sass/mystyles.scss */
+  /* line 206, ../sass/mystyles.scss */
   #subscripion-info .wraps .price {
     text-align: left;
     display: inline-block;
     margin-bottom: 10px;
   }
 }
-/* line 213, ../sass/mystyles.scss */
+/* line 214, ../sass/mystyles.scss */
 #subscripion-info .wraps .price b {
   font-weight: bold;
   font-size: 22px;
   position: relative;
 }
-/* line 217, ../sass/mystyles.scss */
+/* line 218, ../sass/mystyles.scss */
 #subscripion-info .wraps .price b span {
   position: relative;
   z-index: 2;
 }
-/* line 221, ../sass/mystyles.scss */
+/* line 222, ../sass/mystyles.scss */
 #subscripion-info .wraps .price b:before {
   content: "";
   position: absolute;
@@ -303,7 +304,7 @@ ul#g-menu.add_menu {
   z-index: 1;
   background-color: #ffe7d1;
 }
-/* line 233, ../sass/mystyles.scss */
+/* line 234, ../sass/mystyles.scss */
 #subscripion-info:before {
   content: '';
   position: absolute;
@@ -316,19 +317,19 @@ ul#g-menu.add_menu {
   margin-left: -0.5px;
 }
 @media screen and (max-width: 768px) {
-  /* line 233, ../sass/mystyles.scss */
+  /* line 234, ../sass/mystyles.scss */
   #subscripion-info:before {
     display: none;
   }
 }
-/* line 247, ../sass/mystyles.scss */
+/* line 248, ../sass/mystyles.scss */
 #subscripion-info .image-wrap {
   padding: 15px;
   border-radius: 5px;
   background-color: #ffe4cf;
 }
 
-/* line 254, ../sass/mystyles.scss */
+/* line 255, ../sass/mystyles.scss */
 #subscripion-info h2.title:before {
   right: -30px;
   width: 280px;
@@ -336,7 +337,7 @@ ul#g-menu.add_menu {
   background: url("../assets/images/subscribe-icon.png") no-repeat;
 }
 @media screen and (max-width: 768px) {
-  /* line 254, ../sass/mystyles.scss */
+  /* line 255, ../sass/mystyles.scss */
   #subscripion-info h2.title:before {
     width: 40%;
     right: -10px;
@@ -345,7 +346,7 @@ ul#g-menu.add_menu {
   }
 }
 
-/* line 266, ../sass/mystyles.scss */
+/* line 267, ../sass/mystyles.scss */
 #cb-portal-billing h2.title:before {
   right: -10px;
   width: 83px;
@@ -353,13 +354,13 @@ ul#g-menu.add_menu {
   background: url("../assets/images/billing-icon.png") no-repeat;
 }
 @media screen and (max-width: 768px) {
-  /* line 266, ../sass/mystyles.scss */
+  /* line 267, ../sass/mystyles.scss */
   #cb-portal-billing h2.title:before {
     background-position: center bottom;
   }
 }
 
-/* line 275, ../sass/mystyles.scss */
+/* line 276, ../sass/mystyles.scss */
 #cb-portal-payment-method h2.title:before {
   right: 10px;
   width: 48px;
@@ -367,38 +368,38 @@ ul#g-menu.add_menu {
   background: url("../assets/images/payment-icon.png") no-repeat;
 }
 @media screen and (max-width: 768px) {
-  /* line 275, ../sass/mystyles.scss */
+  /* line 276, ../sass/mystyles.scss */
   #cb-portal-payment-method h2.title:before {
     background-position: center bottom;
   }
 }
 
-/* line 286, ../sass/mystyles.scss */
+/* line 287, ../sass/mystyles.scss */
 #cb-portal-payment-method .info-box {
   padding: 9px 16px;
 }
-/* line 289, ../sass/mystyles.scss */
+/* line 290, ../sass/mystyles.scss */
 #cb-portal-payment-method .info-box .form-horizontal .alert-info {
   margin-top: 10px;
 }
-/* line 294, ../sass/mystyles.scss */
+/* line 295, ../sass/mystyles.scss */
 #cb-portal-payment-method .col-sm-6 {
   width: 100%;
   text-align: left;
 }
-/* line 297, ../sass/mystyles.scss */
+/* line 298, ../sass/mystyles.scss */
 #cb-portal-payment-method .col-sm-6 .control-label {
   text-align: left;
 }
 
-/* line 302, ../sass/mystyles.scss */
+/* line 303, ../sass/mystyles.scss */
 #cb-portal-invoice-table tr:first-child {
   background-color: #f7f7f7;
   font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 307, ../sass/mystyles.scss */
+  /* line 308, ../sass/mystyles.scss */
   #cb-portal-invoice-table tr {
     display: block;
     border-top: 1px solid #e1e1e1;
@@ -407,12 +408,12 @@ ul#g-menu.add_menu {
     margin-bottom: 20px;
   }
 }
-/* line 316, ../sass/mystyles.scss */
+/* line 317, ../sass/mystyles.scss */
 #cb-portal-invoice-table td {
   border: 1px solid #b1b1b1;
 }
 @media screen and (max-width: 768px) {
-  /* line 316, ../sass/mystyles.scss */
+  /* line 317, ../sass/mystyles.scss */
   #cb-portal-invoice-table td {
     display: block !important;
     width: 50%;
@@ -423,48 +424,48 @@ ul#g-menu.add_menu {
     border-left: 1px solid #e1e1e1;
     padding-left: 10px;
   }
-  /* line 327, ../sass/mystyles.scss */
+  /* line 328, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.visible-xs {
     background-color: #f7f7f7;
     font-weight: bold;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 332, ../sass/mystyles.scss */
+  /* line 333, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.paid_st, #cb-portal-invoice-table td.pdf-link {
     width: 100%;
     text-align: center;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 339, ../sass/mystyles.scss */
+  /* line 340, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.paid_st.hidden-xs {
     border: none;
     padding: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 347, ../sass/mystyles.scss */
+  /* line 348, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.pdf-link a {
     width: 70%;
     margin: 0 auto;
   }
 }
-/* line 353, ../sass/mystyles.scss */
+/* line 354, ../sass/mystyles.scss */
 #cb-portal-invoice-table td:before {
   background-color: #000000;
 }
 @media screen and (max-width: 768px) {
-  /* line 356, ../sass/mystyles.scss */
+  /* line 357, ../sass/mystyles.scss */
   #cb-portal-invoice-table td:last-child {
     border-color: #e1e1e1;
   }
 }
-/* line 361, ../sass/mystyles.scss */
+/* line 362, ../sass/mystyles.scss */
 #cb-portal-invoice-table td .arrow {
   padding: 4px 10px;
 }
-/* line 363, ../sass/mystyles.scss */
+/* line 364, ../sass/mystyles.scss */
 #cb-portal-invoice-table td .arrow .glyphicon {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
