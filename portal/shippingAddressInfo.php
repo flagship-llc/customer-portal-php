@@ -13,8 +13,10 @@
     <address>
 
         <?php $shippingAddress = $subscription->shippingAddress ?>
+            <b>
         	<?php echo (isset($shippingAddress->firstName) ? esc($shippingAddress->firstName) : "" ) ?>
 			<?php echo (isset($shippingAddress->lastName) ? esc($shippingAddress->lastName) . "<br>" : "") ?>
+            </b>
         	<?php echo (isset($shippingAddress->company) ? esc($shippingAddress->company) . "<br>" : "") ?>
         	<?php echo (isset($shippingAddress->line1) ? $shippingAddress->line1 . "," : "") ?>
         	<?php echo (isset($shippingAddress->line2) ? $shippingAddress->line2 . "," : "") ?>

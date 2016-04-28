@@ -21,7 +21,10 @@
 			$count++;
             ?>
             <tr>
-                <td data-cb-invoice="Status">
+                <td class="visible-xs">
+                    Status
+                </td>
+                <td>
                     <?php if ($invoice->status == "paid") { ?> 
                         <span class="glyphicon glyphicon-ok text-success"></span>                            
                         <span class="hidden-lg hidden-sm hidden-md">&nbsp;<?php echo $invoice->status ?></span>
@@ -33,23 +36,26 @@
                         <span class="hidden-lg hidden-sm hidden-md">&nbsp;<?php echo $invoice->status ?></span>
                     <?php } ?>
                 </td>
-                <td data-cb-invoice="Date">
+                <td class="visible-xs">Date</td>
+                <td>
                     <?php echo date('d-M-Y', $invoice->endDate) ?>
                 </td>
-                <td data-cb-invoice="Invoice Number">
+                <td class="visible-xs">Invoice Number</td>
+                <td>
                     <?php echo $invoice->id ?>
                 </td>
-                <td data-cb-invoice="Amount" class="text-right">
+                <td class="visible-xs">Amount</td>
+                <td class="text-right">
                     <?php echo $configData['currency_value'] . number_format($amount / 100, 2, '.', '') ?>
                 </td>
-                <td class="text-muted">
+                <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hide";}?>">
                     <span class="cb-portal-invoice-desc">
                     <?php if ($invoice->status == "paid") { ?> 
 						Paid on <?php echo date('d-M-Y', $invoice->endDate) ?>
                     <?php }?>
 					</span>
                 </td>
-                <td class="text-right">
+                <td class="text-right pdf-link">
                      <?php if ($settingconfigData["invoice"]["download"] == 'true') { 
                     	 $invoiceAsPdf = getEditUrl("downloadInvoice.php", $configData) . "?invoice_id=" . $invoice->id;
                      ?>
