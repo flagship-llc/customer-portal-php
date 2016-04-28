@@ -102,7 +102,7 @@ ul#g-menu.add_menu{
       @media screen and (max-width: 768px){
         margin: 0 -1%;
         overflow: hidden;
-        padding-bottom:2  0px;
+        padding-bottom:20px;
         &:before{
           content:"";
           position: absolute;
@@ -206,6 +206,7 @@ ul#g-menu.add_menu{
       @media screen and (max-width: 768px){
         text-align: left;
         display: inline-block;
+        margin-bottom:10px;
       }
     } 
     .price b{
