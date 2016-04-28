@@ -158,7 +158,7 @@ include("skip_true.php");
                         <div class="subsc-menu">                    
                             <?php if($subscription->status == "cancelled") {?>
                                 <?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
-                                    <a data-cb-jshook="link-cancel-subscription" id="reactvateSubscription">Reactivate</a> this subscription
+                                    <a data-cb-jshook="link-cancel-subscription" id="reactivateSubscription">Reactivate</a> this subscription
                                 <?php } ?>
                                     <?php } else if ($settingconfigData["cancelsubscription"]["allow"] == 'true') { 
                                     if (!($subscription->status == "non_renewing" && 
@@ -240,6 +240,8 @@ include("skip_true.php");
 </div>
 </div>
 </div>
+
+
 <?php include("footer.php"); ?>
 <script>
     var hidden_alert = function () {
