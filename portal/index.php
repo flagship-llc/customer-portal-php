@@ -6,10 +6,15 @@ $customer = $servicePortal->getCustomer();
 $billingAddress = $customer->billingAddress;
 $customerInvoice = $servicePortal->retrieveInvoice();
 $currentPlanDetails = $servicePortal->retrievePlan($subscription->planId);
+if($subscription->hasScheduledChanges){
+    $result = ChargeBee_Subscription::retrieveWithScheduledChanges($subscription->id);
+    $next_subscription = $result->subscription();
+    $next_plan = ChargeBee_Plan::retrieve($next_subscription->planId)->plan();
+}
 include("skip_true.php");
 ?>
 
-<div class="modal" id="Timeline" tabindex="-1">
+<div class="modal fade" id="Timeline" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -54,8 +59,9 @@ include("skip_true.php");
                                                 $infoconfigData['Timeline']['Next_billing_date']); ?> 
                     </p>
                     <p class="text-muted">
-                        <?php 
-                            if (isset($estimate->lineItems)) {
+                      <?php if($next_plan){?>
+                        <p class="text-muted">Your next plan <?php echo $next_plan->name;?></p>
+                      <?php } else if (isset($estimate->lineItems)) {
                                 foreach ($estimate->lineItems as $li) {
                                     echo ' Your next plan will be '.$li->description.'.';
                                 }
@@ -100,7 +106,11 @@ include("skip_true.php");
                         <img src="assets/images/premium-12.png" alt="">
                       </div>
                     <div class="info clearfix row">
+                    <?php if ($subscription->status != "cancelled") {?>
                       <div class="col-sm-8">
+                    <?php } else {?>
+                      <div class="col-sm-12">
+                    <?php }?>
                         <?php 
         $phrase = $infoconfigData['Timeline']['Recurring_charge'];
         $default = array('$planperiod', '$planunit');
@@ -111,11 +121,18 @@ include("skip_true.php");
                         <div class="price">
                           <b class="visible-xs"><span><?php echo $configData['currency_value'] .' '.number_format($estimate->amount / 100, 2, '.', '') ?></span></b>
                         </div>
-                        <?php }?>
-                          <p class="text-orange"><b><span>
-                            <?php
-                              echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
-                            ?></span></b></p>
+                        <p class="text-orange"><b><span>
+                          <?php
+                            echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
+                          ?>
+                          <?php if($next_plan){?>
+                            <br>Your next plan <?php echo $next_plan->name;?>
+                          <?php } ?>
+                          </span></b></p>
+                          
+                        <?php }else{?>
+                          <p class="text-danger">Your subscription has been canceled.<br> Please Reactivate your subscription! </p>
+                        <?php } ?>
                         </div>
                       <?php if ($subscription->status != "cancelled") {?>
                         <div class="col-sm-4 price hidden-xs">
@@ -202,11 +219,11 @@ include("skip_true.php");
                         <div class="cb-well glay-border" id="cb-portal-payment-method">
                             <h2 class="title back-glay Candal"><span>Payment Method</span></h2>
                             <div class="info-box">
-                                <?php include("cardInfo.php") ?>
+                            <?php include("cardInfo.php") ?>
                     
                         <a id="cb-portal-payment-info-edit-link" href=<?php echo getEditUrl("editCard.php", $configData) ?> class="arrow glay">
                         <?php if(!isset($customer->paymentMethod)) {?>
-                            <span class='glyphicon glyphicon-plus'></span>Add Payment Method<span class="glyphicon glyphicon-chevron-right" title="add card info">
+                            Add Payment Method<span class='glyphicon glyphicon-plus'></span>
                         <?php } else {?>
                              Change Payment Method<span class="glyphicon glyphicon-chevron-right" title="edit card info">
                         <?php } ?>

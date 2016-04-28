@@ -48,7 +48,7 @@
                 <td class="text-right">
                     <?php echo $configData['currency_value'] . number_format($amount / 100, 2, '.', '') ?>
                 </td>
-                <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hide";}?>">
+                <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hidden-xs";}?>">
                     <span class="cb-portal-invoice-desc">
                     <?php if ($invoice->status == "paid") { ?> 
 						Paid on <?php echo date('d-M-Y', $invoice->endDate) ?>
@@ -80,7 +80,7 @@
         Showing <span class="inv-start-no"><?php echo $lastInvoiceNo + 1 ?></span> - 
 				<span class="inv-end-no"><?php echo $lastInvoiceNo + $count ?></span> of <span class="inv-max-no"><?php echo $maxInvoiceNo; ?></span>　
         <?php if(isset($nextOffset)){ ?>
-            <a href="" data-cb-nav="next" id="next">Next</a>
+            <a href="" data-cb-nav="next" id="next" class="text-orange">Next</a>
         <?php } else{ ?>
             <span class="text-muted" >Next</span>
         <?php } ?>
