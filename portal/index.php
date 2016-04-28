@@ -5,6 +5,7 @@ $subscription_term_end = $subscription->currentTermEnd;
 $customer = $servicePortal->getCustomer();
 $billingAddress = $customer->billingAddress;
 $customerInvoice = $servicePortal->retrieveInvoice();
+$currentPlanDetails = $servicePortal->retrievePlan($subscription->planId);
 include("skip_true.php");
 ?>
 
