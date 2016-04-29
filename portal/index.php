@@ -97,29 +97,29 @@ include("skip_true.php");
                   <div class="clearfix wraps">
                     <div class="col-sm-6 box-info">
                       <div class="image-wrap text-center">
-                        <?php if($currentPlanDetails->id == 'premium-12-month-prepay-plan'){?>
+                        <?php if($subscription->planId == 'premium-12-month-prepay-plan'){?>
                             <img src="assets/images/premium-12.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'premium-6-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'premium-6-month-prepay-plan'){ ?>
                             <img src="assets/images/premium-6.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'premium-3-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'premium-3-month-prepay-plan'){ ?>
                             <img src="assets/images/premium-3.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'premium-monthly-plan'){ ?>
+                        <?php }else if($subscription->planId == 'premium-monthly-plan'){ ?>
                             <img src="assets/images/premium-1.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'regular-12-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'regular-12-month-prepay-plan'){ ?>
                             <img src="assets/images/regular-12.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'regular-6-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'regular-6-month-prepay-plan'){ ?>
                             <img src="assets/images/regular-6.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'regular-3-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'regular-3-month-prepay-plan'){ ?>
                             <img src="assets/images/regular-3.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'regular-monthly-plan'){ ?>
+                        <?php }else if($subscription->planId == 'regular-monthly-plan'){ ?>
                             <img src="assets/images/regular-1.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'small-12-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'small-12-month-prepay-plan'){ ?>
                             <img src="assets/images/small-12.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'small-6-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'small-6-month-prepay-plan'){ ?>
                             <img src="assets/images/small-6.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'small-3-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'small-3-month-prepay-plan'){ ?>
                             <img src="assets/images/small-3.png" alt="">
-                        <?php }else if($currentPlanDetails->id == 'small-monthly-plan'){ ?>
+                        <?php }else if($subscription->planId == 'small-monthly-plan'){ ?>
                             <img src="assets/images/small-1.png" alt="">
                         <?php } ?>
                       </div>
