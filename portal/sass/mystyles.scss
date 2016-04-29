@@ -153,6 +153,8 @@ ul#g-menu.add_menu{
     padding:4px 20px;
     color: #ffffff;
     font-weight: normal;
+    transition:opacity 0.2s linear;
+    -webkit-transition:opacity 0.2s linear;
     @media screen and (max-width: 768px){
       display: block;
       width: 100%;
@@ -166,6 +168,11 @@ ul#g-menu.add_menu{
     }
     &.glay{
       background-color: #b1b1b1;
+    }
+    &:hover{
+      @media screen and (min-width: 768px){
+        opacity: 0.7;
+      }
     }
   }
   .payment-attention{
@@ -194,6 +201,13 @@ ul#g-menu.add_menu{
       color: #ff7a0f;
       border-bottom:none;
       font-weight: normal;
+      transition: opacity 0.2s linear;
+      -webkit-transition: opacity 0.2s linear;
+      &:hover{
+        @media screen and (min-width: 768px){
+          opacity: 0.7;
+        }
+      }
     }
   }
 }
