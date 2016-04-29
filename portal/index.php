@@ -35,7 +35,7 @@ include("skip_true.php");
                         $default = array('$subscription.current_term_start', '$subscription.current_term_end');
                         $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
                         echo str_replace($default,  $assign, $phrase);
-
+                        if($next_plan){echo "(".$next_plan->name.")";}
                      ?> 
                     </p> 
                 <?php } ?>
@@ -56,17 +56,7 @@ include("skip_true.php");
             <?php } else if ($subscription->status == "active") { ?>   
                     <p class="text-muted">
                         <?php echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),
-                                                $infoconfigData['Timeline']['Next_billing_date']); ?> 
-                    </p>
-                    <p class="text-muted">
-                      <?php if($next_plan){?>
-                        <p class="text-muted">Your next plan <?php echo $next_plan->name;?></p>
-                      <?php } else if (isset($estimate->lineItems)) {
-                                foreach ($estimate->lineItems as $li) {
-                                    echo ' Your next plan will be '.$li->description.'.';
-                                }
-                            }
-                        ?>
+                                                $infoconfigData['Timeline']['Next_billing_date']); ?>
                     </p>
                     <p class="text-muted">
                         <?php echo str_replace('$subscription.activated_at', date('d-M-Y', $subscription->activatedAt),
@@ -80,6 +70,10 @@ include("skip_true.php");
                     <p class="text-muted"><?php echo str_replace('$subscription.activated_at', date('d-M-Y', $subscription->activatedAt),
                                     $infoconfigData['Timeline']['Activation_date']); ?> </p>
             <?php }  ?>
+                    <p class="text-muted">
+                        <?php echo str_replace('$subscription.created_at', date('d-M-y', $subscription->createdAt),
+                                            $infoconfigData['Timeline']['Signed_up_on']); ?> 
+                    </p>
             </div>
         </div>
     </div>
@@ -148,10 +142,8 @@ include("skip_true.php");
                         <p class="text-orange"><b><span>
                           <?php
                             echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
+                            if($next_plan){echo "(".$next_plan->name.")";}
                           ?>
-                          <?php if($next_plan){?>
-                            <br>Your next plan <?php echo $next_plan->name;?>
-                          <?php } ?>
                           </span></b></p>
                           
                         <?php }else{?>
