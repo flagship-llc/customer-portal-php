@@ -79,7 +79,7 @@ class ServicePortal {
 	 * Retrieves only 5 invoices from Chargebee. If offset is passed, then the invoices from the offset will be returned.
 	 */
     function retrieveInvoice($offset=null) {
-        $inputParams = array("limit" => 5 );
+        $inputParams = array("limit" => 12 );
         if(isset($offset)){
             $inputParams['offset'] = $offset;
         }         
