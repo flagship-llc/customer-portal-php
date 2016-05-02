@@ -31,17 +31,11 @@ include("skip_true.php");
                 <?php if(isset($subscription->currentTermStart)){ ?>
                     <p class="text-muted">
                         <?php 
-                        $phrase = $infoconfigData['Timeline']['Current_term2'];
-                        $default = array('$subscription.current_term_start', '$subscription.current_term_end');
-                        $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
-                        if($next_plan){
-                            $phrase = $infoconfigData['Timeline']['Current_term'];
+                            $phrase = $infoconfigData['Timeline']['Current_term2'];
+                            $default = array('$subscription.current_term_start', '$subscription.current_term_end');
+                            $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
                             echo str_replace($default,  $assign, $phrase);
-                            echo "(".$next_plan->name.").";
-                        }else{
-                            echo str_replace($default,  $assign, $phrase);
-                        }
-                     ?> 
+                         ?> 
                     </p> 
                 <?php } ?>
                 
@@ -60,8 +54,15 @@ include("skip_true.php");
                     </p> 
             <?php } else if ($subscription->status == "active") { ?>   
                     <p class="text-muted">
-                        <?php echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),
-                                                $infoconfigData['Timeline']['Next_billing_date']); ?>
+                        <?php 
+                            if($next_plan){
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Timeline']['Next_billing_date2']);
+                                echo "(".$next_plan->name.").";
+                            }else{                                
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Timeline']['Next_billing_date']);
+                            }
+                        ?>
+
                     </p>
                     <p class="text-muted">
                         <?php echo str_replace('$subscription.activated_at', date('d-M-Y', $subscription->activatedAt),
