@@ -19,21 +19,18 @@ foreach ($allPlans as $plan) {
     $allPlansIndexed[$plan->plan()->id] = $plan->plan();
     if ($settingconfigData["changesubscription"]["groupplan"] == 'false') {
         $nonGroupPlans[$plan->plan()->id] = $plan->plan()->period;
-    } elseif ($plan->plan()->periodUnit == "week") {
-        $weeklyPlans[$plan->plan()->id] = $plan->plan()->period;
-        asort($weeklyPlans);
     } elseif ($plan->plan()->period == 12) {
         $yearlyPlans[$plan->plan()->id] = $plan->plan()->period;
-        asort($yearlyPlans);
+        ksort($yearlyPlans);
     } elseif ($plan->plan()->period == 6) {
         $halfYearlyPlans[$plan->plan()->id] = $plan->plan()->period;
-        asort($halfYearlyPlans);
+        ksort($halfYearlyPlans);
     } elseif ($plan->plan()->period == 3) {
         $quarterYearlyPlans[$plan->plan()->id] = $plan->plan()->period;
-        asort($quarterYearlyPlans);
+        ksort($quarterYearlyPlans);
     } else {
         $monthlyPlans[$plan->plan()->id] = $plan->plan()->period;
-        asort($monthlyPlans);
+        ksort($monthlyPlans);
     }
 }
 $total = ($planResult->price * $servicePortal->getSubscription()->planQuantity);
