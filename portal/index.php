@@ -31,11 +31,16 @@ include("skip_true.php");
                 <?php if(isset($subscription->currentTermStart)){ ?>
                     <p class="text-muted">
                         <?php 
-                        $phrase = $infoconfigData['Timeline']['Current_term'];
+                        $phrase = $infoconfigData['Timeline']['Current_term2'];
                         $default = array('$subscription.current_term_start', '$subscription.current_term_end');
                         $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
-                        echo str_replace($default,  $assign, $phrase);
-                        if($next_plan){echo "(".$next_plan->name.")";}
+                        if($next_plan){
+                            $phrase = $infoconfigData['Timeline']['Current_term'];
+                            echo str_replace($default,  $assign, $phrase);
+                            echo "(".$next_plan->name.").";
+                        }else{
+                            echo str_replace($default,  $assign, $phrase);
+                        }
                      ?> 
                     </p> 
                 <?php } ?>
@@ -130,10 +135,10 @@ include("skip_true.php");
                       <div class="col-sm-12">
                     <?php }?>
                         <?php 
-        $phrase = $infoconfigData['Timeline']['Recurring_charge'];
-        $default = array('$planperiod', '$planunit');
-        $assign   = array($currentPlanDetails->period, $currentPlanDetails->periodUnit);
-        echo str_replace($default,  $assign, $phrase); ?>
+                            $phrase = $infoconfigData['Timeline']['Recurring_charge'];
+                            $default = array('$planperiod', '$planunit');
+                            $assign   = array($currentPlanDetails->period, $currentPlanDetails->periodUnit);
+                            echo str_replace($default,  $assign, $phrase); ?>
                         <?php if ($subscription->status != "cancelled") {?>
                         <br>
                         <div class="price">
@@ -141,8 +146,12 @@ include("skip_true.php");
                         </div>
                         <p class="text-orange"><b><span>
                           <?php
-                            echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
-                            if($next_plan){echo "(".$next_plan->name.")";}
+                            if($next_plan){
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
+                                echo "(".$next_plan->name.").";
+                            }else{
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info2']);
+                            }
                           ?>
                           </span></b></p>
                           
