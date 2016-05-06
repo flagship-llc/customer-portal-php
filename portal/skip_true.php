@@ -10,14 +10,14 @@
       }
   }
   if($end_term_add_month == 1){
-    $cur_term_x = strtotime('+ 2 month',$current_start); //スキップ ア マンスをしていない場合のタームエンド(１ヶ月)
+    $cur_term_x = strtotime('+ 1 month',$current_start); //スキップ ア マンスをしていない場合のタームエンド(１ヶ月)
     $skip_limit = strtotime('- 1 month',$current_end); //次回スキップ ア マンス開放日
   }elseif($end_term_add_month == 3){
     $cur_term_x = strtotime('+ 3 month',$current_start); //スキップ ア マンスをしていない場合のタームエンド(3ヶ月)
-    $skip_limit = strtotime('- 3 month',$current_end); //次回スキップ ア マンス開放日
+    $skip_limit = strtotime('- 2 month',$current_end); //次回スキップ ア マンス開放日
   }elseif($end_term_add_month == 6){
     $cur_term_x = strtotime('+ 6 month',$current_start); //スキップ ア マンスをしていない場合のタームエンド(6ヶ月)
-    $skip_limit = strtotime('- 6 month',$current_end); //次回スキップ ア マンス開放日
+    $skip_limit = strtotime('- 5 month',$current_end); //次回スキップ ア マンス開放日
   }elseif($end_term_add_month == 12){
     $cur_term_x = strtotime('+ 12 month',$current_start); //スキップ ア マンスをしていない場合のタームエンド(12ヶ月)    
     $skip_limit = strtotime('- 11 month',$current_end); //次回スキップ ア マンス開放日

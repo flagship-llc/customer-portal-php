@@ -158,8 +158,27 @@ class ServicePortal {
                         "replaceAddonList" => true,
                         "addons" => $_POST['addons']
                     ));
-          $response["status"] = "success";
-          $response["forward"] = getReturnURL();
+            $response["status"] = "success";
+            $response["forward"] = getReturnURL();
+
+            $subscription_term_end = $this->getSubscription()->currentTermEnd;
+
+        $end_day = date('d',$subscription_term_end);    
+        $end_current_month = date('m',$subscription_term_end);
+        $end_month = date('m',$subscription_term_end) + 1;
+        $end_year = date('Y',$subscription_term_end);
+
+        $current_last_day = date('t', mktime(0, 0, 0, $end_current_month, 1, $end_year));
+        $next_last_day = date('t', mktime(0, 0, 0, $end_month, 1, $end_year));
+
+        $next_add_day =$current_last_day - $end_day + 1;
+
+        $one_month_after_end = strtotime( '+ '.$next_add_day .' day + 7 hour', $subscription_term_end) ;
+
+        $result = ChargeBee_Subscription::changeTermEnd($this->getSubscription()->id, array(
+                "termEndsAt" => $one_month_after_end
+            ));
+
           return json_encode($response);
 
         } catch (ChargeBee_PaymentException $e) {
