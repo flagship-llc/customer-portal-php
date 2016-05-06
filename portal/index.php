@@ -224,6 +224,7 @@ include("skip_true.php");
                 </div>
 
                 <div class="clearfix row">
+                <?php if ($settingconfigData["billing"]["addedit"] == 'true'){ ?>
                     <div class="col-sm-6">
                         <div class="cb-well glay-border" id="cb-portal-billing">
                             <h2 class="title back-glay Candal"><span>Billing Info</span></h2>
@@ -241,6 +242,7 @@ include("skip_true.php");
                             </div>
                         </div>
                     </div>
+                <?php }?>
                     <div class="col-sm-6">
                         <div class="cb-well glay-border" id="cb-portal-payment-method">
                             <h2 class="title back-glay Candal"><span>Payment Method</span></h2>
@@ -259,7 +261,6 @@ include("skip_true.php");
                         </div>
                     </div>
                 </div>
-
                 <div class="payment-history">
                     <h2 class="Candal text-orange"><span>Payment History</span></h2>
                     <?php if (count($customerInvoice) <= 0) { ?>
