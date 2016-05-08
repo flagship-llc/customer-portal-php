@@ -11,6 +11,7 @@ if($subscription->hasScheduledChanges){
     $next_subscription = $result->subscription();
     $next_plan = ChargeBee_Plan::retrieve($next_subscription->planId)->plan();
 }
+$cur_plans = ChargeBee_Plan::retrieve($subscription->planId);
 include("skip_true.php");
 ?>
 
@@ -58,10 +59,11 @@ include("skip_true.php");
                     <p class="text-muted">
                         <?php 
                             if($next_plan){
-                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Timeline']['Next_billing_date2']);
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Timeline']['Next_billing_date']);
                                 echo "(".$next_plan->name.").";
                             }else{                                
                                 echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Timeline']['Next_billing_date']);
+                                echo "(".$cur_plans->plan()->name.").";
                             }
                         ?>
 
@@ -149,11 +151,13 @@ include("skip_true.php");
                         </div>
                         <p class="text-orange"><b><span>
                           <?php
+                          
                             if($next_plan){
                                 echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
                                 echo "(".$next_plan->name.").";
                             }else{
                                 echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info2']);
+                                echo "(".$cur_plans->plan()->name.").";
                             }
                           ?>
                           </span></b></p>
