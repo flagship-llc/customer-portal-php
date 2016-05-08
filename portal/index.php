@@ -29,14 +29,16 @@ include("skip_true.php");
                 $assign   = array($currentPlanDetails->period, $currentPlanDetails->periodUnit);
                 echo str_replace($default,  $assign, $phrase); ?> </p>
                 <?php if(isset($subscription->currentTermStart)){ ?>
-                    <p class="text-muted">
-                        <?php 
-                            $phrase = $infoconfigData['Timeline']['Current_term2'];
-                            $default = array('$subscription.current_term_start', '$subscription.current_term_end');
-                            $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
-                            echo str_replace($default,  $assign, $phrase);
-                         ?> 
-                    </p> 
+                    <?php if ($subscription->status != "cancelled") { ?>   
+                        <p class="text-muted">
+                            <?php 
+                                $phrase = $infoconfigData['Timeline']['Current_term2'];
+                                $default = array('$subscription.current_term_start', '$subscription.current_term_end');
+                                $assign   = array(date('d-M-Y', $subscription->currentTermStart), date('d-M-Y', $subscription->currentTermEnd));
+                                echo str_replace($default,  $assign, $phrase);
+                             ?> 
+                        </p> 
+                    <?php } ?>
                 <?php } ?>
                 
          <?php if ($subscription->status == "in_trial") {  ?>
