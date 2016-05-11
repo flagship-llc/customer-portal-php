@@ -4,7 +4,7 @@
     $subscription_id = $subscription->id;
     $billingAddress = $customer->billingAddress;
 
-    $result = ChargeBee_Subscription::cancel($subscription_id);
+    $result = ChargeBee_Subscription::cancel($subscription_id,array("endOfTerm" => $_POST['endOfTerm']));
 
     $comment_note = $_POST['feedback'];
     if($comment_note){

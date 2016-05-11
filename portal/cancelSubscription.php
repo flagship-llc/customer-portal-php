@@ -55,7 +55,7 @@ $one_month_after_end = strtotime( "+1 month", $current_end);
                                 </div> 
                             <?php 
                         } elseif ($settingconfigData["cancelsubscription"]["immediately"] == 'true' && $settingconfigData["cancelsubscription"]["endcurrentterm"] == 'true') { ?>
-                            <!-- <div class="radio-group">                            
+                            <div class="radio-group">                            
                                 <div class="radio">
                                     <label>                                 
                                         <input type="radio" name="endOfTerm" id="cancelNow" value="false" checked=""> Cancel Immediately
@@ -67,7 +67,7 @@ $one_month_after_end = strtotime( "+1 month", $current_end);
                                     </label>
                                 </div>
                                 <span id="sub_cancel.err" class="text-danger">&nbsp;</span>
-                            </div>  -->
+                            </div>
                             
                                 <div id="cancel-immediately-info" class="alert alert-warning">
                                     <div class="media text-left">
