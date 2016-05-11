@@ -206,7 +206,6 @@ include("skip_true.php");
                       <?php } ?>
                       <div class="text-center">
                         <div class="subsc-menu">
-                        <?php echo $subscription->status;?>
                             <?php if($subscription->status == "cancelled" || $subscription->status == "non_renewing") {?>
                                 <?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
                                     <a data-cb-jshook="link-cancel-subscription" id="reactivateSubscription">Reactivate</a> this subscription
