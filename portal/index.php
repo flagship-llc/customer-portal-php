@@ -205,22 +205,20 @@ include("skip_true.php");
                         </a>
                       <?php } ?>
                       <div class="text-center">
-                        <div class="subsc-menu">                    
-                            <?php if($subscription->status == "cancelled") {?>
+                        <div class="subsc-menu">
+                        <?php echo $subscription->status;?>
+                            <?php if($subscription->status == "cancelled" || $subscription->status == "non_renewing") {?>
                                 <?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
                                     <a data-cb-jshook="link-cancel-subscription" id="reactivateSubscription">Reactivate</a> this subscription
                                 <?php } ?>
-                                    <?php } else if ($settingconfigData["cancelsubscription"]["allow"] == 'true') { 
-                                    if (!($subscription->status == "non_renewing" && 
-                                    $settingconfigData["cancelsubscription"]["immediately"] == "false")) { ?>
-                                    <?php if($skip_st){ ?>
-                                        <a href=<?php echo getEditUrl("skip_a_month_view.php", $configData) ?> >Skip a Month</a> | 
-                                    <?php } else { ?>
-                                        <span class="text-muted">Can't Skip a Month</span> | 
-                                    <?php }?>
-                                        <a href=<?php echo getEditUrl("cancelSubscription.php", $configData) ?> id="cancelSubscription">
-                                    Cancel
-                                    </a> this subscription
+                            <?php } else if ($settingconfigData["cancelsubscription"]["allow"] == 'true') { 
+                                if (!($subscription->status == "non_renewing" && $settingconfigData["cancelsubscription"]["immediately"] == "false")) { ?>
+                                <?php if($skip_st){ ?>
+                                    <a href=<?php echo getEditUrl("skip_a_month_view.php", $configData) ?> >Skip a Month</a> | 
+                                <?php } else { ?>
+                                    <span class="text-muted">Can't Skip a Month</span> | 
+                                <?php }?>
+                                <a href=<?php echo getEditUrl("cancelSubscription.php", $configData) ?> id="cancelSubscription">Cancel</a> this subscription
                                 <?php } ?>
                             <?php } ?>               
                         </div>
