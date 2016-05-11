@@ -457,37 +457,38 @@ ul#g-menu.add_menu {
   #cb-portal-invoice-table td.paid_st, #cb-portal-invoice-table td.pdf-link {
     width: 100%;
     text-align: center;
+    padding-left: 5px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 359, ../sass/mystyles.scss */
+  /* line 360, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.paid_st.hidden-xs {
     border: none;
     padding: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 367, ../sass/mystyles.scss */
+  /* line 368, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.pdf-link a {
     width: 70%;
     margin: 0 auto;
   }
 }
-/* line 373, ../sass/mystyles.scss */
+/* line 374, ../sass/mystyles.scss */
 #cb-portal-invoice-table td:before {
   background-color: #000000;
 }
 @media screen and (max-width: 768px) {
-  /* line 376, ../sass/mystyles.scss */
+  /* line 377, ../sass/mystyles.scss */
   #cb-portal-invoice-table td:last-child {
     border-color: #e1e1e1;
   }
 }
-/* line 381, ../sass/mystyles.scss */
+/* line 382, ../sass/mystyles.scss */
 #cb-portal-invoice-table td .arrow {
   padding: 4px 10px;
 }
-/* line 383, ../sass/mystyles.scss */
+/* line 384, ../sass/mystyles.scss */
 #cb-portal-invoice-table td .arrow .glyphicon {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
@@ -495,7 +496,7 @@ ul#g-menu.add_menu {
   left: 4px;
 }
 
-/* line 392, ../sass/mystyles.scss */
+/* line 393, ../sass/mystyles.scss */
 .cb-available-list {
   max-height: none;
 }

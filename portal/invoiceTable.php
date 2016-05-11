@@ -5,10 +5,9 @@
     <tbody>
         <tr class="hidden-xs">
             <td class="control-label">Status</td>
-            <td class="control-label">Date</td>
-            <td class="control-label">Invoice Number</td>
+            <td class="control-label">Paid on</td>
+            <td class="control-label">Payment for</td>
             <td class="control-label text-right">Amount</td>
-            <td></td>
             <td></td>
         </tr>
         <?php
@@ -36,24 +35,24 @@
                         <span class="hidden-lg hidden-sm hidden-md">&nbsp;<?php echo $invoice->status ?></span>
                     <?php } ?>
                 </td>
-                <td class="visible-xs">Date</td>
+                <td class="visible-xs">Paid on</td>
                 <td>
                     <?php echo date('d-M-Y', $invoice->endDate) ?>
                 </td>
-                <td class="visible-xs">Invoice Number</td>
-                <td>
-                    <?php echo $invoice->id ?>
+                <td class="visible-xs paid_st">Payment for</td>
+                <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hidden-xs";}?>">
+                    <span class="cb-portal-invoice-desc">
+                    <?php
+                        echo date('d-M-Y',$subscription->currentTermStart);
+                        echo ' 〜 ';
+                        echo date('d-M-Y',$subscription_term_end = $subscription->currentTermEnd);
+                        echo '<br>';
+                    ?>
+                    </span>
                 </td>
                 <td class="visible-xs">Amount</td>
                 <td class="text-right">
                     <?php echo $configData['currency_value'] . number_format($amount / 100, 2, '.', '') ?>
-                </td>
-                <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hidden-xs";}?>">
-                    <span class="cb-portal-invoice-desc">
-                    <?php if ($invoice->status == "paid") { ?> 
-						Paid on <?php echo date('d-M-Y', $invoice->endDate) ?>
-                    <?php }?>
-					</span>
                 </td>
                 <td class="text-right pdf-link">
                      <?php if ($settingconfigData["invoice"]["download"] == 'true') { 
