@@ -23,13 +23,19 @@ $accounts = $portalSession->linkedCustomers;
               "limit" => 1));
             foreach($all as $entry){
               $subscription = $entry->subscription();
+              $cur_plan_name = ChargeBee_Plan::retrieve($subscription->planId)->plan()->name;
             }
             $count++;
     ?>
 
         <dl class="row">
             <dt class="col-xs-8">
-                Account #<?php echo $count; ?>
+                TokyoTreat - <?php echo $cur_plan_name;?>
+                <!-- <?php if($subscription->planId == "small-12-month-prepay-plan" || $subscription->planId == "small-6-month-prepay-plan" || $subscription->planId == "small-3-month-prepay-plan" || $subscription->planId == "small-monthly-plan" ){?>
+                YumeTwins - <?php echo $subscription->planId;?>
+                <?php }else{ ?>
+                TokyoTreat - <?php echo $subscription->planId;?>
+                <?php } ?> -->
                 <br />
                 <span class="text-muted">Signed up on <?php echo date('d-M-Y',$customer->createdAt); ?></span>
             </dt>
