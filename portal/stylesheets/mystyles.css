@@ -500,3 +500,9 @@ ul#g-menu.add_menu {
 .cb-available-list {
   max-height: none;
 }
+
+/* line 397, ../sass/mystyles.scss */
+.reactivate-info {
+  position: relative;
+  top: 30px;
+}

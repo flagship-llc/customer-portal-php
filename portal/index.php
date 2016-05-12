@@ -205,6 +205,20 @@ include("skip_true.php");
                         </a>
                       <?php } ?>
                       <div class="text-center">
+
+                    <?php if($subscription->status == "cancelled" || $subscription->status == "non_renewing") {?>
+                        <?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
+                            <div class="alert alert-info reactivate-info">
+                                <div class="media text-left">
+                                    <span class="glyphicon glyphicon-info-sign pull-left"></span>
+                                    <div class="media-body">
+                                        Please be aware that you will be charged for your reactivated subscription upon reactivation.
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
+
                         <div class="subsc-menu">
                             <?php if($subscription->status == "cancelled" || $subscription->status == "non_renewing") {?>
                                 <?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
@@ -297,8 +311,10 @@ include("skip_true.php");
     }
     setTimeout(hidden_alert, 10000);
     $('#reactivateSubscription').click(function () {
+        if(window.confirm('Please be aware that you will be charged for your reactivated subscription upon reactivation.')){
         var data = $.param({action: "subscriptionReactivate"});
         AjaxCallMessage('api.php', 'POST', 'json', data, 'index');
 		return false;
+    }
     });
 </script>
