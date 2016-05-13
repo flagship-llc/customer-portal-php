@@ -96,7 +96,7 @@ include("skip_true.php");
     <?php 
       $estimate = $servicePortal->retrieveEstimate(); 
     ?>
-    <div class="container renew">
+    <div class="container renew" id="top">
 
         <div id="cb-wrapper-ssp">
              <?php include("processing.php");  ?>
@@ -131,6 +131,14 @@ include("skip_true.php");
                             <img src="assets/images/small-3.png" alt="">
                         <?php }else if($subscription->planId == 'small-monthly-plan'){ ?>
                             <img src="assets/images/small-1.png" alt="">
+                        <?php }else if($subscription->planId == 'yume-monthly-plan'){ ?>
+                            <img src="assets/images/yume/yume-1.png" alt="">
+                        <?php }else if($subscription->planId == 'yume-3-month-prepay-plan'){ ?>
+                            <img src="assets/images/yume/yume-3.png" alt="">
+                        <?php }else if($subscription->planId == 'yume-6-month-prepay-plan'){ ?>
+                            <img src="assets/images/yume/yume-6.png" alt="">
+                        <?php }else if($subscription->planId == 'yume-12-month-prepay-plan'){ ?>
+                            <img src="assets/images/yume/yume-12.png" alt="">
                         <?php } ?>
                       </div>
                     <div class="info clearfix row">

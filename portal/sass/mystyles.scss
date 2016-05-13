@@ -101,25 +101,33 @@ ul#g-menu.add_menu{
     }
   }
   .box-info{
-      @media screen and (max-width: 768px){
-        margin: 0 -1%;
-        overflow: hidden;
-        padding-bottom:20px;
-        &:before{
-          content:"";
-          position: absolute;
-          width: 100%;
-          height: 1px;
-          bottom: 0px;
-          left: 0;
-          border-top:1px dashed #ff7a0f;
-          transform: scale(2,1);
-        }
-        .arrow{
-          width: 48%;
-          margin: 0 1%;
+    .image-wrap{
+      img{
+        width: 380px;
+        @media screen and (max-width: 768px){
+          width: auto;
         }
       }
+    }
+    @media screen and (max-width: 768px){
+      margin: 0 -1%;
+      overflow: hidden;
+      padding-bottom:20px;
+      &:before{
+        content:"";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0px;
+        left: 0;
+        border-top:1px dashed #ff7a0f;
+        transform: scale(2,1);
+      }
+      .arrow{
+        width: 48%;
+        margin: 0 1%;
+      }
+    }
   }
   .my-info{
     h3{
@@ -397,4 +405,9 @@ ul#g-menu.add_menu{
 .reactivate-info{
   position: relative;
   top:30px;
+}
+
+
+.navbar-nav{
+  margin-top:0;
 }

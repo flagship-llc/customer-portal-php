@@ -1,0 +1,162 @@
+body#yume{
+  .text-darkblue{
+      color: #F58BDC;
+  }
+  header nav .nav-area ul li.center-logo{
+    float: none;
+    a{
+      height: 63px;
+      width: 322px;
+      margin:0 auto;
+      background: url('../assets/images/yume/yume-logo.png') center 4px no-repeat;
+      background-size: auto 50px;
+    }
+  }
+  header nav .nav-area ul li.link-p{
+    float: none;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+  .sp-logo{
+    width: 100%;
+    height: 67px;
+    margin: 0 auto;
+    background: url('../assets/images/yume/yume-logo.png') 15px 6px no-repeat;
+    background-size: auto 50px;
+  }
+  #subscripion-info .image-wrap{
+    background: #FFEBFA;
+  }
+  #subscripion-info h2.title:before{
+    width: 280px;
+    height: 140px;
+    background: url("../assets/images/yume/subscribe-icon.png") no-repeat;
+    @media screen and (max-width: 768px){
+      width: 40%;
+      right: -10px;
+      background-size: contain;
+      background-position: center bottom;
+    }
+  }
+
+  #cb-portal-billing h2.title:before{
+    right: 0px;
+    width: 81px;
+    height: 88px;
+    background: url("../assets/images/yume/billing-icon.png") no-repeat;
+  }
+  #cb-portal-payment-method h2.title:before{
+    right: -3px;
+    width: 63px;
+    height: 89px;
+    background: url("../assets/images/yume/payment-icon.png") no-repeat;
+    @media screen and (max-width: 768px){
+      top:-30px;
+    }
+  } 
+
+  header{
+    border-top: 12px solid #bf92cb;
+  }
+  #g-menu{
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  ul#g-menu.add_menu{
+    left:0;
+  }
+  .cb-well{
+    border: 2px solid #bf92cb;
+  }
+  .renew a.arrow,
+  .back-orange{
+    background-color:#bf92cb;
+  }
+  .go_cancel a,
+  .go_top a,
+  .copyright,
+  .subsc-menu a,
+  .text-orange,
+  .cb-well h3,
+  h2.title,
+  .back-glay.title{
+    color: #bf92cb;
+  }
+  .subsc-menu a{
+    color: #bf92cb!important;
+  }
+  #subscripion-info h2.title{
+    color: #ffffff;
+  }
+  #subscripion-info:before{
+    border-left: 1px dashed #bf92cb!important;
+  }
+  .renew .box-info:before{
+    @media screen and (max-width: 768px){
+      border-top: 1px dashed #bf92cb;
+    }    
+  }
+  .navbar-toggle .icon-bar{
+    background: #bf92cb;
+  }
+  .navbar-nav{
+    @media screen and (max-width: 768px){
+      background-color:#bf92cb;
+      margin-top:0;
+    }
+  }
+  .navbar-collapse > .navbar-nav > .dropdown{
+    margin-top:0;
+  }
+
+.navbar-collapse > .navbar-nav a:hover, .navbar-collapse > .navbar-nav > .dropdown > a:hover, .navbar-collapse > .navbar-nav > .dropdown > a:focus, .navbar-collapse > .navbar-nav > .dropdown.open > a, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+{
+  background: #bf92cb;
+  border-color: #bf92cb;
+  border: 2px solid #bf92cb;
+}
+.navbar-collapse > .navbar-nav > .dropdown > a{
+  border: 2px solid #bf92cb;
+  background-color: #bf92cb;
+}
+.navbar-collapse .navbar-nav .dropdown-menu{
+  border: 2px solid #bf92cb;
+}
+
+#portal_subscription_cancel_submit:before{
+  display: none;
+}
+
+#skip_a_month{
+  border: 2px solid #bf92cb;
+}
+#back{
+  color: #ffffff;
+}
+#cb-wrapper-ssp .cb-well a{
+  color: #bf92cb;
+  border-bottom: 1px solid #bf92cb;
+  &#back{
+    color: #ffffff;
+  }
+}
+#top{
+  #cb-wrapper-ssp .cb-well a{
+    color: #ffffff;
+  }
+}
+#portal_subscription_cancel_submit{
+  left: auto;
+  margin: 0 auto;
+}
+#portal_subscription_cancel_submit input[type="submit"]{
+  color: #bf92cb;
+  border-bottom: 1px solid #bf92cb!important;
+}
+
+
+
+}
