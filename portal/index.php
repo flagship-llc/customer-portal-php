@@ -211,8 +211,8 @@ include("skip_true.php");
                             <div class="alert alert-info reactivate-info">
                                 <div class="media text-left">
                                     <span class="glyphicon glyphicon-info-sign pull-left"></span>
-                                    <div class="media-body">
-                                        Please be aware that you will be charged for your reactivated subscription upon reactivation.
+                                    <div class="media-body" style="font-weight: normal; color:#000000;">
+                                        An amount of <b>USD <?php echo number_format($cur_plans->plan()->price / 100, 2, '.', ''); ?></b> will be charged immediately upon reactivation.
                                     </div>
                                 </div>
                             </div>
@@ -311,10 +311,8 @@ include("skip_true.php");
     }
     setTimeout(hidden_alert, 10000);
     $('#reactivateSubscription').click(function () {
-        if(window.confirm('Please be aware that you will be charged for your reactivated subscription upon reactivation.')){
         var data = $.param({action: "subscriptionReactivate"});
         AjaxCallMessage('api.php', 'POST', 'json', data, 'index');
-		return false;
-    }
+        return false;
     });
 </script>
