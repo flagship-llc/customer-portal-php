@@ -1,6 +1,19 @@
-        <footer id="footer">
+            <footer id="footer">
 
-        <?php if($yume){
+        <?php if($now_url){?>
+
+        <div class="container text-center orange footer-copyright-area">
+            <div class="footer-menu">
+                <ul class="text-bold">
+                    <li><a href="https://tokyotreat.com/privacy-policy/" target="_blank">Privacy Policy</a></li>
+                    <li><a href="https://tokyotreat.com/terms-of-service/" target="_blank">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="copyright col-xs-12">Copyright © 2016 TOKYOTREAT. All Rights Reserved.</div>
+
+        </div>
+        <?php }elseif($yume){
           include('yume-footer.php');
         }else{
           include('footer-menu.php');
