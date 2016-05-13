@@ -7,7 +7,6 @@
 
     $subscription_id = $subscription->id;
 
-    ChargeBee_Environment::configure("tokyotreat-test","test_GaRJqYcqiISoo439GgkSbPUgFHIjS6GD");
     $result = ChargeBee_Address::update(array(
         "subscriptionId" => $subscription_id, 
         "label" => "shipping_address", 
