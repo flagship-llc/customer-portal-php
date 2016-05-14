@@ -5,45 +5,46 @@ header {
 /* line 3, ../sass/common-theme.scss */
 header nav .nav-area ul li {
   top: 0;
+  padding: 10px 20px;
 }
-/* line 5, ../sass/common-theme.scss */
+/* line 6, ../sass/common-theme.scss */
 header nav .nav-area ul li.yume {
   top: 10px;
 }
-/* line 9, ../sass/common-theme.scss */
+/* line 10, ../sass/common-theme.scss */
 header .sp-logo {
   background: none;
   height: auto;
 }
 @media (max-width: 767px) {
-  /* line 12, ../sass/common-theme.scss */
+  /* line 13, ../sass/common-theme.scss */
   header .sp-logo a {
     float: none;
     margin: 0 auto;
   }
 }
 
-/* line 20, ../sass/common-theme.scss */
+/* line 21, ../sass/common-theme.scss */
 .cb-well h3,
 .copyright {
   color: #a2a2a2;
 }
 
-/* line 26, ../sass/common-theme.scss */
+/* line 27, ../sass/common-theme.scss */
 .cb-subscription-manage dl {
   border-top: 1px solid #ebe5ed;
   overflow: hidden;
   padding: 8px 15px;
   background-color: #fff3e9;
 }
-/* line 32, ../sass/common-theme.scss */
+/* line 33, ../sass/common-theme.scss */
 .cb-subscription-manage .small-12-month-prepay-plan,
 .cb-subscription-manage .small-6-month-prepay-plan,
 .cb-subscription-manage .small-3-month-prepay-plan,
 .cb-subscription-manage .small-monthly-plan {
   background-color: #fdf5ff;
 }
-/* line 37, ../sass/common-theme.scss */
+/* line 38, ../sass/common-theme.scss */
 .cb-subscription-manage .small-12-month-prepay-plan a.arrow,
 .cb-subscription-manage .small-6-month-prepay-plan a.arrow,
 .cb-subscription-manage .small-3-month-prepay-plan a.arrow,
@@ -51,14 +52,14 @@ header .sp-logo {
   background-color: #be93c9;
 }
 
-/* line 42, ../sass/common-theme.scss */
+/* line 43, ../sass/common-theme.scss */
 #switch {
   padding-bottom: 0;
   overflow: hidden;
   border: 2px solid #a2a2a2;
 }
 
-/* line 48, ../sass/common-theme.scss */
+/* line 49, ../sass/common-theme.scss */
 a.arrow {
   position: absolute;
   top: 6px;
@@ -74,7 +75,7 @@ a.arrow {
   -webkit-transition: opacity 0.2s linear;
 }
 @media screen and (max-width: 768px) {
-  /* line 48, ../sass/common-theme.scss */
+  /* line 49, ../sass/common-theme.scss */
   a.arrow {
     display: block;
     width: 100%;
@@ -82,30 +83,30 @@ a.arrow {
     text-align: center;
   }
 }
-/* line 67, ../sass/common-theme.scss */
+/* line 68, ../sass/common-theme.scss */
 a.arrow .glyphicon {
   top: 1px;
   left: 6px;
   transform: scale(0.8, 0.8);
 }
-/* line 72, ../sass/common-theme.scss */
+/* line 73, ../sass/common-theme.scss */
 a.arrow.glay {
   background-color: #b1b1b1;
 }
 @media screen and (min-width: 768px) {
-  /* line 75, ../sass/common-theme.scss */
+  /* line 76, ../sass/common-theme.scss */
   a.arrow:hover {
     opacity: 0.7;
   }
 }
 
-/* line 82, ../sass/common-theme.scss */
+/* line 83, ../sass/common-theme.scss */
 footer#footer {
   line-height: 140px;
   background: #fafafa;
   color: #707070;
 }
-/* line 86, ../sass/common-theme.scss */
+/* line 87, ../sass/common-theme.scss */
 footer#footer a {
   color: #707070;
 }

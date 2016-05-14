@@ -416,10 +416,11 @@ ul#g-menu.add_menu{
 }
 header nav .nav-area ul li.center-logo{
   a{
-    background-size: auto 50px;
+    background-size: auto 60px;
   }
   &.yume a{
+    width: 260px;
     background: url('../assets/images/yume/yume-logo.png') center 4px no-repeat;
-    background-size: auto 50px;
+    background-size: auto 60px;
   }
 }
