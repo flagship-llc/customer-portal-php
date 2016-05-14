@@ -131,13 +131,13 @@ include("skip_true.php");
                             <img src="assets/images/small-3.png" alt="">
                         <?php }else if($subscription->planId == 'small-monthly-plan'){ ?>
                             <img src="assets/images/small-1.png" alt="">
-                        <?php }else if($subscription->planId == 'yume-monthly-plan'){ ?>
+                        <?php }else if($subscription->planId == 'yumetwins-monthly-plan'){ ?>
                             <img src="assets/images/yume/yume-1.png" alt="">
-                        <?php }else if($subscription->planId == 'yume-3-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'yumetwins-3-month-prepay-plan'){ ?>
                             <img src="assets/images/yume/yume-3.png" alt="">
-                        <?php }else if($subscription->planId == 'yume-6-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'yumetwins-6-month-prepay-plan'){ ?>
                             <img src="assets/images/yume/yume-6.png" alt="">
-                        <?php }else if($subscription->planId == 'yume-12-month-prepay-plan'){ ?>
+                        <?php }else if($subscription->planId == 'yumetwins-12-month-prepay-plan'){ ?>
                             <img src="assets/images/yume/yume-12.png" alt="">
                         <?php } ?>
                       </div>

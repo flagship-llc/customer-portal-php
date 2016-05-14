@@ -25,12 +25,19 @@ $accounts = $portalSession->linkedCustomers;
               $subscription = $entry->subscription();
               $cur_plan = ChargeBee_Plan::retrieve($subscription->planId);
               $cur_plan_name = $cur_plan->plan()->name;
+              if($cur_plan_name == 'YumeTwins Monthly Plan' || $cur_plan_name == 'YumeTwins 3 Month Prepay Plan' || $cur_plan_name == 'YumeTwins 6 Month Prepay Plan' || $cur_plan_name == 'YumeTwins 12 Month Prepay Plan'){
+                $yume_plan = true;
+              }
             }
             $count++;
     ?>
         <dl class="<?php echo $subscription->planId; ?>">
             <dt class="col-xs-8">
+                <?php if($yume_plan){?>
+                YumeTwins - <?php echo $cur_plan_name;?>
+                <?php }else{?>
                 TokyoTreat - <?php echo $cur_plan_name;?>
+                <?php } ?>
                 <br />
                 <span class="text-muted">Signed up on <?php echo date('d-M-Y',$customer->createdAt); ?></span>
             </dt>

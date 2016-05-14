@@ -38,17 +38,17 @@ header .sp-logo {
   background-color: #fff3e9;
 }
 /* line 33, ../sass/common-theme.scss */
-.cb-subscription-manage .small-12-month-prepay-plan,
-.cb-subscription-manage .small-6-month-prepay-plan,
-.cb-subscription-manage .small-3-month-prepay-plan,
-.cb-subscription-manage .small-monthly-plan {
+.cb-subscription-manage .yumetwins-12-month-prepay-plan,
+.cb-subscription-manage .yumetwins-6-month-prepay-plan,
+.cb-subscription-manage .yumetwins-3-month-prepay-plan,
+.cb-subscription-manage .yumetwins-monthly-plan {
   background-color: #fdf5ff;
 }
 /* line 38, ../sass/common-theme.scss */
-.cb-subscription-manage .small-12-month-prepay-plan a.arrow,
-.cb-subscription-manage .small-6-month-prepay-plan a.arrow,
-.cb-subscription-manage .small-3-month-prepay-plan a.arrow,
-.cb-subscription-manage .small-monthly-plan a.arrow {
+.cb-subscription-manage .yumetwins-12-month-prepay-plan a.arrow,
+.cb-subscription-manage .yumetwins-6-month-prepay-plan a.arrow,
+.cb-subscription-manage .yumetwins-3-month-prepay-plan a.arrow,
+.cb-subscription-manage .yumetwins-monthly-plan a.arrow {
   background-color: #be93c9;
 }
 
