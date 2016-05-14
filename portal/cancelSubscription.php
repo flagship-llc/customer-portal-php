@@ -31,7 +31,10 @@ $two_month_after_end = strtotime( "+2 month", $current_end);
                     <input id="cancelImmediateText" name="cancelImmediateText" type="hidden" class="form-control" value="<?php echo $infoconfigData['Warnings_during_Cancellation']['Cancel_immediately'] ?>" > 
                     <div class="cb-well">
                         <h3 class="text-center">Cancel Subscription</h3>
-                        <p>If you cancel now, you will lose a chance to receive the monthly <a href="https://tokyotreat.com/about/how-it-works/#lucky-treat">Lucky Treat</a> with value over $500 USD! Are you sure..? (TωT)</p>
+                        <?php if($yume){?>
+                        <?php }else{?>
+                            <p>If you cancel now, you will lose a chance to receive the monthly <a href="https://tokyotreat.com/about/how-it-works/#lucky-treat">Lucky Treat</a> with value over $500 USD! Are you sure..? (TωT)</p>
+                        <?php }?>
                         <p>Please let us know why you would like to cancel</p>
                         <textarea name="feedback" class="form-control" style="margin-bottom:20px;"></textarea>
                         <?php 
