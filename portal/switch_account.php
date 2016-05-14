@@ -27,6 +27,8 @@ $accounts = $portalSession->linkedCustomers;
               $cur_plan_name = $cur_plan->plan()->name;
               if($cur_plan_name == 'YumeTwins Monthly Plan' || $cur_plan_name == 'YumeTwins 3 Month Prepay Plan' || $cur_plan_name == 'YumeTwins 6 Month Prepay Plan' || $cur_plan_name == 'YumeTwins 12 Month Prepay Plan'){
                 $yume_plan = true;
+              }else{
+                $yume_plan = false;
               }
             }
             $count++;
