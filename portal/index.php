@@ -190,7 +190,7 @@ include("skip_true.php");
                             if ($settingconfigData["changesubscription"]["allow"] == 'true'){
                                 $showEditDisplay = $servicePortal->getEditSubscription($settingconfigData); 
                                 if($showEditDisplay==true) {   ?>
-                                    <a href=<?php echo getEditUrl("editSubscription.php", $configData) ?> class="arrow glay pull-left">
+                                    <a href=<?php echo getEditUrl("editSubscription.php", $configData) ?> class="arrow pull-left">
                                         Change Plan<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
                                     </a>
                                 <?php
@@ -205,7 +205,7 @@ include("skip_true.php");
                       <h3>TOKYOTREAT will ship to</h3>
                       <?php include("shippingAddressInfo.php") ?>
                       <?php if ($settingconfigData["shipping"]["addedit"] == 'true') { ?>
-                         <a href=<?php echo getEditUrl("editShippingAddress.php", $configData) ?> id="cb-portal-billing-edit-link" class="arrow glay">
+                         <a href=<?php echo getEditUrl("editShippingAddress.php", $configData) ?> id="cb-portal-billing-edit-link" class="arrow">
                             <?php if(!isset($subscription->shippingAddress)) {?>
                                 Add Shipping Address<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
                             <?php } else {?>
@@ -257,7 +257,7 @@ include("skip_true.php");
                             <?php include("billingAddressInfo.php") ?>
                             <div class="link-area">
                                 <?php if ($settingconfigData["billing"]["addedit"] == 'true') { ?>
-                                        <a href=<?php echo getEditUrl("editBillingAddress.php", $configData) ?> id="cb-portal-billing-edit-link" class="arrow glay">
+                                        <a href=<?php echo getEditUrl("editBillingAddress.php", $configData) ?> id="cb-portal-billing-edit-link" class="arrow">
                                             <?php if(!isset($customer->billingAddress)) {?>
                                                 <span class='glyphicon glyphicon-plus'></span>Add
                                             <?php } else {?>
@@ -275,7 +275,7 @@ include("skip_true.php");
                             <div class="info-box">
                             <?php include("cardInfo.php") ?>
                     
-                        <a id="cb-portal-payment-info-edit-link" href=<?php echo getEditUrl("editCard.php", $configData) ?> class="arrow glay">
+                        <a id="cb-portal-payment-info-edit-link" href=<?php echo getEditUrl("editCard.php", $configData) ?> class="arrow">
                         <?php if(!isset($customer->paymentMethod)) {?>
                             Add Payment Method<span class='glyphicon glyphicon-plus'></span>
                         <?php } else {?>
