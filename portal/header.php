@@ -50,13 +50,13 @@ include_once('brand-switch.php');
             <div data-cb-jshook="attach-account-dropdown" class="navbar-collapse collapse" style="height: auto;">
               <ul class="nav navbar-nav navbar-right">
                 <li class="visible-xs">
-                  <a href="/switch_account.php">Switch Account</a>
+                  <a href="switch_account.php">Switch Account</a>
                 </li>
                 <li class="visible-xs">
-                  <a href="/change_password">Change Password</a>
+                  <a href="<?php echo getLogoutUrl($configData); ?>>change_password">Change Password</a>
                 </li>
                 <li class="visible-xs">
-                  <a href="/logout">Logout</a>
+                  <a href="<?php echo getLogoutUrl($configData); ?>>logout">Logout</a>
                 </li>
 
                 <li class="dropdown hidden-xs">
