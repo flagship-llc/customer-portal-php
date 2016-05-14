@@ -132,10 +132,6 @@ body#yume{
 #portal_subscription_cancel_submit:before{
   display: none;
 }
-
-#skip_a_month{
-  border: 2px solid #bf92cb;
-}
 #back{
   color: #ffffff;
 }
@@ -174,10 +170,12 @@ body#yume{
 }
 
 #skip_a_month{
+  border: 2px solid #bf92cb;
   background: url('../assets/images/yume/skip.png') 15px center no-repeat;
   @media screen and (max-width: 768px){
     background-size: 300px auto;
-    background-position: bottom right;
+    background-position: bottom 18px center;
+    padding-bottom:250px;
   }
 }
 

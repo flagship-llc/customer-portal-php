@@ -161,61 +161,59 @@ body#yume .navbar-collapse .navbar-nav .dropdown-menu {
 body#yume #portal_subscription_cancel_submit:before {
   display: none;
 }
-/* line 136, ../sass/yume-theme.scss */
-body#yume #skip_a_month {
-  border: 2px solid #bf92cb;
-}
-/* line 139, ../sass/yume-theme.scss */
+/* line 135, ../sass/yume-theme.scss */
 body#yume #back {
   color: #ffffff;
 }
-/* line 142, ../sass/yume-theme.scss */
+/* line 138, ../sass/yume-theme.scss */
 body#yume .color-1 {
   color: #bf92cb !important;
 }
-/* line 145, ../sass/yume-theme.scss */
+/* line 141, ../sass/yume-theme.scss */
 body#yume #cb-wrapper-ssp .cb-well a {
   color: #bf92cb;
   border-bottom: 1px solid #bf92cb;
 }
-/* line 148, ../sass/yume-theme.scss */
+/* line 144, ../sass/yume-theme.scss */
 body#yume #cb-wrapper-ssp .cb-well a#back {
   color: #ffffff;
 }
-/* line 153, ../sass/yume-theme.scss */
+/* line 149, ../sass/yume-theme.scss */
 body#yume #top #cb-wrapper-ssp .cb-well a {
   color: #ffffff;
 }
-/* line 157, ../sass/yume-theme.scss */
+/* line 153, ../sass/yume-theme.scss */
 body#yume #portal_subscription_cancel_submit {
   left: auto;
   margin: 0 auto;
 }
-/* line 161, ../sass/yume-theme.scss */
+/* line 157, ../sass/yume-theme.scss */
 body#yume #portal_subscription_cancel_submit input[type="submit"] {
   color: #bf92cb;
   border-bottom: 1px solid #bf92cb !important;
 }
-/* line 166, ../sass/yume-theme.scss */
+/* line 162, ../sass/yume-theme.scss */
 body#yume .page-header {
   color: #bf92cb;
 }
-/* line 169, ../sass/yume-theme.scss */
+/* line 165, ../sass/yume-theme.scss */
 body#yume .cb-product-step.current {
   background: #bf92cb;
 }
-/* line 172, ../sass/yume-theme.scss */
+/* line 168, ../sass/yume-theme.scss */
 body#yume .cb-product-step.current:before {
   border-left-color: #bf92cb;
 }
-/* line 176, ../sass/yume-theme.scss */
+/* line 172, ../sass/yume-theme.scss */
 body#yume #skip_a_month {
+  border: 2px solid #bf92cb;
   background: url("../assets/images/yume/skip.png") 15px center no-repeat;
 }
 @media screen and (max-width: 768px) {
-  /* line 176, ../sass/yume-theme.scss */
+  /* line 172, ../sass/yume-theme.scss */
   body#yume #skip_a_month {
     background-size: 300px auto;
-    background-position: bottom right;
+    background-position: bottom 18px center;
+    padding-bottom: 250px;
   }
 }
