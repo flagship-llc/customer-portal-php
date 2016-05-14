@@ -73,26 +73,32 @@ body#yume #cb-portal-payment-method h2.title:before {
 body#yume header {
   border-top: 12px solid #bf92cb;
 }
-/* line 63, ../sass/yume-theme.scss */
+@media screen and (max-width: 768px) {
+  /* line 60, ../sass/yume-theme.scss */
+  body#yume header {
+    border: none;
+  }
+}
+/* line 66, ../sass/yume-theme.scss */
 body#yume #g-menu {
   left: 0;
   width: 100%;
   text-align: center;
 }
-/* line 68, ../sass/yume-theme.scss */
+/* line 71, ../sass/yume-theme.scss */
 body#yume ul#g-menu.add_menu {
   left: 0;
 }
-/* line 71, ../sass/yume-theme.scss */
+/* line 74, ../sass/yume-theme.scss */
 body#yume .cb-well {
   border: 2px solid #bf92cb;
 }
-/* line 74, ../sass/yume-theme.scss */
+/* line 77, ../sass/yume-theme.scss */
 body#yume .renew a.arrow,
 body#yume .back-orange {
   background-color: #bf92cb;
 }
-/* line 78, ../sass/yume-theme.scss */
+/* line 81, ../sass/yume-theme.scss */
 body#yume .go_cancel a,
 body#yume .go_top a,
 body#yume .copyright,
@@ -103,111 +109,111 @@ body#yume h2.title,
 body#yume .back-glay.title {
   color: #bf92cb;
 }
-/* line 88, ../sass/yume-theme.scss */
+/* line 91, ../sass/yume-theme.scss */
 body#yume .subsc-menu a {
   color: #bf92cb !important;
 }
-/* line 91, ../sass/yume-theme.scss */
+/* line 94, ../sass/yume-theme.scss */
 body#yume #subscripion-info h2.title {
   color: #ffffff;
 }
-/* line 94, ../sass/yume-theme.scss */
+/* line 97, ../sass/yume-theme.scss */
 body#yume #subscripion-info:before {
   border-left: 1px dashed #bf92cb !important;
 }
 @media screen and (max-width: 768px) {
-  /* line 97, ../sass/yume-theme.scss */
+  /* line 100, ../sass/yume-theme.scss */
   body#yume .renew .box-info:before {
     border-top: 1px dashed #bf92cb;
   }
 }
-/* line 102, ../sass/yume-theme.scss */
+/* line 105, ../sass/yume-theme.scss */
 body#yume .navbar-toggle .icon-bar {
   background: #bf92cb;
 }
 @media screen and (max-width: 768px) {
-  /* line 105, ../sass/yume-theme.scss */
+  /* line 108, ../sass/yume-theme.scss */
   body#yume .navbar-nav {
     background-color: #bf92cb;
     margin-top: 0;
   }
 }
-/* line 111, ../sass/yume-theme.scss */
+/* line 114, ../sass/yume-theme.scss */
 body#yume .navbar-collapse > .navbar-nav > .dropdown {
   margin-top: 0;
 }
-/* line 115, ../sass/yume-theme.scss */
+/* line 118, ../sass/yume-theme.scss */
 body#yume .navbar-collapse > .navbar-nav a:hover, body#yume .navbar-collapse > .navbar-nav > .dropdown > a:hover, body#yume .navbar-collapse > .navbar-nav > .dropdown > a:focus, body#yume .navbar-collapse > .navbar-nav > .dropdown.open > a, body#yume .nav .open > a, body#yume .nav .open > a:hover, body#yume .nav .open > a:focus {
   background: #bf92cb;
   border-color: #bf92cb;
   border: 2px solid #bf92cb;
 }
-/* line 121, ../sass/yume-theme.scss */
+/* line 124, ../sass/yume-theme.scss */
 body#yume .navbar-collapse > .navbar-nav > .dropdown > a {
   border: 2px solid #bf92cb;
   background-color: #bf92cb;
 }
-/* line 125, ../sass/yume-theme.scss */
+/* line 128, ../sass/yume-theme.scss */
 body#yume .navbar-collapse .navbar-nav .dropdown-menu {
   border: 2px solid #bf92cb;
 }
-/* line 129, ../sass/yume-theme.scss */
+/* line 132, ../sass/yume-theme.scss */
 body#yume #portal_subscription_cancel_submit:before {
   display: none;
 }
-/* line 133, ../sass/yume-theme.scss */
+/* line 136, ../sass/yume-theme.scss */
 body#yume #skip_a_month {
   border: 2px solid #bf92cb;
 }
-/* line 136, ../sass/yume-theme.scss */
+/* line 139, ../sass/yume-theme.scss */
 body#yume #back {
   color: #ffffff;
 }
-/* line 139, ../sass/yume-theme.scss */
+/* line 142, ../sass/yume-theme.scss */
 body#yume .color-1 {
   color: #bf92cb !important;
 }
-/* line 142, ../sass/yume-theme.scss */
+/* line 145, ../sass/yume-theme.scss */
 body#yume #cb-wrapper-ssp .cb-well a {
   color: #bf92cb;
   border-bottom: 1px solid #bf92cb;
 }
-/* line 145, ../sass/yume-theme.scss */
+/* line 148, ../sass/yume-theme.scss */
 body#yume #cb-wrapper-ssp .cb-well a#back {
   color: #ffffff;
 }
-/* line 150, ../sass/yume-theme.scss */
+/* line 153, ../sass/yume-theme.scss */
 body#yume #top #cb-wrapper-ssp .cb-well a {
   color: #ffffff;
 }
-/* line 154, ../sass/yume-theme.scss */
+/* line 157, ../sass/yume-theme.scss */
 body#yume #portal_subscription_cancel_submit {
   left: auto;
   margin: 0 auto;
 }
-/* line 158, ../sass/yume-theme.scss */
+/* line 161, ../sass/yume-theme.scss */
 body#yume #portal_subscription_cancel_submit input[type="submit"] {
   color: #bf92cb;
   border-bottom: 1px solid #bf92cb !important;
 }
-/* line 163, ../sass/yume-theme.scss */
+/* line 166, ../sass/yume-theme.scss */
 body#yume .page-header {
   color: #bf92cb;
 }
-/* line 166, ../sass/yume-theme.scss */
+/* line 169, ../sass/yume-theme.scss */
 body#yume .cb-product-step.current {
   background: #bf92cb;
 }
-/* line 169, ../sass/yume-theme.scss */
+/* line 172, ../sass/yume-theme.scss */
 body#yume .cb-product-step.current:before {
   border-left-color: #bf92cb;
 }
-/* line 173, ../sass/yume-theme.scss */
+/* line 176, ../sass/yume-theme.scss */
 body#yume #skip_a_month {
   background: url("../assets/images/yume/skip.png") 15px center no-repeat;
 }
 @media screen and (max-width: 768px) {
-  /* line 173, ../sass/yume-theme.scss */
+  /* line 176, ../sass/yume-theme.scss */
   body#yume #skip_a_month {
     background-size: 300px auto;
     background-position: bottom right;

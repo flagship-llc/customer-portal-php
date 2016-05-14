@@ -122,7 +122,7 @@ h2.title:before {
 
 /* line 87, ../sass/mystyles.scss */
 ul#g-menu.add_menu {
-  left: 44px;
+  left: 80px;
 }
 
 /* line 91, ../sass/mystyles.scss */
@@ -531,10 +531,13 @@ ul#g-menu.add_menu {
 /* line 418, ../sass/mystyles.scss */
 header nav .nav-area ul li.center-logo a {
   background-size: auto 60px;
+  height: 68px;
+  width: 332px;
 }
-/* line 421, ../sass/mystyles.scss */
+/* line 423, ../sass/mystyles.scss */
 header nav .nav-area ul li.center-logo.yume a {
   width: 260px;
+  top: -5px;
   background: url("../assets/images/yume/yume-logo.png") center 4px no-repeat;
   background-size: auto 60px;
 }

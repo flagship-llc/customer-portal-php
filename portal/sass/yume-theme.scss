@@ -59,6 +59,9 @@ body#yume{
 
   header{
     border-top: 12px solid #bf92cb;
+    @media screen and (max-width: 768px){
+      border:none;
+    }
   }
   #g-menu{
     left: 0;

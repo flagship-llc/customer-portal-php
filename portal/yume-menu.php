@@ -3,7 +3,7 @@
           <div class="menu-wrap"> 
             <ul id="g-menu" class="add_menu">
 
-              <li class="hidden-xs center-logo"><a href="https://tokyotreat.com/" target="_blank" rel="nofollow"></a></li>
+              <li class="hidden-xs center-logo yume"><a href="https://yumetwins.com/" target="_blank" rel="nofollow"></a></li>
               
               <li class="link-p">
                 <div data-cb-jshook="attach-account-dropdown" class="navbar-collapse collapse">

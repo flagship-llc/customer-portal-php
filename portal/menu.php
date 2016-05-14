@@ -7,7 +7,7 @@
               <li><a href="https://tokyotreat.com/subscribe/" target="_blank" rel="nofollow">PRICING</a></li>
 
               <li class="hidden-xs center-logo"><a href="https://tokyotreat.com/" target="_blank" rel="nofollow"></a></li>
-              <li><a href="http://help.tokyotreat.com/hc/en-us" target="_blank" rel="nofollow">FAQ</a></li>
+              <li><a href="http://help.tokyotreat.com/hc/en-us" target="_blank" rel="nofollow">HELP CENTER</a></li>
               <li class="hidden-xs"><a href="https://tokyotreat.com/community/" target="_blank" rel="nofollow">COMMUNITY</a></li>
               <li>
                 <div data-cb-jshook="attach-account-dropdown" class="navbar-collapse collapse">
