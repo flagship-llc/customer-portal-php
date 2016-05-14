@@ -136,6 +136,9 @@ body#yume{
 #back{
   color: #ffffff;
 }
+.color-1{
+  color: #bf92cb!important;
+}
 #cb-wrapper-ssp .cb-well a{
   color: #bf92cb;
   border-bottom: 1px solid #bf92cb;
@@ -157,6 +160,22 @@ body#yume{
   border-bottom: 1px solid #bf92cb!important;
 }
 
+.page-header{
+  color: #bf92cb;
+}
+.cb-product-step.current{
+  background: #bf92cb;
+}
+.cb-product-step.current:before{
+  border-left-color: #bf92cb;
+}
 
+#skip_a_month{
+  background: url('../assets/images/yume/skip.png') 15px center no-repeat;
+  @media screen and (max-width: 768px){
+    background-size: 300px auto;
+    background-position: bottom right;
+  }
+}
 
 }

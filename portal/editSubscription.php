@@ -166,7 +166,7 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
                             </p>
                             <div class="clearfix">
                                 <input type='button' data-cb="plan" class='btn btn-default' value="Save and Continue" id="continueSubscription" onclick="savePlan()">         
-                                <a class="btn btn-link" id="back" href=<?php echo getCancelURL($configData) ?>>Cancel</a>   
+                                <a class="btn btn-link color-1" id="back" href=<?php echo getCancelURL($configData) ?>>Cancel</a>   
                             </div>
                         </div>
 
@@ -241,7 +241,7 @@ if ( !$servicePortal->planAccessible($allPlans, $settingconfigData) ) { ?>
                             </p>
                             <div class="clearfix">
                                 <input type="button" data-cb="review" class="btn btn-primary" value="Change Subscription" id="changeSubscription">
-                                <a class="btn btn-link" id="back2" href=<?php echo getCancelURL($configData) ?>>Cancel</a>
+                                <a class="btn btn-link color-1" id="back2" href=<?php echo getCancelURL($configData) ?>>Cancel</a>
                             </div>
                         </div>
 

@@ -142,7 +142,7 @@ $subscription = $servicePortal->getSubscription();
 						    <input type="hidden" name="action" value="updateBillingAddress">
                         </div>
                         <div class="form-group">
-                            <a href=<?php echo getCancelURL($configData) ?> id="back" class="btn btn-link">Cancel</a>
+                            <a href=<?php echo getCancelURL($configData) ?> id="back" class="btn btn-link color-1">Cancel</a>
                         </div>
                     </div>
                 </div>
