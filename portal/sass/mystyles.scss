@@ -407,7 +407,7 @@ ul#g-menu.add_menu{
   top:30px;
 }
 .navbar-nav{
-  margin-top:0;
+  margin-top:0!important;
 }
 
 #g-mail.common{
@@ -427,3 +427,14 @@ header nav .nav-area ul li.center-logo{
     background-size: auto 60px;
   }
 }
+
+#skip_a_month .skip-desc input.button{
+    box-shadow: 0 5px 0 #1398e4!important;
+    background-color: #38b6fe!important;
+    &:hover{
+      box-shadow: none!important;
+    }
+}
+
+
+

@@ -207,7 +207,7 @@ body#yume .cb-product-step.current:before {
 /* line 172, ../sass/yume-theme.scss */
 body#yume #skip_a_month {
   border: 2px solid #bf92cb;
-  background: url("../assets/images/yume/skip.png") 15px center no-repeat;
+  background: url("../assets/images/yume/skip.png") 2px center no-repeat;
 }
 @media screen and (max-width: 768px) {
   /* line 172, ../sass/yume-theme.scss */

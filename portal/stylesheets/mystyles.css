@@ -519,7 +519,7 @@ ul#g-menu.add_menu {
 
 /* line 409, ../sass/mystyles.scss */
 .navbar-nav {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 /* line 413, ../sass/mystyles.scss */
@@ -540,4 +540,14 @@ header nav .nav-area ul li.center-logo.yume a {
   top: -5px;
   background: url("../assets/images/yume/yume-logo.png") center 4px no-repeat;
   background-size: auto 60px;
+}
+
+/* line 431, ../sass/mystyles.scss */
+#skip_a_month .skip-desc input.button {
+  box-shadow: 0 5px 0 #1398e4 !important;
+  background-color: #38b6fe !important;
+}
+/* line 434, ../sass/mystyles.scss */
+#skip_a_month .skip-desc input.button:hover {
+  box-shadow: none !important;
 }

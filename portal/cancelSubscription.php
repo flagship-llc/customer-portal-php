@@ -12,7 +12,11 @@ $two_month_after_end = strtotime( "+2 month", $current_end);
     <div id="skip_a_month" class="cb-user-content">
         <div class="text-center skip-desc">
             <h1 class="text-orange"><strong>You could just Skip a Month!</strong></h1>
+            <?php if($yume){?>
+            <p>You can Skip a Month, and postpone the fun!<br class="hidden-xs"> The <?php echo date('M Y', $one_month_after_end); ?> box will get skipped, and your next box will be <?php echo date('M Y', $two_month_after_end); ?>.</p>
+            <?}else{?>
             <p>You can Skip a Month, and postpone the fun!<br class="hidden-xs"> The <?php echo date('M Y', $one_month_after_end); ?> treat will get skipped, and your next treat will be <?php echo date('M Y', $two_month_after_end); ?>.</p>
+            <?}?>
             <form action="skip_a_month.php" method="post">
                 <input type="hidden" name="skip_true" value="true">
                 <input type="submit" value="Skip a Month" class="button">

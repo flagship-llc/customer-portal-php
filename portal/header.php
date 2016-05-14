@@ -53,10 +53,10 @@ include_once('brand-switch.php');
                   <a href="switch_account.php">Switch Account</a>
                 </li>
                 <li class="visible-xs">
-                  <a href="<?php echo getLogoutUrl($configData); ?>>change_password">Change Password</a>
+                  <a href="<?php echo getChangePasswordUrl($configData); ?>">Change Password</a>
                 </li>
                 <li class="visible-xs">
-                  <a href="<?php echo getLogoutUrl($configData); ?>>logout">Logout</a>
+                  <a href="<?php echo getLogoutUrl($configData); ?>">Logout</a>
                 </li>
 
                 <li class="dropdown hidden-xs">
@@ -70,7 +70,7 @@ include_once('brand-switch.php');
                       <a href="/switch_account.php">Switch Account</a>
                     </li>
                     <li class="">
-                      <a href="/change_password">Change Password</a>
+                    <a href=<?php echo getChangePasswordUrl($configData); ?>>Change Password</a>
                     </li>
                     <li class="">
                       <a href=<?php echo getLogoutUrl($configData); ?>>Logout</a>
