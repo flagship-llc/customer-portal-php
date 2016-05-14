@@ -3934,7 +3934,7 @@ footer .mailmagazine-area { background-color: #ff7a0f; padding-bottom: 20px; pos
 footer .mailmagazine-area * { transition: all 0.2s linear; }
 @media (max-width: 767px) { footer .mailmagazine-area { padding: 15px 0; padding-bottom: 0; } }
 footer .mailmagazine-area .footer-menu-top { padding: 0; margin: 0; display: inline-block; line-height: 80px; }
-footer .mailmagazine-area .footer-menu-top li { padding-right: 41.7px; float: left; }
+footer .mailmagazine-area .footer-menu-top li { padding-right: 31.7px; float: left; }
 @media (max-width: 767px) { footer .mailmagazine-area .footer-menu-top li { width: 50%; line-height: 40px; padding-left: 15px; padding-right: 0px; } }
 @media (min-width: 767px) { footer .mailmagazine-area .footer-menu-top li:last-child { padding: 0; } }
 footer .mailmagazine-area .footer-menu-top li a { font-weight: normal; letter-spacing: 1px; font-size: 16px; color: #ffffff; }

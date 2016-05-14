@@ -11,7 +11,7 @@
                     <li><a href="https://tokyotreat.com/blog" target="_blank">BLOG</a></li>
                     <li><a href="https://tokyotreat.com/about" target="_blank">ABOUT</a></li>
                     <li><a href="https://tokyotreat.com/about/how-it-works/#lucky-treat" target="_blank">LUCKY TREAT</a></li>
-                    <li><a href="http://help.tokyotreat.com/hc/en-us" target="_blank">FAQ</a></li>
+                    <li><a href="http://help.tokyotreat.com/hc/en-us" target="_blank">HELP CENTER</a></li>
                     <li><a href=<?php echo getLogoutUrl($configData); ?>>LOGOUT</a></li>
                 </ul>
             </div>
