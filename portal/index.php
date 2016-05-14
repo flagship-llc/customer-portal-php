@@ -15,6 +15,7 @@ $cur_plans = ChargeBee_Plan::retrieve($subscription->planId);
 include("skip_true.php");
 ?>
 
+
 <div class="modal fade" id="Timeline" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
