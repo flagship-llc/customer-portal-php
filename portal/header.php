@@ -41,7 +41,11 @@ include_once('brand-switch.php');
           </div>
         <?php }else{?>
           <div class="sp-logo visible-xs">
+            <?php if($yume){?>
+            <a href="https://yumetwins.com/"></a>
+            <?php } else{ ?>
             <a href="https://tokyotreat.com/"></a>
+            <?php }?>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
