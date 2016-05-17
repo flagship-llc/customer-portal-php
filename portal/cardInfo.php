@@ -1,16 +1,17 @@
+<?php $customer->paymentMethod->type = "paypal_express_checkout"; ?>
 <?php if(isset($customer->paymentMethod) && $customer->paymentMethod->type == "paypal_express_checkout") {?>
-<div class="form-horizontal">
+<div id="paypal_express_checkout" class="form-horizontal">
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="row">
-    			<label class="col-xs-4 control-label">Payment Method</label>
+			<div class="row method">
+    			<label class="col-xs-5 control-label">Payment Method</label>
     			<div class="col-xs-7 form-control-static">
         			Paypal Express Checkout
     			</div>
 			</div>
 
-			<div class="row">
-    			<label class="col-xs-4 control-label">Billing Agreement ID</label>
+			<div class="row billing_agreement">
+    			<label class="col-xs-5 control-label">Billing Agreement ID</label>
     			<div class="col-xs-7 form-control-static">
       			  <?php echo esc($customer->paymentMethod->referenceId) ?>
     		  </div>
@@ -48,7 +49,7 @@ if (!isset($customer->paymentMethod)) {
     </div>
 <?php } ?>
 <?php if(isset($customer->paymentMethod) && $customer->paymentMethod->type == "card") {?>
-	<div class="form-horizontal">
+	<div id="card_info" class="form-horizontal">
 		<div class="row">
     		<div class="col-sm-6">
         		<div class="row">

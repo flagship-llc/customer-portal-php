@@ -551,3 +551,10 @@ header nav .nav-area ul li.center-logo.yume a {
 #skip_a_month .skip-desc input.button:hover {
   box-shadow: none !important;
 }
+
+@media screen and (max-width: 768px) {
+  /* line 441, ../sass/mystyles.scss */
+  #paypal_express_checkout .control-label, #card_info .control-label {
+    padding-top: 7px;
+  }
+}

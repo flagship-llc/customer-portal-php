@@ -437,4 +437,16 @@ header nav .nav-area ul li.center-logo{
 }
 
 
+#paypal_express_checkout,#card_info{
+  .control-label{
+    @media screen and (max-width: 768px){
+      padding-top:7px;
+    }
+  }
+}
+
+
+
+
+
 
