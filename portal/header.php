@@ -23,13 +23,18 @@ include_once('brand-switch.php');
       <link rel="stylesheet" type="text/css" href="stylesheets/yume-theme.css">
     <?php }?>
 
-
 <script type="text/javascript">
 setTimeout(function(){var a=document.createElement("script");
 var b=document.getElementsByTagName("script")[0];
 a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0042/6966.js?"+Math.floor(new Date().getTime()/3600000);
 a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
+
+<?php
+  $url = $_SERVER['HTTP_HOST'] ;
+  echo $url;
+  if(strstr($url,'my.tokyotreat.com')==true):
+?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -40,7 +45,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
   ga('send', 'pageview');
 
 </script>
-
+<?php endif; ?>
 </head>
 
 <?php if($yume){ ?>
