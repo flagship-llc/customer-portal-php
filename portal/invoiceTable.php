@@ -44,7 +44,7 @@
                     <span class="cb-portal-invoice-desc">
                     <?php
                         echo date('d-M-Y',$subscription->currentTermStart);
-                        echo ' 〜 ';
+                        echo ' ~ ';
                         echo date('d-M-Y',$subscription_term_end = $subscription->currentTermEnd);
                         echo '<br>';
                     ?>
