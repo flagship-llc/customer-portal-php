@@ -1,4 +1,3 @@
-<?php $customer->paymentMethod->type = "paypal_express_checkout"; ?>
 <?php if(isset($customer->paymentMethod) && $customer->paymentMethod->type == "paypal_express_checkout") {?>
 <div id="paypal_express_checkout" class="form-horizontal">
 	<div class="row">
