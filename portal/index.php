@@ -60,10 +60,10 @@ include("skip_true.php");
                     <p class="text-muted">
                         <?php 
                             if($next_plan){
-                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Timeline']['Next_billing_date']);
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y h:i', $subscription->currentTermEnd),$infoconfigData['Timeline']['Next_billing_date']);
                                 echo "(".$next_plan->name.").";
                             }else{                                
-                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Timeline']['Next_billing_date']);
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y h:i', $subscription->currentTermEnd),$infoconfigData['Timeline']['Next_billing_date']);
                                 echo "(".$cur_plans->plan()->name.").";
                             }
                         ?>
