@@ -20,7 +20,7 @@ include("skip_true.php");
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="title glay Candal" id="modal-label"><span>Timeline</span></h2>
+                <h2 class="title glay Candal" id="modal-label"><span>Timeline<br><small>All dates &amp; times are shown in <a href="http://localtimes.info/Asia/Japan/Tokyo/" target="_blank">Japan Standard Time</a>.</small></span></h2>
             </div>
             <div class="modal-body">
 
