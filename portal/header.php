@@ -1,6 +1,7 @@
 <?php
 include_once('init.php');
 $subscription = $servicePortal->getSubscription();
+date_default_timezone_set('Asia/Tokyo');
 include_once('brand-switch.php');
 ?>
 <!DOCTYPE html>
@@ -118,4 +119,3 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
       </nav><!-- #site-navigation -->
     </header><!-- #masthead -->
   </div>
-
