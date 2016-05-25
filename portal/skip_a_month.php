@@ -20,6 +20,8 @@
         $current_end_secound = date('s',$subscription_term_end); // 次回更新予定日の秒（フォーマットは00-59）
 
         // 変更前の月の日数が、翌月の日数よりも多い時（例： 31日間 vs 30日間）
+        // 例：30日(間) - 31日 = 0以下となった場合、+ 1 monthでは、次回更新予定日が翌々月になってしまう
+        // 上記例に当てはまる月末日のための処理
         if($nextmonth_end_day - $current_end_day < 0){
             $next_last = date('Y-m-t H:i:s', mktime($current_end_hour, $current_end_minutes, $current_end_secound, $end_month, 1, $end_year)); // 次回更新日を翌月の最終日に設定
             $one_month_after_end = strtotime($next_last); // 次回契約更新日の延長予定日をタイムスタンプに変換
