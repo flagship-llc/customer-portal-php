@@ -12,7 +12,9 @@ if($subscription->hasScheduledChanges){
     $next_plan = ChargeBee_Plan::retrieve($next_subscription->planId)->plan();
 }
 $cur_plans = ChargeBee_Plan::retrieve($subscription->planId);
+date_default_timezone_set('JTC');
 include("skip_true.php");
+
 ?>
 
 <script>
@@ -122,6 +124,7 @@ include("skip_true.php");
                     <div class="col-sm-6" id="subscripion-info">
                         <div class="cb-well">
                           <h2 class="title back-orange Candal left"><span>My Subscription</span></h2>
+
                           <div class="clearfix wraps">
                             <div class="box-info">
                               <div class="image-wrap text-center">

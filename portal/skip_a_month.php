@@ -13,15 +13,18 @@
         $subscription_term_end = $subscription->currentTermEnd;
         $subscription_term_end = strtotime( '+ 9 hour',$subscription_term_end);
         
-        $end_day = date('d',$subscription_term_end);    
-        $end_current_month = date('m',$subscription_term_end);
         $end_month = date('m',$subscription_term_end) + 1;
         $end_year = date('Y',$subscription_term_end);
+        $nextmonth_end_day = date('t', mktime(0, 0, 0, $end_month, 1, $end_year));
+        $current_end_day = date('d',$subscription_term_end);
 
-        $current_last_day = date('t', mktime(0, 0, 0, $end_current_month, 1, $end_year));
-        $next_last_day = date('t', mktime(0, 0, 0, $end_month, 1, $end_year));
-        $next_add_day =$current_last_day - $end_day + 1;
-        $one_month_after_end = strtotime( '+ '.$next_add_day.' day - 9 hour', $subscription_term_end) ;
+        if($nextmonth_end_day - $current_end_day < 0){ //31日などの狂いが生じる場合
+            $next_last = date('Y-m-t', mktime(0, 0, 0, $end_month, 1, $end_year));
+            $one_month_after_end = strtotime($next_last);
+        }else{
+            $one_month_after_end = strtotime( '+ 1 month - 9 hour', $subscription_term_end);
+        }
+
         $result = ChargeBee_Subscription::changeTermEnd($subscription_id, array(
         "termEndsAt" => $one_month_after_end));
     }
