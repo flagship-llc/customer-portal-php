@@ -45,7 +45,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 </script>
 <?php endif; ?>
-
 </head>
 
 <?php if($yume){ ?>

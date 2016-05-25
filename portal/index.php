@@ -12,27 +12,9 @@ if($subscription->hasScheduledChanges){
     $next_plan = ChargeBee_Plan::retrieve($next_subscription->planId)->plan();
 }
 $cur_plans = ChargeBee_Plan::retrieve($subscription->planId);
-date_default_timezone_set('JTC');
 include("skip_true.php");
-
 ?>
 
-<script>
-  window['friendbuy'] = window['friendbuy'] || [];
-  window['friendbuy'].push(['site', 'site-1b0110d0-aaa']);
-  window['friendbuy'].push(['track', 'customer',
-      {
-          id: '<?php echo $customer->id;?>', //INSERT CUSTOMER ID PARAMETER
-          email: '<?php echo $customer->email;?>', //INSERT CUSTOMER EMAIL PARAMETER
-          first_name: '<?php echo $customer->firstName;?>', //INSERT CUSTOMER FIRST NAME PARAMETER
-          last_name: '<?php echo $customer->lastName;?>' //INSERT CUSTOMER LAST NAME PARAMETER
-      }
-  ]);
-  (function (f, r, n, d, b, y) {
-      b = f.createElement(r), y = f.getElementsByTagName(r)[0];b.async = 1;b.src = n;y.parentNode.insertBefore(b, y);
-  })(document, 'script', '//djnf6e5yyirys.cloudfront.net/js/friendbuy.min.js');
-</script>
-          
 
 <div class="modal fade" id="Timeline" role="dialog">
     <div class="modal-dialog">
@@ -120,168 +102,152 @@ include("skip_true.php");
         <div id="cb-wrapper-ssp">
              <?php include("processing.php");  ?>
             <div id="cb-content">
-                <div class="row clearfix">
-                    <div class="col-sm-6" id="subscripion-info">
-                        <div class="cb-well">
-                          <h2 class="title back-orange Candal left"><span>My Subscription</span></h2>
 
-                          <div class="clearfix wraps">
-                            <div class="box-info">
-                              <div class="image-wrap text-center">
-                                <?php if($subscription->planId == 'premium-12-month-prepay-plan'){?>
-                                    <img src="assets/images/premium-12.png" alt="">
-                                <?php }else if($subscription->planId == 'premium-6-month-prepay-plan'){ ?>
-                                    <img src="assets/images/premium-6.png" alt="">
-                                <?php }else if($subscription->planId == 'premium-3-month-prepay-plan'){ ?>
-                                    <img src="assets/images/premium-3.png" alt="">
-                                <?php }else if($subscription->planId == 'premium-monthly-plan'){ ?>
-                                    <img src="assets/images/premium-1.png" alt="">
-                                <?php }else if($subscription->planId == 'regular-12-month-prepay-plan'){ ?>
-                                    <img src="assets/images/regular-12.png" alt="">
-                                <?php }else if($subscription->planId == 'regular-6-month-prepay-plan'){ ?>
-                                    <img src="assets/images/regular-6.png" alt="">
-                                <?php }else if($subscription->planId == 'regular-3-month-prepay-plan'){ ?>
-                                    <img src="assets/images/regular-3.png" alt="">
-                                <?php }else if($subscription->planId == 'regular-monthly-plan'){ ?>
-                                    <img src="assets/images/regular-1.png" alt="">
-                                <?php }else if($subscription->planId == 'small-12-month-prepay-plan'){ ?>
-                                    <img src="assets/images/small-12.png" alt="">
-                                <?php }else if($subscription->planId == 'small-6-month-prepay-plan'){ ?>
-                                    <img src="assets/images/small-6.png" alt="">
-                                <?php }else if($subscription->planId == 'small-3-month-prepay-plan'){ ?>
-                                    <img src="assets/images/small-3.png" alt="">
-                                <?php }else if($subscription->planId == 'small-monthly-plan'){ ?>
-                                    <img src="assets/images/small-1.png" alt="">
-                                <?php }else if($subscription->planId == 'yumetwins-monthly-plan'){ ?>
-                                    <img src="assets/images/yume/yume-1.png" alt="">
-                                <?php }else if($subscription->planId == 'yumetwins-3-month-prepay-plan'){ ?>
-                                    <img src="assets/images/yume/yume-3.png" alt="">
-                                <?php }else if($subscription->planId == 'yumetwins-6-month-prepay-plan'){ ?>
-                                    <img src="assets/images/yume/yume-6.png" alt="">
-                                <?php }else if($subscription->planId == 'yumetwins-12-month-prepay-plan'){ ?>
-                                    <img src="assets/images/yume/yume-12.png" alt="">
-                                <?php } ?>
-                              </div>
-                            <div class="info clearfix row">
-                            <?php if ($subscription->status != "cancelled") {?>
-                              <div class="col-sm-8">
-                            <?php } else {?>
-                              <div class="col-sm-12">
-                            <?php }?>
-                                <?php 
-                                    $phrase = $infoconfigData['Timeline']['Recurring_charge'];
-                                    $default = array('$planperiod', '$planunit');
-                                    $assign   = array($currentPlanDetails->period, $currentPlanDetails->periodUnit);
-                                    echo str_replace($default,  $assign, $phrase); ?>
-                                <?php if ($subscription->status != "cancelled") {?>
-                                <div class="price">
-                                  <b class="visible-xs"><span><?php echo $configData['currency_value'] .' '.number_format($estimate->amount / 100, 2, '.', '') ?></span></b>
-                                </div>
-                                <p class="text-orange"><b><span>
-                                  <?php
-                                  
-                                    if($next_plan){
-                                        echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
-                                        echo "(".$next_plan->name.").";
-                                    }else{
-                                        echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info2']);
-                                        echo "(".$cur_plans->plan()->name.").";
-                                    }
-                                  ?>
-                                  </span></b></p>
-                                  
-                                <?php }else{?>
-                                  <p class="text-danger">Your subscription has been canceled.<br> Please Reactivate your subscription! </p>
-                                <?php } ?>
-                                </div>
-                              <?php if ($subscription->status != "cancelled") {?>
-                                <div class="col-sm-4 price hidden-xs">
-                                  <b><span>
-                                  <?php echo $configData['currency_value'] .' '.number_format($estimate->amount / 100, 2, '.', '') ?></span></b>
-                                </div>
-                              <?php } ?>
-                              </div>
-
-
-
-                              <div class="clearfix">
-                                <?php
-                                    if ($settingconfigData["changesubscription"]["allow"] == 'true'){
-                                        $showEditDisplay = $servicePortal->getEditSubscription($settingconfigData); 
-                                        if($showEditDisplay==true) {   ?>
-                                            <a href=<?php echo getEditUrl("editSubscription.php", $configData) ?> class="arrow pull-left">
-                                                Change Plan<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
-                                            </a>
-                                        <?php
-                                            $showEditDisplay = false;
-                                        }             
-                                    }               
-                                ?>
-                                <a id="timeline-disp" class="arrow pull-right" data-toggle="modal" data-target="#Timeline">Timeline<span class="glyphicon glyphicon-chevron-right" title="Download"></span></a>
-                              </div>
-                            </div>
-                            <div class="my-info">
-                              <h3>TOKYOTREAT will ship to</h3>
-                              <?php include("shippingAddressInfo.php") ?>
-                              <?php if ($settingconfigData["shipping"]["addedit"] == 'true') { ?>
-                                 <a href=<?php echo getEditUrl("editShippingAddress.php", $configData) ?> id="cb-portal-billing-edit-link" class="arrow">
-                                    <?php if(!isset($subscription->shippingAddress)) {?>
-                                        Add Shipping Address<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
-                                    <?php } else {?>
-                                         Change Shipping Address<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
-                                    <?php } ?>
-                                </a>
-                              <?php } ?>
-                              <div class="text-center">
-
-                            <?php if($subscription->status == "cancelled" || $subscription->status == "non_renewing") {?>
-                                <?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
-                                    <div class="alert alert-info reactivate-info">
-                                        <div class="media text-left">
-                                            <span class="glyphicon glyphicon-info-sign pull-left"></span>
-                                            <div class="media-body" style="font-weight: normal; color:#000000;">
-                                                An amount of <b>USD <?php echo number_format($cur_plans->plan()->price / 100, 2, '.', ''); ?></b> will be charged immediately upon reactivation.
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                            <?php } ?>
-
-                                <div class="subsc-menu">
-                                    <?php if($subscription->status == "cancelled" || $subscription->status == "non_renewing") {?>
-                                        <?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
-                                            <a data-cb-jshook="link-cancel-subscription" id="reactivateSubscription">Reactivate</a> this subscription
-                                        <?php } ?>
-                                    <?php } else if ($settingconfigData["cancelsubscription"]["allow"] == 'true') { 
-                                        if (!($subscription->status == "non_renewing" && $settingconfigData["cancelsubscription"]["immediately"] == "false")) { ?>
-                                        <?php if($skip_st){ ?>
-                                            <a href=<?php echo getEditUrl("skip_a_month_view.php", $configData) ?> >Skip a Month</a> | 
-                                        <?php } else { ?>
-                                            <span class="text-muted">Can't Skip a Month</span> | 
-                                        <?php }?>
-                                        <a href=<?php echo getEditUrl("cancelSubscription.php", $configData) ?> id="cancelSubscription">Cancel</a> this subscription
-                                        <?php } ?>
-                                    <?php } ?>               
-                                </div>
-                              </div>  
-                            </div>
-                          </div>
+                <div class="cb-well" id="subscripion-info">
+                  <h2 class="title back-orange Candal"><span>My Subscription</span></h2>
+                  <div class="clearfix wraps">
+                    <div class="col-sm-6 box-info">
+                      <div class="image-wrap text-center">
+                        <?php if($subscription->planId == 'premium-12-month-prepay-plan'){?>
+                            <img src="assets/images/premium-12.png" alt="">
+                        <?php }else if($subscription->planId == 'premium-6-month-prepay-plan'){ ?>
+                            <img src="assets/images/premium-6.png" alt="">
+                        <?php }else if($subscription->planId == 'premium-3-month-prepay-plan'){ ?>
+                            <img src="assets/images/premium-3.png" alt="">
+                        <?php }else if($subscription->planId == 'premium-monthly-plan'){ ?>
+                            <img src="assets/images/premium-1.png" alt="">
+                        <?php }else if($subscription->planId == 'regular-12-month-prepay-plan'){ ?>
+                            <img src="assets/images/regular-12.png" alt="">
+                        <?php }else if($subscription->planId == 'regular-6-month-prepay-plan'){ ?>
+                            <img src="assets/images/regular-6.png" alt="">
+                        <?php }else if($subscription->planId == 'regular-3-month-prepay-plan'){ ?>
+                            <img src="assets/images/regular-3.png" alt="">
+                        <?php }else if($subscription->planId == 'regular-monthly-plan'){ ?>
+                            <img src="assets/images/regular-1.png" alt="">
+                        <?php }else if($subscription->planId == 'small-12-month-prepay-plan'){ ?>
+                            <img src="assets/images/small-12.png" alt="">
+                        <?php }else if($subscription->planId == 'small-6-month-prepay-plan'){ ?>
+                            <img src="assets/images/small-6.png" alt="">
+                        <?php }else if($subscription->planId == 'small-3-month-prepay-plan'){ ?>
+                            <img src="assets/images/small-3.png" alt="">
+                        <?php }else if($subscription->planId == 'small-monthly-plan'){ ?>
+                            <img src="assets/images/small-1.png" alt="">
+                        <?php }else if($subscription->planId == 'yumetwins-monthly-plan'){ ?>
+                            <img src="assets/images/yume/yume-1.png" alt="">
+                        <?php }else if($subscription->planId == 'yumetwins-3-month-prepay-plan'){ ?>
+                            <img src="assets/images/yume/yume-3.png" alt="">
+                        <?php }else if($subscription->planId == 'yumetwins-6-month-prepay-plan'){ ?>
+                            <img src="assets/images/yume/yume-6.png" alt="">
+                        <?php }else if($subscription->planId == 'yumetwins-12-month-prepay-plan'){ ?>
+                            <img src="assets/images/yume/yume-12.png" alt="">
+                        <?php } ?>
+                      </div>
+                    <div class="info clearfix row">
+                    <?php if ($subscription->status != "cancelled") {?>
+                      <div class="col-sm-8">
+                    <?php } else {?>
+                      <div class="col-sm-12">
+                    <?php }?>
+                        <?php 
+                            $phrase = $infoconfigData['Timeline']['Recurring_charge'];
+                            $default = array('$planperiod', '$planunit');
+                            $assign   = array($currentPlanDetails->period, $currentPlanDetails->periodUnit);
+                            echo str_replace($default,  $assign, $phrase); ?>
+                        <?php if ($subscription->status != "cancelled") {?>
+                        <br>
+                        <div class="price">
+                          <b class="visible-xs"><span><?php echo $configData['currency_value'] .' '.number_format($estimate->amount / 100, 2, '.', '') ?></span></b>
                         </div>
-                    </div>
+                        <p class="text-orange"><b><span>
+                          <?php
+                          
+                            if($next_plan){
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
+                                echo "(".$next_plan->name.").";
+                            }else{
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info2']);
+                                echo "(".$cur_plans->plan()->name.").";
+                            }
+                          ?>
+                          </span></b></p>
+                          
+                        <?php }else{?>
+                          <p class="text-danger">Your subscription has been canceled.<br> Please Reactivate your subscription! </p>
+                        <?php } ?>
+                        </div>
+                      <?php if ($subscription->status != "cancelled") {?>
+                        <div class="col-sm-4 price hidden-xs">
+                          <b><span>
+                          <?php echo $configData['currency_value'] .' '.number_format($estimate->amount / 100, 2, '.', '') ?></span></b>
+                        </div>
+                      <?php } ?>
+                      </div>
 
-                    <div id="friendbuy" class="col-sm-6">
-                      <div class="cb-well">
-                        <h2 class="title back-red Candal"><span>My Subscription</span></h2>
- <script>
-    window['friendbuy'] = window['friendbuy'] || [];
-    window['friendbuy'].push(['widget', "cxS-heu"]);
-</script>
-<div class="friendbuy-cxS-heu"></div>
+
+
+                      <div class="clearfix">
+                        <?php
+                            if ($settingconfigData["changesubscription"]["allow"] == 'true'){
+                                $showEditDisplay = $servicePortal->getEditSubscription($settingconfigData); 
+                                if($showEditDisplay==true) {   ?>
+                                    <a href=<?php echo getEditUrl("editSubscription.php", $configData) ?> class="arrow pull-left">
+                                        Change Plan<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
+                                    </a>
+                                <?php
+                                    $showEditDisplay = false;
+                                }             
+                            }               
+                        ?>
+                        <a id="timeline-disp" class="arrow pull-right" data-toggle="modal" data-target="#Timeline">Timeline<span class="glyphicon glyphicon-chevron-right" title="Download"></span></a>
                       </div>
                     </div>
+                    <div class="col-sm-6 my-info">
+                      <h3>TOKYOTREAT will ship to</h3>
+                      <?php include("shippingAddressInfo.php") ?>
+                      <?php if ($settingconfigData["shipping"]["addedit"] == 'true') { ?>
+                         <a href=<?php echo getEditUrl("editShippingAddress.php", $configData) ?> id="cb-portal-billing-edit-link" class="arrow">
+                            <?php if(!isset($subscription->shippingAddress)) {?>
+                                Add Shipping Address<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
+                            <?php } else {?>
+                                 Change Shipping Address<span class="glyphicon glyphicon-chevron-right" title="Download"></span>
+                            <?php } ?>
+                        </a>
+                      <?php } ?>
+                      <div class="text-center">
 
+                    <?php if($subscription->status == "cancelled" || $subscription->status == "non_renewing") {?>
+                        <?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
+                            <div class="alert alert-info reactivate-info">
+                                <div class="media text-left">
+                                    <span class="glyphicon glyphicon-info-sign pull-left"></span>
+                                    <div class="media-body" style="font-weight: normal; color:#000000;">
+                                        An amount of <b>USD <?php echo number_format($cur_plans->plan()->price / 100, 2, '.', ''); ?></b> will be charged immediately upon reactivation.
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
+
+                        <div class="subsc-menu">
+                            <?php if($subscription->status == "cancelled" || $subscription->status == "non_renewing") {?>
+                                <?php if($settingconfigData["reactivatesubscription"]["allow"] == 'true') {?>
+                                    <a data-cb-jshook="link-cancel-subscription" id="reactivateSubscription">Reactivate</a> this subscription
+                                <?php } ?>
+                            <?php } else if ($settingconfigData["cancelsubscription"]["allow"] == 'true') { 
+                                if (!($subscription->status == "non_renewing" && $settingconfigData["cancelsubscription"]["immediately"] == "false")) { ?>
+                                <?php if($skip_st){ ?>
+                                    <a href=<?php echo getEditUrl("skip_a_month_view.php", $configData) ?> >Skip a Month</a> | 
+                                <?php } else { ?>
+                                    <span class="text-muted">Can't Skip a Month</span> | 
+                                <?php }?>
+                                <a href=<?php echo getEditUrl("cancelSubscription.php", $configData) ?> id="cancelSubscription">Cancel</a> this subscription
+                                <?php } ?>
+                            <?php } ?>               
+                        </div>
+                      </div>  
+                    </div>
+                  </div>   
                 </div>
-
 
                 <div class="clearfix row">
                 <?php if ($settingconfigData["billing"]["addedit"] == 'true'){ ?>
@@ -358,7 +324,4 @@ include("skip_true.php");
         AjaxCallMessage('api.php', 'POST', 'json', data, 'index');
         return false;
     });
-    window.setInterval(function(){
-        $('#fbuy_iFrameResizer').contents().find('head').append('<link rel="stylesheet" href="stylesheets/mystyles.css" type="text/css" />');
-    },1000);
 </script>
