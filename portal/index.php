@@ -162,11 +162,11 @@ include("skip_true.php");
                           <?php
                           
                             if($next_plan){
-                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
-                                echo "(".$next_plan->name.").";
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y h:i', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
+                                echo "<br>(".$next_plan->name.").";
                             }else{
-                                echo str_replace('$subscription.current_term_end', date('d-M-Y', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info2']);
-                                echo "(".$cur_plans->plan()->name.").";
+                                echo str_replace('$subscription.current_term_end', date('d-M-Y h:i', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info2']);
+                                echo "<br>(".$cur_plans->plan()->name.").";
                             }
                           ?>
                           </span></b></p>
