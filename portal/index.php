@@ -288,7 +288,7 @@ include("skip_true.php");
                     </div>
                 </div>
                 <div class="payment-history">
-                    <h2 class="Candal text-orange"><span>Payment History</span></h2>
+                    <h2 class="Candal text-orange"><span>Payment History<br></span><small>All dates &amp; times are shown in <a href="http://localtimes.info/Asia/Japan/Tokyo/" target="_blank">Japan Standard Time</a>.</small></h2>
                     <?php if (count($customerInvoice) <= 0) { ?>
                         <div class="text-center">
                             <div class="alert alert-info">

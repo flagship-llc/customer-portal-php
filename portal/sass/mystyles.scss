@@ -29,6 +29,12 @@ header{
     width: 100%!important;
   }
 }
+.payment-history h2 small{
+  font-size: 11px;
+  line-height: 16px;
+  display: block;
+  margin-top: 8px;
+}
 h2.title{
   position: relative;
   text-align: center;
@@ -87,7 +93,7 @@ h2.title{
     padding-bottom:10px;
     box-shadow: none;
     small{
-      font-size: 14px;
+      font-size: 11px;
       line-height: 16px;
       display: block;
       margin-top: 8px;
