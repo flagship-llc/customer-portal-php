@@ -19,8 +19,6 @@
     $cur_term_x = strtotime('+ 12 month',$current_start); //スキップ ア マンスをしていない場合のタームエンド(12ヶ月)    
   }
   $skip_limit = strtotime('- 1 month',$current_end); //次回スキップ ア マンス開放日
-  $no_skip_cur_end = date('Ym01',$cur_term_x); //スキップ ア マンスをしていない場合のタームエンド(１ヶ月)
-  $cur_end = date('Ym01',$current_end); //実際のタームエンド
   $skip_st = true;
 
   $time_now = time(); //現在時間
