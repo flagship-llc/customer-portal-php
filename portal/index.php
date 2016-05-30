@@ -20,7 +20,7 @@ include("skip_true.php");
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="title glay Candal" id="modal-label"><span>Timeline<br><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Next%20Billing%20Date&iso=".date('Ymd\This', $subscription->currentTermEnd)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></span></h2>
+                <h2 class="title glay Candal" id="modal-label"><span>Timeline<br><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Next%20Billing%20Date&iso=".date('Ymd\THis', $subscription->currentTermEnd)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></span></h2>
             </div>
             <div class="modal-body">
 
@@ -161,10 +161,10 @@ include("skip_true.php");
                         <p class="text-orange"><b><span>
                           <?php
                             if($next_plan){
-                                echo "Your next billing is on <br>".date('d-M-Y H:i', $subscription->currentTermEnd)." <small>( <a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Next%20Billing%20Date&iso=".date('Ymd\This', $subscription->currentTermEnd)."&p1=248' target='_blank'>Japan Standard Time</a> )</small>";
+                                echo "Your next billing is on <br>".date('d-M-Y H:i', $subscription->currentTermEnd)." <small>( <a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Next%20Billing%20Date&iso=".date('Ymd\THis', $subscription->currentTermEnd)."&p1=248' target='_blank'>Japan Standard Time</a> )</small>";
                                 echo "<br>(".$next_plan->name.").";
                             }else{
-                                echo "Your next billing is on <br>".date('d-M-Y H:i', $subscription->currentTermEnd)." <small>( <a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Next%20Billing%20Date&iso=".date('Ymd\This', $subscription->currentTermEnd)."&p1=248' target='_blank'>Japan Standard Time</a> )</small>";
+                                echo "Your next billing is on <br>".date('d-M-Y H:i', $subscription->currentTermEnd)." <small>( <a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Next%20Billing%20Date&iso=".date('Ymd\THis', $subscription->currentTermEnd)."&p1=248' target='_blank'>Japan Standard Time</a> )</small>";
                                 echo "<br>(".$cur_plans->plan()->name.").";
                             }
                           ?>
@@ -293,7 +293,7 @@ include("skip_true.php");
                             break;
                         }
                     ?>
-                    <h2 class="Candal text-orange"><span>Payment History<br></span><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Paid%20On&iso=".date('Ymd\This', $invoice->startDate)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></h2>
+                    <h2 class="Candal text-orange"><span>Payment History<br></span><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Paid%20On&iso=".date('Ymd\THis', $invoice->startDate)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></h2>
                     <?php if (count($customerInvoice) <= 0) { ?>
                         <div class="text-center">
                             <div class="alert alert-info">
