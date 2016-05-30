@@ -14,6 +14,8 @@
         foreach ($customerInvoice as $entry) {
             $invoice = $entry->invoice();
             $amount = $invoice->amount;
+            $invoice_term_start = $invoice->lineItems[0]->dateFrom;
+            $invoice_term_end = $invoice->lineItems[0]->dateTo;
             if ($invoice->status == "pending") {
                 continue;
             }
@@ -37,15 +39,15 @@
                 </td>
                 <td class="visible-xs">Paid on</td>
                 <td>
-                    <?php echo date('d-M-Y', $invoice->endDate) ?>
+                    <?php echo date('d-M-Y', $invoice->startDate) ?>
                 </td>
                 <td class="visible-xs paid_st">Payment for</td>
                 <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hidden-xs";}?>">
                     <span class="cb-portal-invoice-desc">
                     <?php
-                        echo date('d-M-Y',$invoice->startDate);
+                        echo date('d-M-Y',$invoice_term_start);
                         echo ' ~ ';
-                        echo date('d-M-Y',$invoice->endDate);
+                        echo date('d-M-Y',$invoice_term_end);
                         echo '<br>';
                     ?>
                     </span>

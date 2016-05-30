@@ -293,7 +293,7 @@ include("skip_true.php");
                             break;
                         }
                     ?>
-                    <h2 class="Candal text-orange"><span>Payment History<br></span><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Paid%20On&iso=".date('Ymd\This', $invoice->endDate)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></h2>
+                    <h2 class="Candal text-orange"><span>Payment History<br></span><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Paid%20On&iso=".date('Ymd\This', $invoice->startDate)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></h2>
                     <?php if (count($customerInvoice) <= 0) { ?>
                         <div class="text-center">
                             <div class="alert alert-info">
