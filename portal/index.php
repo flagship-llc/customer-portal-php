@@ -20,7 +20,7 @@ include("skip_true.php");
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="title glay Candal" id="modal-label"><span>Timeline<br><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Next%20Billing%20Date&iso=".date('Ymd\THis', $subscription->currentTermEnd)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></span></h2>
+                <h2 class="title glay Candal" id="modal-label"><span>Timeline<br><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=".date('Ymd\THis')."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></span></h2>
             </div>
             <div class="modal-body">
 
@@ -293,7 +293,9 @@ include("skip_true.php");
                             break;
                         }
                     ?>
-                    <h2 class="Candal text-orange"><span>Payment History<br></span><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=Paid%20On&iso=".date('Ymd\THis', $invoice->startDate)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></h2>
+                    <h2 class="Candal text-orange"><span>Payment History<br></span>
+                    <small>
+                    All dates & times on this portal are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=".date('Ymd\THis')."&p1=248' target='_blank'>";?>Japan Standard Time</a> (Dates &amp; times in the PDF are shown in UTC).</small></h2>
                     <?php if (count($customerInvoice) <= 0) { ?>
                         <div class="text-center">
                             <div class="alert alert-info">
