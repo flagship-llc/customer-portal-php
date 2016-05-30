@@ -39,7 +39,7 @@
                 </td>
                 <td class="visible-xs">Paid on</td>
                 <td>
-                    <?php echo date('d-M-Y', $invoice->startDate) ?>
+                    <?php echo date('d-M-Y',$invoice_term_start); ?>
                 </td>
                 <td class="visible-xs paid_st">Payment for</td>
                 <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hidden-xs";}?>">
