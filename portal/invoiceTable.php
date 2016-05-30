@@ -43,9 +43,9 @@
                 <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hidden-xs";}?>">
                     <span class="cb-portal-invoice-desc">
                     <?php
-                        echo date('d-M-Y',$subscription->currentTermStart);
+                        echo date('d-M-Y',$invoice->startDate);
                         echo ' ~ ';
-                        echo date('d-M-Y',$subscription_term_end = $subscription->currentTermEnd);
+                        echo date('d-M-Y',$invoice->endDate);
                         echo '<br>';
                     ?>
                     </span>
