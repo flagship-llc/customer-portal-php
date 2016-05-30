@@ -20,7 +20,7 @@ include("skip_true.php");
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="title glay Candal" id="modal-label"><span>Timeline<br><small>All dates &amp; times are shown in <a href="http://localtimes.info/Asia/Japan/Tokyo/" target="_blank">Japan Standard Time</a>.</small></span></h2>
+                <h2 class="title glay Candal" id="modal-label"><span>Timeline<br><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=next-billing-date&iso=".date('Ymd\TGis', $subscription->currentTermEnd)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></span></h2>
             </div>
             <div class="modal-body">
 
@@ -160,12 +160,11 @@ include("skip_true.php");
                         </div>
                         <p class="text-orange"><b><span>
                           <?php
-                          
                             if($next_plan){
-                                echo str_replace('$subscription.current_term_end', date('d-M-Y H:i', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info']);
+                                echo "Your next billing is on <br>".date('d-M-Y H:i', $subscription->currentTermEnd)." <small>( <a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=next-billing-date&iso=".date('Ymd\TGis', $subscription->currentTermEnd)."&p1=248' target='_blank'>Japan Standard Time</a> )</small>";
                                 echo "<br>(".$next_plan->name.").";
                             }else{
-                                echo str_replace('$subscription.current_term_end', date('d-M-Y H:i', $subscription->currentTermEnd),$infoconfigData['Active_Subscriptions']['Subscription_renewal_info2']);
+                                echo "Your next billing is on <br>".date('d-M-Y H:i', $subscription->currentTermEnd)." <small>( <a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=next-billing-date&iso=".date('Ymd\TGis', $subscription->currentTermEnd)."&p1=248' target='_blank'>Japan Standard Time</a> )</small>";
                                 echo "<br>(".$cur_plans->plan()->name.").";
                             }
                           ?>
@@ -288,7 +287,7 @@ include("skip_true.php");
                     </div>
                 </div>
                 <div class="payment-history">
-                    <h2 class="Candal text-orange"><span>Payment History<br></span><small>All dates &amp; times are shown in <a href="http://localtimes.info/Asia/Japan/Tokyo/" target="_blank">Japan Standard Time</a>.</small></h2>
+                    <h2 class="Candal text-orange"><span>Payment History<br></span><small>All dates &amp; times are shown in <?php echo "<a href='http://www.timeanddate.com/worldclock/fixedtime.html?msg=next-billing-date&iso=".date('Ymd\TGis', $subscription->currentTermEnd)."&p1=248' target='_blank'>";?>Japan Standard Time</a>.</small></h2>
                     <?php if (count($customerInvoice) <= 0) { ?>
                         <div class="text-center">
                             <div class="alert alert-info">
