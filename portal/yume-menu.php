@@ -2,10 +2,13 @@
         <div class="container text-center nav-area sp-no-padding">
           <div class="menu-wrap"> 
             <ul id="g-menu" class="add_menu">
+              <li><a href="https://yumetwins.com/about/" target="_blank" rel="nofollow">ABOUT</a></li>
+              <li class="hidden-xs"><a href="https://yumetwins.com/items/" target="_blank" rel="nofollow">ITEMS</a></li>
+              <li><a href="https://yumetwins.com/subscribe/" target="_blank" rel="nofollow">PRICING</a></li>
 
-              <li class="hidden-xs center-logo yume"><a href="https://yumetwins.com/" target="_blank" rel="nofollow"></a></li>
-              
-              <li class="link-p">
+              <li class="hidden-xs center-logo"><a href="https://tokyotreat.com/" target="_blank" rel="nofollow"></a></li>
+              <li><a href="http://help.tokyotreat.com/hc/en-us" target="_blank" rel="nofollow">HELP CENTER</a></li>
+              <li>
                 <div data-cb-jshook="attach-account-dropdown" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
                     <?php if($account_count > 1 ):?>
