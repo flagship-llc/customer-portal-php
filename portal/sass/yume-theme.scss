@@ -2,11 +2,21 @@ body#yume{
   .text-darkblue{
       color: #F58BDC;
   }
+  header nav .nav-area ul li{
+    line-height: 53px;
+    padding-top:10px;
+    padding-bottom:20px;
+    .dropdown-menu{
+      li{
+        padding:0;
+      }
+    }
+  }
   header nav .nav-area ul li.center-logo{
-    float: none;
+    padding-bottom:0;
     a{
       height: 63px;
-      width: 322px;
+      width: 220px;
       margin:0 auto;
       background: url('../assets/images/yume/yume-logo.png') center 4px no-repeat;
       background-size: auto 50px;
@@ -65,11 +75,11 @@ body#yume{
   }
   #g-menu{
     left: 0;
-    width: 100%;
+    display: inline-block;
     text-align: center;
   }
   ul#g-menu.add_menu{
-    left:0;
+    left:15px;
   }
   .cb-well{
     border: 2px solid #bf92cb;
@@ -112,7 +122,7 @@ body#yume{
     }
   }
   .navbar-collapse > .navbar-nav > .dropdown{
-    margin-top:0;
+    margin-top:14px;
   }
 
 .navbar-collapse > .navbar-nav a:hover, .navbar-collapse > .navbar-nav > .dropdown > a:hover, .navbar-collapse > .navbar-nav > .dropdown > a:focus, .navbar-collapse > .navbar-nav > .dropdown.open > a, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
@@ -162,7 +172,8 @@ body#yume{
   border-bottom: 1px solid #bf92cb!important;
 }
 
-.page-header{
+.page-header,
+footer .footer-copyright-area .footer-menu ul li a{
   color: #bf92cb;
 }
 .cb-product-step.current{
@@ -181,5 +192,68 @@ body#yume{
     padding-bottom:250px;
   }
 }
+
+footer .mailmagazine-area{
+  background-color: #bf92cb;
+}
+
+.social{
+  position: absolute;
+  z-index: 10;
+  right: 15px;
+  top:50%;
+  margin-top:-15px;
+  @media (max-width: 768px){
+    position: relative;
+    right: auto;
+    top:auto;
+    margin-top:10px;
+    line-height: 40px;
+    height: 30px;
+  }
+  ul{
+    padding:0;
+    margin:0;
+    overflow: hidden;
+    @media (max-width: 768px){
+      display: inline-block;
+      margin-left: -14px;
+    }
+    li{
+      float: left;
+      margin-left: 20px;
+      &:hover{
+        opacity:0.7;
+      }
+      a{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url('../assets/images/yume/social-icon.png') no-repeat;
+        &.fb{
+          background-position: 0 0;
+        }
+        &.twitter{
+          background-position: -54px 0;
+        }
+        &.instagram{
+          top:0;
+          background-position: -112px 0;
+        }
+        &.pinterest{
+          background-position: -172px 0;
+        }
+        &.youtube{
+          top:0;
+          background-position: -230px 0;
+        }
+        &:hover{
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
 
 }
