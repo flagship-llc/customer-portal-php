@@ -45,7 +45,12 @@
                 <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hidden-xs";}?>">
                     <span class="cb-portal-invoice-desc">
                     <?php
-                        echo date('F \B\O\X',strtotime(date('Y-m-1',$invoice_term_start).' +1 month'));
+                        $monthly_judge = date('Y-m-1',$invoice_term_end);
+                        $term_next_month = strtotime(date('Y-m-1',$invoice_term_start).' +1 month');
+                        echo date('Y F \B\O\X',$term_next_month);
+                        if(date('Y-m-1',$term_next_month) != $monthly_judge){
+                            echo ' ~ '.date('Y F \B\O\X',strtotime(date('Y-m-1',$invoice_term_end)));
+                        }
                     ?>
                     </span>
                 </td>
