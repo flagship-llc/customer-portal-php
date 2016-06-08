@@ -578,15 +578,16 @@ header nav .nav-area ul li.center-logo.yume a {
 
 /* line 458, ../sass/mystyles.scss */
 #invoiceTableShow .glyphicon-exclamation-sign {
-  top: 2px;
+  font-size: 13px;
 }
 /* line 461, ../sass/mystyles.scss */
 #invoiceTableShow .glyphicon-remove {
-  top: 3px;
+  top: 2px;
+  font-size: 14.5px !important;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 467, ../sass/mystyles.scss */
+  /* line 468, ../sass/mystyles.scss */
   #paypal_express_checkout .control-label, #card_info .control-label {
     padding-top: 7px;
   }
