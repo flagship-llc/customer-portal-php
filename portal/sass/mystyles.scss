@@ -348,6 +348,9 @@ ul#g-menu.add_menu{
   font-weight: bold;
 }
 #cb-portal-invoice-table {
+  tr,td,th{
+    vertical-align: middle;
+  }
   tr{
     @media screen and (max-width: 768px){
       display: block;

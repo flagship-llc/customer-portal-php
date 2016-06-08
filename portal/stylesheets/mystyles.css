@@ -450,8 +450,12 @@ ul#g-menu.add_menu {
   font-weight: bold;
 }
 
+/* line 351, ../sass/mystyles.scss */
+#cb-portal-invoice-table tr, #cb-portal-invoice-table td, #cb-portal-invoice-table th {
+  vertical-align: middle;
+}
 @media screen and (max-width: 768px) {
-  /* line 351, ../sass/mystyles.scss */
+  /* line 354, ../sass/mystyles.scss */
   #cb-portal-invoice-table tr {
     display: block;
     border-top: 1px solid #e1e1e1;
@@ -460,12 +464,12 @@ ul#g-menu.add_menu {
     margin-bottom: 20px;
   }
 }
-/* line 360, ../sass/mystyles.scss */
+/* line 363, ../sass/mystyles.scss */
 #cb-portal-invoice-table td {
   border: 1px solid #b1b1b1;
 }
 @media screen and (max-width: 768px) {
-  /* line 360, ../sass/mystyles.scss */
+  /* line 363, ../sass/mystyles.scss */
   #cb-portal-invoice-table td {
     display: block !important;
     width: 50%;
@@ -476,14 +480,14 @@ ul#g-menu.add_menu {
     border-left: 1px solid #e1e1e1;
     padding-left: 10px;
   }
-  /* line 371, ../sass/mystyles.scss */
+  /* line 374, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.visible-xs {
     background-color: #f7f7f7;
     font-weight: bold;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 376, ../sass/mystyles.scss */
+  /* line 379, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.paid_st, #cb-portal-invoice-table td.pdf-link {
     width: 100%;
     text-align: center;
@@ -491,34 +495,34 @@ ul#g-menu.add_menu {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 384, ../sass/mystyles.scss */
+  /* line 387, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.paid_st.hidden-xs {
     border: none;
     padding: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 392, ../sass/mystyles.scss */
+  /* line 395, ../sass/mystyles.scss */
   #cb-portal-invoice-table td.pdf-link a {
     width: 70%;
     margin: 0 auto;
   }
 }
-/* line 398, ../sass/mystyles.scss */
+/* line 401, ../sass/mystyles.scss */
 #cb-portal-invoice-table td:before {
   background-color: #000000;
 }
 @media screen and (max-width: 768px) {
-  /* line 401, ../sass/mystyles.scss */
+  /* line 404, ../sass/mystyles.scss */
   #cb-portal-invoice-table td:last-child {
     border-color: #e1e1e1;
   }
 }
-/* line 406, ../sass/mystyles.scss */
+/* line 409, ../sass/mystyles.scss */
 #cb-portal-invoice-table td .arrow {
   padding: 4px 10px;
 }
-/* line 408, ../sass/mystyles.scss */
+/* line 411, ../sass/mystyles.scss */
 #cb-portal-invoice-table td .arrow .glyphicon {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
@@ -526,35 +530,35 @@ ul#g-menu.add_menu {
   left: 4px;
 }
 
-/* line 417, ../sass/mystyles.scss */
+/* line 420, ../sass/mystyles.scss */
 .cb-available-list {
   max-height: none;
 }
 
-/* line 421, ../sass/mystyles.scss */
+/* line 424, ../sass/mystyles.scss */
 .reactivate-info {
   position: relative;
   top: 30px;
 }
 
-/* line 425, ../sass/mystyles.scss */
+/* line 428, ../sass/mystyles.scss */
 .navbar-nav {
   margin-top: 0 !important;
 }
 
-/* line 429, ../sass/mystyles.scss */
+/* line 432, ../sass/mystyles.scss */
 #g-mail.common {
   margin: 0 auto;
   margin-bottom: 10px;
 }
 
-/* line 434, ../sass/mystyles.scss */
+/* line 437, ../sass/mystyles.scss */
 header nav .nav-area ul li.center-logo a {
   background-size: auto 60px;
   height: 68px;
   width: 332px;
 }
-/* line 439, ../sass/mystyles.scss */
+/* line 442, ../sass/mystyles.scss */
 header nav .nav-area ul li.center-logo.yume a {
   width: 260px;
   top: -5px;
@@ -562,18 +566,18 @@ header nav .nav-area ul li.center-logo.yume a {
   background-size: auto 60px;
 }
 
-/* line 447, ../sass/mystyles.scss */
+/* line 450, ../sass/mystyles.scss */
 #skip_a_month .skip-desc input.button {
   box-shadow: 0 5px 0 #1398e4 !important;
   background-color: #38b6fe !important;
 }
-/* line 450, ../sass/mystyles.scss */
+/* line 453, ../sass/mystyles.scss */
 #skip_a_month .skip-desc input.button:hover {
   box-shadow: none !important;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 457, ../sass/mystyles.scss */
+  /* line 460, ../sass/mystyles.scss */
   #paypal_express_checkout .control-label, #card_info .control-label {
     padding-top: 7px;
   }
