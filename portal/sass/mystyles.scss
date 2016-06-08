@@ -454,7 +454,14 @@ header nav .nav-area ul li.center-logo{
       box-shadow: none!important;
     }
 }
-
+#invoiceTableShow{
+  .glyphicon-exclamation-sign{
+    top:2px;
+  }
+  .glyphicon-remove{
+    top:3px;    
+  }  
+}
 
 #paypal_express_checkout,#card_info{
   .control-label{

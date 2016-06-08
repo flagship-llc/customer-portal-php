@@ -576,8 +576,17 @@ header nav .nav-area ul li.center-logo.yume a {
   box-shadow: none !important;
 }
 
+/* line 458, ../sass/mystyles.scss */
+#invoiceTableShow .glyphicon-exclamation-sign {
+  top: 2px;
+}
+/* line 461, ../sass/mystyles.scss */
+#invoiceTableShow .glyphicon-remove {
+  top: 3px;
+}
+
 @media screen and (max-width: 768px) {
-  /* line 460, ../sass/mystyles.scss */
+  /* line 467, ../sass/mystyles.scss */
   #paypal_express_checkout .control-label, #card_info .control-label {
     padding-top: 7px;
   }
