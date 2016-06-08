@@ -1,3 +1,21 @@
+# Skip a monthの仕様について
+
+**前提**  
+* ChargeBeeでの時間管理はUTC
+* ポータルで表示する時間はすべてJST
+
+**機能概要**  
+Next Billing Dateを1ヶ月先に延期
+ 
+**Skip可能期間**  
+Next Billing Dateより30日前に入った段階〜Next Billing Date当日の更新時間まで
+ 
+**備考**  
+* 1ヶ月先の日数が現在の契約更新月の日数より少なかった場合Next Billing Dateは翌月の最終日になる  
+例： 5/31-> skip a month -> 6/30
+* 上記の計算はJSTに変換した後に行われるため、契約更新タイミングが15:00以降の場合以下のようになる
+![Portal UI](skip_a_month.jpg)
+
 # CUSTOMER PORTAL
 
 * [Introduction](#introduction)

@@ -45,10 +45,7 @@
                 <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hidden-xs";}?>">
                     <span class="cb-portal-invoice-desc">
                     <?php
-                        echo date('d-M-Y',$invoice_term_start);
-                        echo ' ~ ';
-                        echo date('d-M-Y',$invoice_term_end);
-                        echo '<br>';
+                        echo date('F \B\O\X',strtotime(date('Y-m-1',$invoice_term_start).' +1 month'));
                     ?>
                     </span>
                 </td>
