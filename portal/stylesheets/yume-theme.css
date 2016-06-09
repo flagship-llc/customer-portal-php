@@ -3,28 +3,18 @@ body#yume .text-darkblue {
   color: #F58BDC;
 }
 /* line 5, ../sass/yume-theme.scss */
-body#yume header nav .nav-area ul li {
-  line-height: 53px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-/* line 10, ../sass/yume-theme.scss */
-body#yume header nav .nav-area ul li .dropdown-menu li {
-  padding: 0;
-}
-/* line 15, ../sass/yume-theme.scss */
 body#yume header nav .nav-area ul li.center-logo {
-  padding-bottom: 0;
+  float: none;
 }
-/* line 17, ../sass/yume-theme.scss */
+/* line 7, ../sass/yume-theme.scss */
 body#yume header nav .nav-area ul li.center-logo a {
   height: 63px;
-  width: 220px;
+  width: 322px;
   margin: 0 auto;
   background: url("../assets/images/yume/yume-logo.png") center 4px no-repeat;
   background-size: auto 50px;
 }
-/* line 25, ../sass/yume-theme.scss */
+/* line 15, ../sass/yume-theme.scss */
 body#yume header nav .nav-area ul li.link-p {
   float: none;
   display: inline-block;
@@ -32,7 +22,7 @@ body#yume header nav .nav-area ul li.link-p {
   right: 0;
   top: 10px;
 }
-/* line 32, ../sass/yume-theme.scss */
+/* line 22, ../sass/yume-theme.scss */
 body#yume .sp-logo {
   width: 100%;
   height: 67px;
@@ -40,18 +30,18 @@ body#yume .sp-logo {
   background: url("../assets/images/yume/yume-logo.png") 15px 6px no-repeat;
   background-size: auto 50px;
 }
-/* line 39, ../sass/yume-theme.scss */
+/* line 29, ../sass/yume-theme.scss */
 body#yume #subscripion-info .image-wrap {
   background: #FFEBFA;
 }
-/* line 42, ../sass/yume-theme.scss */
+/* line 32, ../sass/yume-theme.scss */
 body#yume #subscripion-info h2.title:before {
   width: 280px;
   height: 140px;
   background: url("../assets/images/yume/subscribe-icon.png") no-repeat;
 }
 @media screen and (max-width: 768px) {
-  /* line 42, ../sass/yume-theme.scss */
+  /* line 32, ../sass/yume-theme.scss */
   body#yume #subscripion-info h2.title:before {
     width: 40%;
     right: -10px;
@@ -59,14 +49,14 @@ body#yume #subscripion-info h2.title:before {
     background-position: center bottom;
   }
 }
-/* line 54, ../sass/yume-theme.scss */
+/* line 44, ../sass/yume-theme.scss */
 body#yume #cb-portal-billing h2.title:before {
   right: 0px;
   width: 81px;
   height: 88px;
   background: url("../assets/images/yume/billing-icon.png") no-repeat;
 }
-/* line 60, ../sass/yume-theme.scss */
+/* line 50, ../sass/yume-theme.scss */
 body#yume #cb-portal-payment-method h2.title:before {
   right: -3px;
   width: 63px;
@@ -74,41 +64,41 @@ body#yume #cb-portal-payment-method h2.title:before {
   background: url("../assets/images/yume/payment-icon.png") no-repeat;
 }
 @media screen and (max-width: 768px) {
-  /* line 60, ../sass/yume-theme.scss */
+  /* line 50, ../sass/yume-theme.scss */
   body#yume #cb-portal-payment-method h2.title:before {
     top: -30px;
   }
 }
-/* line 70, ../sass/yume-theme.scss */
+/* line 60, ../sass/yume-theme.scss */
 body#yume header {
   border-top: 12px solid #bf92cb;
 }
 @media screen and (max-width: 768px) {
-  /* line 70, ../sass/yume-theme.scss */
+  /* line 60, ../sass/yume-theme.scss */
   body#yume header {
     border: none;
   }
 }
-/* line 76, ../sass/yume-theme.scss */
+/* line 66, ../sass/yume-theme.scss */
 body#yume #g-menu {
   left: 0;
-  display: inline-block;
+  width: 100%;
   text-align: center;
 }
-/* line 81, ../sass/yume-theme.scss */
+/* line 71, ../sass/yume-theme.scss */
 body#yume ul#g-menu.add_menu {
-  left: 15px;
+  left: 0;
 }
-/* line 84, ../sass/yume-theme.scss */
+/* line 74, ../sass/yume-theme.scss */
 body#yume .cb-well {
   border: 2px solid #bf92cb;
 }
-/* line 87, ../sass/yume-theme.scss */
+/* line 77, ../sass/yume-theme.scss */
 body#yume .renew a.arrow,
 body#yume .back-orange {
   background-color: #bf92cb;
 }
-/* line 91, ../sass/yume-theme.scss */
+/* line 81, ../sass/yume-theme.scss */
 body#yume .go_cancel a,
 body#yume .go_top a,
 body#yume .copyright,
@@ -119,194 +109,115 @@ body#yume h2.title,
 body#yume .back-glay.title {
   color: #bf92cb;
 }
-/* line 101, ../sass/yume-theme.scss */
+/* line 91, ../sass/yume-theme.scss */
 body#yume .subsc-menu a {
   color: #bf92cb !important;
 }
-/* line 104, ../sass/yume-theme.scss */
+/* line 94, ../sass/yume-theme.scss */
 body#yume #subscripion-info h2.title {
   color: #ffffff;
 }
-/* line 107, ../sass/yume-theme.scss */
+/* line 97, ../sass/yume-theme.scss */
 body#yume #subscripion-info:before {
   border-left: 1px dashed #bf92cb !important;
 }
 @media screen and (max-width: 768px) {
-  /* line 110, ../sass/yume-theme.scss */
+  /* line 100, ../sass/yume-theme.scss */
   body#yume .renew .box-info:before {
     border-top: 1px dashed #bf92cb;
   }
 }
-/* line 115, ../sass/yume-theme.scss */
+/* line 105, ../sass/yume-theme.scss */
 body#yume .navbar-toggle .icon-bar {
   background: #bf92cb;
 }
 @media screen and (max-width: 768px) {
-  /* line 118, ../sass/yume-theme.scss */
+  /* line 108, ../sass/yume-theme.scss */
   body#yume .navbar-nav {
     background-color: #bf92cb;
     margin-top: 0;
   }
 }
-/* line 124, ../sass/yume-theme.scss */
+/* line 114, ../sass/yume-theme.scss */
 body#yume .navbar-collapse > .navbar-nav > .dropdown {
-  margin-top: 14px;
+  margin-top: 0;
 }
-/* line 128, ../sass/yume-theme.scss */
+/* line 118, ../sass/yume-theme.scss */
 body#yume .navbar-collapse > .navbar-nav a:hover, body#yume .navbar-collapse > .navbar-nav > .dropdown > a:hover, body#yume .navbar-collapse > .navbar-nav > .dropdown > a:focus, body#yume .navbar-collapse > .navbar-nav > .dropdown.open > a, body#yume .nav .open > a, body#yume .nav .open > a:hover, body#yume .nav .open > a:focus {
   background: #bf92cb;
   border-color: #bf92cb;
   border: 2px solid #bf92cb;
 }
-/* line 134, ../sass/yume-theme.scss */
+/* line 124, ../sass/yume-theme.scss */
 body#yume .navbar-collapse > .navbar-nav > .dropdown > a {
   border: 2px solid #bf92cb;
   background-color: #bf92cb;
 }
-/* line 138, ../sass/yume-theme.scss */
+/* line 128, ../sass/yume-theme.scss */
 body#yume .navbar-collapse .navbar-nav .dropdown-menu {
   border: 2px solid #bf92cb;
 }
-/* line 142, ../sass/yume-theme.scss */
+/* line 132, ../sass/yume-theme.scss */
 body#yume #portal_subscription_cancel_submit:before {
   display: none;
 }
-/* line 145, ../sass/yume-theme.scss */
+/* line 135, ../sass/yume-theme.scss */
 body#yume #back {
   color: #ffffff;
 }
-/* line 148, ../sass/yume-theme.scss */
+/* line 138, ../sass/yume-theme.scss */
 body#yume .color-1 {
   color: #bf92cb !important;
 }
-/* line 151, ../sass/yume-theme.scss */
+/* line 141, ../sass/yume-theme.scss */
 body#yume #cb-wrapper-ssp .cb-well a {
   color: #bf92cb;
   border-bottom: 1px solid #bf92cb;
 }
-/* line 154, ../sass/yume-theme.scss */
+/* line 144, ../sass/yume-theme.scss */
 body#yume #cb-wrapper-ssp .cb-well a#back {
   color: #ffffff;
 }
-/* line 159, ../sass/yume-theme.scss */
+/* line 149, ../sass/yume-theme.scss */
 body#yume #top #cb-wrapper-ssp .cb-well a {
   color: #ffffff;
 }
-/* line 162, ../sass/yume-theme.scss */
+/* line 152, ../sass/yume-theme.scss */
 body#yume #top #cb-wrapper-ssp .cb-well small a {
   color: #bf92cb;
 }
-/* line 166, ../sass/yume-theme.scss */
+/* line 156, ../sass/yume-theme.scss */
 body#yume #portal_subscription_cancel_submit {
   left: auto;
   margin: 0 auto;
 }
-/* line 170, ../sass/yume-theme.scss */
+/* line 160, ../sass/yume-theme.scss */
 body#yume #portal_subscription_cancel_submit input[type="submit"] {
   color: #bf92cb;
   border-bottom: 1px solid #bf92cb !important;
 }
-/* line 175, ../sass/yume-theme.scss */
-body#yume .page-header,
-body#yume footer .footer-copyright-area .footer-menu ul li a {
+/* line 165, ../sass/yume-theme.scss */
+body#yume .page-header {
   color: #bf92cb;
 }
-/* line 179, ../sass/yume-theme.scss */
+/* line 168, ../sass/yume-theme.scss */
 body#yume .cb-product-step.current {
   background: #bf92cb;
 }
-/* line 182, ../sass/yume-theme.scss */
+/* line 171, ../sass/yume-theme.scss */
 body#yume .cb-product-step.current:before {
   border-left-color: #bf92cb;
 }
-/* line 186, ../sass/yume-theme.scss */
+/* line 175, ../sass/yume-theme.scss */
 body#yume #skip_a_month {
   border: 2px solid #bf92cb;
   background: url("../assets/images/yume/skip.png") 2px center no-repeat;
 }
 @media screen and (max-width: 768px) {
-  /* line 186, ../sass/yume-theme.scss */
+  /* line 175, ../sass/yume-theme.scss */
   body#yume #skip_a_month {
     background-size: 300px auto;
     background-position: bottom 18px center;
     padding-bottom: 250px;
   }
-}
-/* line 196, ../sass/yume-theme.scss */
-body#yume footer .mailmagazine-area {
-  background-color: #bf92cb;
-}
-/* line 200, ../sass/yume-theme.scss */
-body#yume .social {
-  position: absolute;
-  z-index: 10;
-  right: 15px;
-  top: 50%;
-  margin-top: -15px;
-}
-@media (max-width: 768px) {
-  /* line 200, ../sass/yume-theme.scss */
-  body#yume .social {
-    position: relative;
-    right: auto;
-    top: auto;
-    margin-top: 10px;
-    line-height: 40px;
-    height: 30px;
-  }
-}
-/* line 214, ../sass/yume-theme.scss */
-body#yume .social ul {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-@media (max-width: 768px) {
-  /* line 214, ../sass/yume-theme.scss */
-  body#yume .social ul {
-    display: inline-block;
-    margin-left: -14px;
-  }
-}
-/* line 222, ../sass/yume-theme.scss */
-body#yume .social ul li {
-  float: left;
-  margin-left: 20px;
-}
-/* line 225, ../sass/yume-theme.scss */
-body#yume .social ul li:hover {
-  opacity: 0.7;
-}
-/* line 228, ../sass/yume-theme.scss */
-body#yume .social ul li a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: url("../assets/images/yume/social-icon.png") no-repeat;
-}
-/* line 233, ../sass/yume-theme.scss */
-body#yume .social ul li a.fb {
-  background-position: 0 0;
-}
-/* line 236, ../sass/yume-theme.scss */
-body#yume .social ul li a.twitter {
-  background-position: -54px 0;
-}
-/* line 239, ../sass/yume-theme.scss */
-body#yume .social ul li a.instagram {
-  top: 0;
-  background-position: -112px 0;
-}
-/* line 243, ../sass/yume-theme.scss */
-body#yume .social ul li a.pinterest {
-  background-position: -172px 0;
-}
-/* line 246, ../sass/yume-theme.scss */
-body#yume .social ul li a.youtube {
-  top: 0;
-  background-position: -230px 0;
-}
-/* line 250, ../sass/yume-theme.scss */
-body#yume .social ul li a:hover {
-  opacity: 0.7;
 }
