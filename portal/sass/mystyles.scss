@@ -348,6 +348,9 @@ ul#g-menu.add_menu{
   font-weight: bold;
 }
 #cb-portal-invoice-table {
+  tr,td,th{
+    vertical-align: middle;
+  }
   tr{
     @media screen and (max-width: 768px){
       display: block;
@@ -451,7 +454,15 @@ header nav .nav-area ul li.center-logo{
       box-shadow: none!important;
     }
 }
-
+#invoiceTableShow{
+  .glyphicon-exclamation-sign{
+    font-size: 13px;
+  }
+  .glyphicon-remove{
+    top: 2px;
+    font-size: 14.5px!important;
+  }  
+}
 
 #paypal_express_checkout,#card_info{
   .control-label{

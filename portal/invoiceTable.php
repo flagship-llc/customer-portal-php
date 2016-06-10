@@ -39,16 +39,18 @@
                 </td>
                 <td class="visible-xs">Paid on</td>
                 <td>
-                    <?php echo date('d-M-Y',$invoice_term_start); ?>
+                    <?php echo date('d-M-Y H:i',$invoice_term_start); ?>
                 </td>
                 <td class="visible-xs paid_st">Payment for</td>
                 <td class="text-muted paid_st <?php if ($invoice->status != "paid"){ echo "hidden-xs";}?>">
                     <span class="cb-portal-invoice-desc">
                     <?php
-                        echo date('d-M-Y',$invoice_term_start);
-                        echo ' ~ ';
-                        echo date('d-M-Y',$invoice_term_end);
-                        echo '<br>';
+                        $monthly_judge = date('Y-m-1',$invoice_term_end);
+                        $term_next_month = strtotime(date('Y-m-1',$invoice_term_start).' +1 month');
+                        echo date('Y F \B\O\X',$term_next_month);
+                        if(date('Y-m-1',$term_next_month) != $monthly_judge){
+                            echo ' ~ '.date('Y F \B\O\X',strtotime(date('Y-m-1',$invoice_term_end)));
+                        }
                     ?>
                     </span>
                 </td>
