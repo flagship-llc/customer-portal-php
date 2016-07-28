@@ -5,20 +5,21 @@
 #SCSSのコンパイル方法
 customer-portal-php/portal のディレクトリで $ compass watch  
 
-# 基本的な開発の流れ
-CB側で作成したサイトをAPI連携して動作させることが出来るドメインは一つだけです。  
-基本的な開発の流れは以下です。  
-１．localhostで開発をする  
-２．テストサイトに反映  
-３．CB管理画面からsetting-> whitelistで有効化するドメインを入力  
-　＝＞https://tokyotreat-test.chargebee.com/hosted_pages_settings/whitelisting  
-４．開発を再度する際はwhitelistのドメインをテストサイトのものから「localhost」に設定する  
-  
 # テストサイト反映方法
 Beanstalkを介したデプロイになります。  
 リモートレポジトリ：git@tokyotreat.git.beanstalkapp.com:/tokyotreat/customer-portal-php.git  
 stagingブランチがテストサイト  
 productionブランチが本サイトの反映になります。  
+
+# 基本的な開発の流れ
+CB側で作成したサイトをAPI連携して動作させることが出来るドメインは一つだけです。  
+基本的な開発の流れは以下です。  
+１．CB管理画面からsetting-> whitelistで有効化するドメインを入力 (「localhost」と記述) 　＝＞https://tokyotreat-test.chargebee.com/hosted_pages_settings/whitelisting  
+２．localhostで開発をする  
+３．CB管理画面からsetting-> whitelistで有効化するドメインを入力  (「my-test.tokyotreat.com」と記述)
+４．テストサイトに反映  
+５．my-test.tokyotreat.comにアクセスして確認する
+　
   
 # このレポジトリの影響範囲について
 このレポジトリで編集が出来ないページがあります、アクセスした際にCB側のドメイン(tokyotreat.chargebee.com)に転送されるページはこのレポジトリからは編集が出来ません。  
