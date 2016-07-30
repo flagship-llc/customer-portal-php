@@ -1,22 +1,23 @@
-# 使っているフレームワークなど
+## 使っているフレームワーク
 * SCSS (compassによるコンパイル方法を採用)
 * bootstrap3
 
-#SCSSのコンパイル方法
+## SCSSのコンパイル方法
 customer-portal-php/portal のディレクトリで $ compass watch  
 
-# テストサイト反映方法
+## テストサイト反映方法
 Beanstalkを介したデプロイになります。  
 リモートレポジトリ：git@tokyotreat.git.beanstalkapp.com:/tokyotreat/customer-portal-php.git  
 stagingブランチがテストサイト  
 productionブランチが本サイトの反映になります。  
 
-# 基本的な開発の流れ
+## 基本的な開発の流れ
 CB側で作成したサイトをAPI連携して動作させることが出来るドメインは一つだけです。  
 基本的な開発の流れは以下です。  
 １．CB管理画面からsetting-> whitelistで有効化するドメインを入力 (「localhost」と記述) 　＝＞https://tokyotreat-test.chargebee.com/hosted_pages_settings/whitelisting  
 ２．localhostで開発をする  
 ３．CB管理画面からsetting-> whitelistで有効化するドメインを入力  (「my-test.tokyotreat.com」と記述)
+
 ４．テストサイトに反映  
 ５．my-test.tokyotreat.comにアクセスして確認する
 　
