@@ -12,7 +12,10 @@ $two_month_after_end = strtotime( "+2 month", $current_end);
     <div id="skip_a_month" class="cb-user-content">
         <div class="text-center skip-desc">
             <h1 class="text-orange"><strong>You could just Skip a Month!</strong></h1>
-            <?php if($yume){?>
+            <?php //if($yume){?>
+            <?php if ( $theme == 'yume' ) { ?>
+            <p>You can Skip a Month, and postpone the fun!<br class="hidden-xs"> The <?php echo date('M Y', $one_month_after_end); ?> box will get skipped, and your next box will be <?php echo date('M Y', $two_month_after_end); ?>.</p>
+            <?php } elseif ( $theme == 'nomake' ) { ?>
             <p>You can Skip a Month, and postpone the fun!<br class="hidden-xs"> The <?php echo date('M Y', $one_month_after_end); ?> box will get skipped, and your next box will be <?php echo date('M Y', $two_month_after_end); ?>.</p>
             <?}else{?>
             <p>You can Skip a Month, and postpone the fun!<br class="hidden-xs"> The <?php echo date('M Y', $one_month_after_end); ?> treat will get skipped, and your next treat will be <?php echo date('M Y', $two_month_after_end); ?>.</p>
@@ -35,7 +38,8 @@ $two_month_after_end = strtotime( "+2 month", $current_end);
                     <input id="cancelImmediateText" name="cancelImmediateText" type="hidden" class="form-control" value="<?php echo $infoconfigData['Warnings_during_Cancellation']['Cancel_immediately'] ?>" > 
                     <div class="cb-well">
                         <h3 class="text-center">Cancel Subscription</h3>
-                        <?php if($yume){?>
+                        <?php //if($yume){?>
+                        <?php if ( $theme == 'yume' || $theme == 'nomake' ) { ?>
                         <?php }else{?>
                             <p>If you cancel now, you will lose a chance to receive the monthly <a href="https://tokyotreat.com/about/how-it-works/#lucky-treat">Lucky Treat</a> with value over $500 USD! Are you sure..? (TωT)</p>
                         <?php }?>
