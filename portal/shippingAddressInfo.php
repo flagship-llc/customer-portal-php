@@ -27,7 +27,7 @@
 			<?php echo (isset($shippingAddress->zip) ? $shippingAddress->zip . "" : "") ?>
             <br>
             <br>
-            <?php echo (isset($shippingAddress->phone) ? 'phone:'.$shippingAddress->phone . "<br>" : "") ?>
-            <?php echo (isset($shippingAddress->email) ? 'email:'.$shippingAddress->email . "<br>" : "") ?>
+            <?php echo (isset($shippingAddress->phone) ? 'Phone: '.$shippingAddress->phone . "<br>" : "") ?>
+            <?php echo (isset($shippingAddress->email) ? 'Email: '.$shippingAddress->email . "<br>" : "") ?>
     </address>
 <?php } ?>

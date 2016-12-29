@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i'); /* Rubik */
-body {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   font-family: 'Rubik', sans-serif;
 }
 body#nomake{
   .text-darkblue{
       color: #030303;
+  }
+  .info .text-orange {
+    margin-top: 10px;
   }
   header nav .nav-area ul li.center-logo{
     float: none;
@@ -66,6 +69,9 @@ body#nomake{
     .image-wrap{
       border-radius: 0;
     }
+    .wraps .info small {
+      font-size: 75%;
+    }
   }
   #subscripion-info h2.title:before{
     width: 280px;
@@ -112,6 +118,12 @@ body#nomake{
   .cb-well{
     border: 2px solid #030303;
     border-radius: 0;
+    .alert-info {
+      border-radius: 0;
+    }
+    h3 {
+      font-family: 'Rubik', sans-serif;
+    }
   }
   .renew a.arrow,
   .back-orange{
@@ -127,6 +139,9 @@ body#nomake{
   .back-glay.title{
     color: #030303;
   }
+  .copyright {
+    padding: 15px 0;
+  }
   h2.title {
     padding: 15px 0px 20px;
   }
@@ -135,7 +150,7 @@ body#nomake{
   }
   #subscripion-info h2.title{
     color: #d3effa;
-    padding: 15px 0 25px;
+    padding: 15px 0 20px;
   }
   #subscripion-info:before{
     border-left: 1px dashed #030303!important;
@@ -143,7 +158,7 @@ body#nomake{
   .renew .box-info:before{
     @media screen and (max-width: 768px){
       border-top: 1px dashed #030303;
-    }    
+    }
   }
   .navbar-toggle .icon-bar{
     background: #030303;
@@ -190,6 +205,9 @@ body#nomake{
   &#back{
     color: #d3effa;
   }
+  &:hover {
+    border-bottom: 0;
+  }
 }
 #top{
   #cb-wrapper-ssp .cb-well a{
@@ -228,12 +246,29 @@ body#nomake{
   }
 }
 
-}
+.modal-header a,
 .payment-history small a {
+  font-weight: 700;
   color: #030303;
   text-decoration: underline !important;
   &:hover {
-  color: #030303;
-  text-decoration: none !important;
+    color: #030303;
+    text-decoration: none !important;
   }
+}
+ #cb-portal-billing .info-box {
+    padding: 20px 16px 0;
+ }
+ .attention_text {
+  color: #030303;
+ }
+ footer {
+  margin-top: 60px;
+ }
+ .cb-alert-flash .alert, .cb-alert-flash .loader {
+  padding: 5px 8px;
+  .glyphicon {
+    top: 2px;
+  }
+ }
 }

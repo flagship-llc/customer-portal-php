@@ -1,21 +1,25 @@
 <?php if (!isset($customer->billingAddress)) { ?>
     <div class="form-horizontal">
     	<div class="text-center">
-        	<div class="alert alert-info">
-            	<div class="media text-left">
-                        <span class="glyphicon glyphicon-info-sign pull-left"></span>
-                        <div class="media-body">
-                            <?php echo $infoconfigData['Billing_Information']['No_billing_address_present']; ?>
-                        </div>
+         <div class="info-box">
+          	<div class="alert alert-info">
+              	<div class="media text-left">
+                          <span class="glyphicon glyphicon-info-sign pull-left"></span>
+                          <div class="media-body">
+                              <?php echo $infoconfigData['Billing_Information']['No_billing_address_present']; ?>
+                          </div>
+                   </div>
                  </div>
-               </div>
-         </div>
+            </div>
+        </div>
      </div>
     <?php } else { ?>
       <address>
 			<?php $billingAddress = $customer->billingAddress ?>
+        <b>
 		  	<?php echo (isset($billingAddress->firstName) ? esc($billingAddress->firstName) : "" )?>
 		  	<?php echo (isset($billingAddress->lastName) ? esc($billingAddress->lastName) : "" )?>
+        </b>
 		  	<?php echo (isset($billingAddress->lastName) || isset($billingAddress->firstName) ? "<br>" : "") ?>
         <?php echo (isset($billingAddress->company) ? esc($billingAddress->company) . "<br>" : "" )?>
 		  	<?php echo (isset($billingAddress->line1) ? esc($billingAddress->line1) . "" : "") ?>
@@ -27,7 +31,7 @@
 			<?php echo (isset($billingAddress->zip) ? esc($billingAddress->zip) . "" : "") ?>
             <br>
             <br>
-            <?php echo (isset($billingAddress->phone) ? esc('phone:'.$billingAddress->phone) . "<br>" : "") ?>
-            <?php echo (isset($billingAddress->email) ? esc('email:'.$billingAddress->email) . "" : "") ?>
+            <?php echo (isset($billingAddress->phone) ? esc('Phone: '.$billingAddress->phone) . "<br>" : "") ?>
+            <?php echo (isset($billingAddress->email) ? esc('Email: '.$billingAddress->email) . "" : "") ?>
     	</address>
 <?php } ?>
