@@ -20,9 +20,12 @@ include_once('brand-switch.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <?php if($now_url){ ?>
       <link rel="stylesheet" type="text/css" href="stylesheets/common-theme.css">
-    <?php }elseif($yume){ ?>
+    <?php //}elseif($yume){ ?>
+    <?php } elseif ( $theme == 'yume' ) { ?>
       <link rel="stylesheet" type="text/css" href="stylesheets/yume-theme.css">
-    <?php }?>
+    <?php } elseif ( $theme == 'nomake' ) { ?>
+      <link rel="stylesheet" type="text/css" href="stylesheets/nomake-theme.css">
+    <?php } ?>
 
 <script type="text/javascript">
 setTimeout(function(){var a=document.createElement("script");
@@ -48,8 +51,10 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 <?php endif; ?>
 </head>
 
-<?php if($yume){ ?>
+<?php if ( $theme == 'yume' ) { ?>
 <body id="yume">
+<?php } elseif ( $theme == 'nomake' ) { ?>
+<body id="nomake">
 <?php }else{ ?>
 <body>
 <?php }?>
@@ -65,8 +70,11 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
           </div>
         <?php }else{?>
           <div class="sp-logo visible-xs">
-            <?php if($yume){?>
+            <?php //if($yume){?>
+            <?php if ( $theme == 'yume' ) { ?>
             <a href="https://yumetwins.com/"></a>
+            <?php } elseif ( $theme == 'nomake' ) { ?>
+            <a href="https://nomakenolife.com/"></a>
             <?php } else{ ?>
             <a href="https://tokyotreat.com/"></a>
             <?php }?>
@@ -111,8 +119,11 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
         <?php } ?>
         <?php if($now_url){
           include('common-menu.php');
-        }elseif($yume){
+        // }elseif($yume){
+        } elseif ( $theme == 'yume' ){
           include('yume-menu.php');
+        } elseif ( $theme == 'nomake' ){
+          include('nomake-menu.php');
         }else{
           include('menu.php');
         } ?>

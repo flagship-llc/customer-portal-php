@@ -91,7 +91,7 @@ include("skip_true.php");
 </div>
 
     <h2 id="customer-title" class="text-center Candal text-darkblue">
-        <span class="small-text">カスタマーポータル</span><br>
+        <!-- <span class="small-text">カスタマーポータル</span><br> -->
         CUSTOMER PORTAL
     </h2>
     <?php 
@@ -140,6 +140,14 @@ include("skip_true.php");
                             <img src="assets/images/yume/yume-6.png" alt="">
                         <?php }else if($subscription->planId == 'yumetwins-12-month-prepay-plan'){ ?>
                             <img src="assets/images/yume/yume-12.png" alt="">
+                        <?php }else if($subscription->planId == 'nomakenolife-monthly-plan'){ ?>
+                            <img src="assets/images/nomake/nomake-1.png" alt="">
+                        <?php }else if($subscription->planId == 'nomakenolife-3-month-prepay-plan'){ ?>
+                            <img src="assets/images/nomake/nomake-3.png" alt="">
+                        <?php }else if($subscription->planId == 'nomakenolife-6-month-prepay-plan'){ ?>
+                            <img src="assets/images/nomake/nomake-6.png" alt="">
+                        <?php }else if($subscription->planId == 'nomakenolife-12-month-prepay-plan'){ ?>
+                            <img src="assets/images/nomake/nomake-12.png" alt="">
                         <?php } ?>
                       </div>
                     <div class="info clearfix row">
@@ -201,7 +209,15 @@ include("skip_true.php");
                       </div>
                     </div>
                     <div class="col-sm-6 my-info">
-                      <h3>TOKYOTREAT will ship to</h3>
+                      <?php
+                        $label = 'TOKYOTREAT';
+                        if ( $theme == 'yume' ) {
+                            $label = 'YUMETWINS';
+                        } elseif ( $theme == 'nomake' ) {
+                            $label = 'NOMAKENOLIFE';
+                        }
+                      ?>
+                      <h3><?php echo $label; ?> will ship to</h3>
                       <?php include("shippingAddressInfo.php") ?>
                       <?php if ($settingconfigData["shipping"]["addedit"] == 'true') { ?>
                          <a href=<?php echo getEditUrl("editShippingAddress.php", $configData) ?> id="cb-portal-billing-edit-link" class="arrow">

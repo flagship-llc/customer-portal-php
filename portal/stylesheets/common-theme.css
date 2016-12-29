@@ -52,6 +52,19 @@ header .sp-logo {
   background-color: #be93c9;
 }
 
+.cb-subscription-manage .nomakenolife-12-month-prepay-plan,
+.cb-subscription-manage .nomakenolife-6-month-prepay-plan,
+.cb-subscription-manage .nomakenolife-3-month-prepay-plan,
+.cb-subscription-manage .nomakenolife-monthly-plan {
+  background-color: #ede8e9;
+}
+.cb-subscription-manage .nomakenolife-12-month-prepay-plan a.arrow,
+.cb-subscription-manage .nomakenolife-6-month-prepay-plan a.arrow,
+.cb-subscription-manage .nomakenolife-3-month-prepay-plan a.arrow,
+.cb-subscription-manage .nomakenolife-monthly-plan a.arrow {
+  background-color: #030303;
+}
+
 /* line 43, ../sass/common-theme.scss */
 #switch {
   padding-bottom: 0;

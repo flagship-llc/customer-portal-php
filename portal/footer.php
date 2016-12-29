@@ -12,8 +12,12 @@
 
             <div class="copyright col-xs-12">Copyright © 2016 TOKYOTREAT. All Rights Reserved.</div>
         </div>
-        <?php }elseif($yume){
-          include('yume-footer.php');
+        <?php
+        // }elseif($yume){
+        } elseif ( $theme == 'yume' ) {
+          include( 'yume-footer.php' );
+        } elseif ( $theme == 'nomake' ) {
+          include( 'nomake-footer.php' );
         }else{
           include('footer-menu.php');
         } ?>

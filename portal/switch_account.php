@@ -25,8 +25,13 @@ $accounts = $portalSession->linkedCustomers;
               $subscription = $entry->subscription();
               $cur_plan = ChargeBee_Plan::retrieve($subscription->planId);
               $cur_plan_name = $cur_plan->plan()->name;
+              $theme_plan = 'default';
               if($cur_plan_name == 'YumeTwins Monthly Plan' || $cur_plan_name == 'YumeTwins 3 Month Prepay Plan' || $cur_plan_name == 'YumeTwins 6 Month Prepay Plan' || $cur_plan_name == 'YumeTwins 12 Month Prepay Plan'){
                 $yume_plan = true;
+                $theme_plan = 'yume';
+              } elseif ( $cur_plan_name == 'nomakenolife Monthly Plan' || $cur_plan_name == 'nomakenolife 3 Month Prepay Plan' || $cur_plan_name == 'nomakenolife 6 Month Prepay Plan' || $cur_plan_name == 'nomakenolife 12 Month Prepay Plan') {
+                $yume_plan = false;
+                $theme_plan = 'nomake';
               }else{
                 $yume_plan = false;
               }
@@ -35,8 +40,11 @@ $accounts = $portalSession->linkedCustomers;
     ?>
         <dl class="<?php echo $subscription->planId; ?>">
             <dt class="col-xs-8">
-                <?php if($yume_plan){?>
+                <?php //if($yume_plan){?>
+                <?php if ( $theme_plan == 'yume' ) { ?>
                 YumeTwins - <?php echo $cur_plan_name;?>
+                <?php } elseif ( $theme_plan == 'nomake' ) { ?>
+                NoMakeNoLife - <?php echo $cur_plan_name;?>
                 <?php }else{?>
                 TokyoTreat - <?php echo $cur_plan_name;?>
                 <?php } ?>
